@@ -1,0 +1,43 @@
+// IMPORT BOOTSTRAP STYLES
+
+// THEME COLOURS
+$primary: #333645 !default;
+$primary-dark: #262934 !default;
+$primary-hover: darken($primary, 25%);
+
+//SERVICES COLORS
+$web: #926fb1;
+$web-darken: darken($web, 10%);
+
+$software: #67809F;
+$software-darken: darken($software, 10%);
+
+$it-support: #4183d7;
+$it-support-darken: darken($it-support, 10%);
+
+$digital: #2ecc71;
+$digital-darken: darken($digital, 10%);
+
+$telecoms: #d64541;
+$telecoms-darken: darken($telecoms, 10%);
+
+$security: #f62459;
+$security-darken: darken($security, 10%);
+
+// Font
+$font-stack: 'Poppins',sans-serif;
+
+// WHITE AND GREY COLOURS
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

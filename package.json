@@ -1,0 +1,21 @@
+{
+  "name": "html-css-reflection",
+  "version": "1.0.0",
+  "description": "netmatters-html-css-reflection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Netmatters",
+    "HTML-CSS",
+    "Reflection"
+  ],
+  "author": "Othello Deemi",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "autoprefixer": "^10.4.0",
+    "bootstrap": "^5.1.3"
+  }
+}

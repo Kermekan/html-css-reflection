@@ -1,0 +1,69 @@
+// Browser Reset / 
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+/* Remove default margin and padding */
+body,
+section,
+main,
+img,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Set core root defaults */
+html {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+// Body Styling
+body {
+   font-family: 'Poppins', sans-serif;
+   width: 100vw;
+   height: 100%;
+   overflow-x: none;
+   
+   border: 3px solid red;
+}
+
+
+/* Remove list styles*/
+ul,
+ol {
+  list-style-type: none;
+}
+
+
+/* Removes styling from links */
+a {
+   text-decoration: none;
+   color: $white;
+   
+   &:hover, &:active, &:focus {
+     color: inherit;
+     outline: none;
+     box-shadow: none !important;
+   }
+ }
+ 
+ a:not([class]) {
+   text-decoration-skip-ink: auto;
+ }
+
