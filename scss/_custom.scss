@@ -1,9 +1,22 @@
 // IMPORT BOOTSTRAP STYLES
 
+// WHITE AND GREY COLOURS
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
 // THEME COLOURS
 $primary: #333645 !default;
 $primary-dark: #262934 !default;
-$primary-hover: darken($primary, 25%);
+$primary-hover: darken($primary, 10%);
 
 //SERVICES COLORS
 $web: #926fb1;
@@ -24,20 +37,16 @@ $telecoms-darken: darken($telecoms, 10%);
 $security: #f62459;
 $security-darken: darken($security, 10%);
 
-// Font
-$font-stack: 'Poppins',sans-serif;
 
-// WHITE AND GREY COLOURS
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
+// Button Colors
+$btn-gray: #999aa2;
+$btn-gray-hover: darken($btn-gray, 10%);
+
+$btn-blue: #4183d7;
+$btn-blue-hover: darken($btn-blue, 10%);
+
+$btn-white: $white;
+$btn-white-hover: darken($white, 10%);
+
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

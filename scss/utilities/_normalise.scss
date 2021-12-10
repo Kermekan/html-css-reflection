@@ -29,11 +29,15 @@ li {
   border: 0;
 }
 
+// make span elements inline block
+span {
+  display: inline-block;
+}
 /* Set core root defaults */
 html {
   font-size: 16px;
   line-height: 1.6;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.4px !important;
 }
 
 // Body Styling
@@ -42,7 +46,7 @@ body {
    position: relative;
    width: 100vw;
    height: 100vh;
-   overflow-y: hidden;
+  //  overflow-y: hidden;
    overflow-x: hidden;
    
    
@@ -57,17 +61,23 @@ ol {
 }
 
 
-/* Removes styling from links */
+/* Removes styling from links, buttons and inputs */
 a {
    text-decoration: none;
-   color: $white;
+  padding: 0;
    
    &:hover, &:active, &:focus {
-     color: inherit;
-     outline: none;
+     outline: none ;
      box-shadow: none !important;
    }
  }
+ 
+.btn,
+input {
+  padding: 0;
+  margin: 0;
+  outline: none !important;
+}
  
  a:not([class]) {
    text-decoration-skip-ink: auto;

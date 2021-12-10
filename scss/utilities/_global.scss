@@ -6,19 +6,26 @@
 // For Utility Classes and such
 
 .full-page {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
     position: relative;
     padding-top: 1.25rem; //20px
     // border: 3px solid red;
     
-    
-    @include respond-to-up(md) {
+    @include respond-to-up(sm) {
         // Change padding on screens larger than 768px
         padding: 0 0.625rem; // 0 10px
-        padding-top: 1.25rem;
     }
+    
+    flex-direction: column;
+    justify-content: start !important;
+    align-items: center;
+    
+    /* For some reason using flexbox pushes some elements out of their parent containers
+     * E.g. the mobile search bar is pushed out of the header, and the header margin 
+     * doesn't include it even though in the html it's part of the header  
+    */
 }
 
 .inner {
@@ -32,22 +39,22 @@
     // border: 3px solid gray;
     
     /* ------------------------------- Breakpoints ------------------------------ */
-    // width=750px from 768px to 992px
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
+    // width=750px from 768px to 992px viewport
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
         width: 46.875rem; //750px
-        // do something in this width range.
     }
     
-    // width=970px from 993px to 1260px
-    @media only screen and (min-width: 993px) and (max-width: 1260px) {
+    // width=970px from 993px to 1260px viewport
+    @media only screen and (min-width: 992px) and (max-width: 1259px) {
         width: 60.625rem; //970px
-        // do something in this width range.
     }
 }
 
 
 
-/* ---------------------------- Responsive Layout --------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                              Responsive Layout                             */
+/* -------------------------------------------------------------------------- */
 .flex {
     display: flex;
     justify-content: center;
@@ -63,3 +70,55 @@
     align-items: center;
     height: 100%;
 }
+
+/* -------------------- Hides Elements based on viewport -------------------- */
+
+// Hide elements below 575px
+.hidden-xs {
+    @media (max-width: 575px) {
+        display: none !important;
+    }
+}
+
+// Hide elements between 576px & 767px
+.hidden-sm {
+    @media (min-width: 576px) and (max-width: 767px) {
+        display: none !important;
+    }
+}
+
+// Hide elements between 768px & 991px
+.hidden-md {
+    @media (min-width: 768px) and (max-width: 991px) {
+        display: none !important;
+    }
+}
+
+// Hide elements between 991px & 1199px
+.hidden-lg {
+    @media (min-width: 992px) and (max-width: 1199px) {
+        display: none !important;
+    }
+}
+
+// Hide elements between 1200px & 1399px
+.hidden-xl {
+    @media (min-width: 1200px) and (max-width: 1399px) {
+        display: none !important;
+    }
+}
+
+// Hide elements above 1400px
+.hidden-xxl {
+    @media (min-width: 1400px) {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+
+

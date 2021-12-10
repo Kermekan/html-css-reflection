@@ -23,10 +23,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="full-page">
-        <!-- ----------------------------------------------------------------------- -->
-        <!--                                 Header                                  -->
-        <!-- ----------------------------------------------------------------------- -->
+    <div class="full-page flex">
+        <!-- ------------------------------- Header -------------------------------- -->
         <header id="header" class="header">
             <div class="header-inner inner flex">
                 <!-- Logo -->
@@ -35,18 +33,91 @@
                         <img src="/assets/images/logo/logo.png" alt="NetMatters">
                     </a>
                 </div>
-                                
-                <div class="actions">
-                   <!-- Contact Button (Mobile) -->
-                <div class="mobile-container">
-                    <a href="#" class="mobile-sm">
-                        <span class="icon-phone_in_talk"></span>
-                    </a>
-                </div> 
-                </div>
-                <!-- Menu Button -->
+                <!-- Actions Buttons -->
+                <div class="actions flex">
+                    <!-- Buttons for larger screens -->
+                    <div class="buttons flex hidden-md hidden-sm hidden-xs">
+                        <!-- Support Button -->
+                        <a href="#" class="btn support-lg flex">
+                            <span class="icon fas fa-mouse"></span>
+                            <span class="btn-text text-uppercase text-center">Support</span>
+                        </a>
+                        <!-- Contact Button Large Screens -->
+                        <a href="#" class="btn contact-lg flex">
+                            <span class="icon icon-paper-plane"></span>
+                            <span class="btn-text text-uppercase text-center">Contact</span>
+                        </a>
+                    </div><!-- .buttons-lg -->
+                    <!-- Contact Button (Mobile) -->
+                    <div class="contact-sm hidden-md hidden-lg hidden-xl hidden-xxl">
+                        <a href="#" class="mobile-sms">
+                            <span class="icon-phone_in_talk"></span>
+                        </a>
+                    </div>
+                    <!-- Search for medium screens -->
+                    <div class="search-md hidden-xs hidden-sm">
+                        <form action="#" class="search-form">
+                            <div class="input-container flex">
+                                <input type="text" placeholder="Search..." class="input-field hidden-lg">
+                                <!-- Search Button -->
+                                <div class=" btn search-btn flex">
+                                    <span class="icon-search text-center"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Menu Button -->
+                    <div class="menu-btn btn btn-primary flex">
+                        <div class="burger-container">
+                            <span class="menu-burger"></span>
+                        </div>
+                        <span class="menu-title text-uppercase">menu</span>
+                    </div>
+                </div><!-- .actions -->
             </div><!-- .header-inner -->
+            
+            <!-- Mobile Search // Put it outside of header-inner because it wouldn't go onto new row -->
+            <div class="search-sm inner hidden-md hidden-lg hidden-xl hidden-xxl">
+                <form action="#" class="search-form">
+                    <div class="input-container flex">
+                        <input type="text" placeholder="Search..." class="input-field">
+                        <span class="icon-search"></span>
+                    </div>
+                </form>
+            </div>
         </header>
+        
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                                Services                                 -->
+        <!-- ----------------------------------------------------------------------- -->
+        <section id="services" class="services">
+            <!-- ------------------------------- Banner -------------------------------- -->
+            <!-- <div class="banner flex">
+                <!~~ Image ~~>
+                <img src="/assets/images/banner-images/banner-1.jpg" alt="Banner Image" class="img-fluid">
+                <div class="banner-content container">
+                    <!~~ Text Overlay ~~>
+                    <div class="content-info">
+                        <div class="container content-container">
+                            <div class="text">
+                                <h1>Web Design</h1>
+                                
+                                <p>For businesses looking to make a strong <br />
+                                    and effective first impression.</p>
+                                    
+                                <div class="banner-button">
+                                    <a href="#" class="btn btn-web">
+                                        Find Out More
+                                        <span class="icon-arrow-thin-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!~~ .content-info ~~>
+                </div><!~~ .banner-content ~~>
+            </div><!~~ .banner ~~>   -->
+        </section>
+            
     </div>
     
     

@@ -1,0 +1,74 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+
+/* -------------------------------------------------------------------------- */
+/*                               Header Buttons                               */
+/* -------------------------------------------------------------------------- */
+// Search Button for medium +screens
+.search-md .search-btn {
+    position: relative;
+    background-color: $btn-gray;
+    height: 100%;
+    width: 3.938rem; //63px
+    margin: 0 auto;
+    // border: 2px solid rebeccapurple;
+    
+    span {
+        color: white;
+        font-size: 1.5rem; //24px
+    }
+    
+    &:hover {
+        @include btnHover($btn-gray-hover);
+    }
+}
+
+/* ------------------------ Header Buttons for Large Screens ----------------------- */
+.buttons {
+    align-items: center;
+    justify-content: space-around;
+    height: 3.5rem; //56px
+    // border: 3px solid sandybrown;
+    
+    // Style header buttons for large screens buttons
+    a {
+        white-space: nowrap; //makes icon and text on same line
+        align-items: center;
+        margin-right: 1.4rem;
+        padding: 0.313rem 0.938rem; // 5px 15px
+        border-radius: 3px;
+        // border: 3px solid sandybrown;
+        
+        span {
+            color: $white;
+        }
+        
+        .icon {
+            margin-right: 0.313rem; //5px
+            font-size: 1.438rem; //23px
+        }
+        
+        .btn-text {
+            font-size: 1.125rem; //18px
+        }
+    }
+    
+    // Support Button
+    .support-lg {
+        background-color: $btn-blue;
+        &:hover {
+            @include btnHover($btn-blue-hover)
+        }
+    }
+    
+    // Contact button
+    .contact-lg {
+        background-color: $btn-gray;
+        &:hover {
+            @include btnHover($btn-gray-hover)
+        }
+    }
+}
+

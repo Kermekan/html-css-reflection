@@ -11146,11 +11146,15 @@ li {
   border: 0;
 }
 
+span {
+  display: inline-block;
+}
+
 /* Set core root defaults */
 html {
   font-size: 16px;
   line-height: 1.6;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.4px !important;
 }
 
 body {
@@ -11158,7 +11162,6 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -11168,15 +11171,21 @@ ol {
   list-style-type: none;
 }
 
-/* Removes styling from links */
+/* Removes styling from links, buttons and inputs */
 a {
   text-decoration: none;
-  color: #fff;
+  padding: 0;
 }
 a:hover, a:active, a:focus {
-  color: inherit;
   outline: none;
   box-shadow: none !important;
+}
+
+.btn,
+input {
+  padding: 0;
+  margin: 0;
+  outline: none !important;
 }
 
 a:not([class]) {
@@ -11190,16 +11199,22 @@ img {
 }
 
 .full-page {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
   position: relative;
   padding-top: 1.25rem;
+  flex-direction: column;
+  justify-content: start !important;
+  align-items: center;
+  /* For some reason using flexbox pushes some elements out of their parent containers
+   * E.g. the mobile search bar is pushed out of the header, and the header margin 
+   * doesn't include it even though in the html it's part of the header  
+  */
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .full-page {
     padding: 0 0.625rem;
-    padding-top: 1.25rem;
   }
 }
 
@@ -11211,18 +11226,20 @@ img {
   padding: 0 0.938rem;
   /* ------------------------------- Breakpoints ------------------------------ */
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .inner {
     width: 46.875rem;
   }
 }
-@media only screen and (min-width: 993px) and (max-width: 1260px) {
+@media only screen and (min-width: 992px) and (max-width: 1259px) {
   .inner {
     width: 60.625rem;
   }
 }
 
-/* ---------------------------- Responsive Layout --------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                              Responsive Layout                             */
+/* -------------------------------------------------------------------------- */
 .flex {
   display: flex;
   justify-content: center;
@@ -11239,13 +11256,109 @@ img {
   height: 100%;
 }
 
+/* -------------------- Hides Elements based on viewport -------------------- */
+@media (max-width: 575px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .hidden-xl {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hidden-xxl {
+    display: none !important;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Header Buttons                               */
+/* -------------------------------------------------------------------------- */
+.search-md .search-btn {
+  position: relative;
+  background-color: #999aa2;
+  height: 100%;
+  width: 3.938rem;
+  margin: 0 auto;
+}
+.search-md .search-btn span {
+  color: white;
+  font-size: 1.5rem;
+}
+.search-md .search-btn:hover {
+  background-color: #7e808a;
+}
+
+/* ------------------------ Header Buttons for Large Screens ----------------------- */
+.buttons {
+  align-items: center;
+  justify-content: space-around;
+  height: 3.5rem;
+}
+.buttons a {
+  white-space: nowrap;
+  align-items: center;
+  margin-right: 1.4rem;
+  padding: 0.313rem 0.938rem;
+  border-radius: 3px;
+}
+.buttons a span {
+  color: #fff;
+}
+.buttons a .icon {
+  margin-right: 0.313rem;
+  font-size: 1.438rem;
+}
+.buttons a .btn-text {
+  font-size: 1.125rem;
+}
+.buttons .support-lg {
+  background-color: #4183d7;
+}
+.buttons .support-lg:hover {
+  background-color: #286abd;
+}
+.buttons .contact-lg {
+  background-color: #999aa2;
+}
+.buttons .contact-lg:hover {
+  background-color: #7e808a;
+}
+
 header {
+  position: relative;
   width: 100%;
+  margin-bottom: 1.25rem;
+  border: 3px solid purple;
 }
 
 .header-inner {
   position: relative;
-  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 1.25rem;
 }
 
 .logo-container {
@@ -11254,29 +11367,160 @@ header {
   padding: 0;
   margin-right: 1.5rem;
   flex-shrink: 1;
-  border: 3px solid lightblue;
 }
 
-.mobile-container {
+/* ----------------------------- Action Buttons ----------------------------- */
+.actions {
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+  padding: 0.438rem 0.938rem;
+}
+
+.contact-sm {
   display: inline-block;
   width: fit-content;
   padding: 0;
-  border: 2px solid yellowgreen;
 }
-.mobile-container a:hover {
+.contact-sm a:hover {
   text-decoration: underline;
 }
-.mobile-container span {
+.contact-sm span {
   color: #333645;
   font-size: 2rem;
   margin-left: auto;
 }
-.mobile-container span:hover {
-  color: black;
+.contact-sm span:hover {
+  color: #1d1f28;
 }
 
-.actions {
+/* -------------------------------- Menu btn -------------------------------- */
+.menu-btn {
+  position: relative;
+  flex-direction: column;
+  padding: 1.25rem 0.938rem 0.625rem 0.938rem;
+  margin-left: 1.25rem;
+  width: 3.938rem;
+  height: 3.5rem;
+}
+.menu-btn:hover {
+  background-color: #1d1f28;
+}
+.menu-btn .burger-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.menu-btn .burger-container .menu-burger {
   display: inline-block;
+  position: relative;
+  top: -5px;
+  left: 0;
+  background-color: #fff;
+  width: 33px;
+  height: 3px;
+}
+.menu-btn .burger-container .menu-burger::before, .menu-btn .burger-container .menu-burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  width: 33px;
+  height: 3px;
+}
+.menu-btn .burger-container .menu-burger::before {
+  content: "";
+  transform: translateY(-10px);
+}
+.menu-btn .burger-container .menu-burger::after {
+  content: "";
+  transform: translateY(10px);
+}
+.menu-btn .menu-title {
+  font-size: 0.75rem;
+  margin-bottom: 5px;
+}
+
+/* ------------------------------ Mobile Search ----------------------------- */
+.search-form,
+.input-container,
+.input-field {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.search-sm {
+  position: relative;
+  height: 47px;
+}
+.search-sm .input-container {
+  justify-content: flex-end;
+}
+.search-sm .input-container .input-field {
+  padding: 0.313rem 2.5rem 0.313rem 0.938rem;
+  width: 763px !important;
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
+}
+.search-sm .input-container span {
+  position: absolute;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-right: 0.625rem;
+}
+
+/* ------------------------------ Medium Search ----------------------------- */
+.search-md {
+  position: relative;
+  height: 3.5rem;
+}
+.search-md .input-field {
+  width: 10.875rem;
+  border: 1px solid #dee2e6;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
+  padding: 0.313rem 0.938rem;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1259px) {
+  .search-md .input-field {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 1260px) {
+  .search-md .input-field {
+    width: 15rem;
+  }
+}
+
+.services {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  border: 3px solid violet;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+  color: #fff;
+  border: 3px solid indianred;
+}
+.banner img {
+  position: relative;
+  width: 200%;
+  height: 200%;
+  object-fit: cover;
+  border: 3px solid yellowgreen;
+}
+.banner .banner-content {
+  position: absolute;
+  border: 3px solid darkgoldenrod;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */

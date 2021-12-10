@@ -1,19 +1,18 @@
 @use '../custom' as *;
 @use '../utilities/mixins' as *;
 
-
 /* -------------------------------------------------------------------------- */
 /*                                 Breakpoints                                */
 /* -------------------------------------------------------------------------- */
 // Breakpoints Map
 
 $breakpoints: (
-  'xs': 361px,
-  'sm': 577px,
-  'md': 769px,
-  'lg': 993px,
-  'xl': 1201px,
-  'xxl': 1401px,
+  'xxs': 360px,
+  'xs': 576px,
+  'sm': 768px,
+  'md': 992px,
+  'lg': 1200px,
+  'xl': 1400px,
   ) !default;
   
 // ======= Mixin to manage responsive breakpoints
@@ -47,3 +46,4 @@ $breakpoints: (
 // @media only screen and (min-width: 360px) and (max-width: 768px) {
 // 	// do something in this width range.
 // }
+

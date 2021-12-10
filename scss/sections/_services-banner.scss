@@ -1,0 +1,62 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+.services {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    border: 3px solid violet;
+    
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    color: $white;    
+    border: 3px solid indianred;
+    
+    // Shadow effect
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     left: 0;
+    //     right: 0;
+    //     top: 0;
+    //     bottom: 0;
+    //     z-index: 1;
+    //     background: linear-gradient(270deg,transparent 25%,#000);
+    //     -webkit-background: linear-gradient(270deg,transparent 25%,#000);
+    // }
+    
+    // image styling
+    img {
+        position: relative;
+        width: 200%;
+        height: 200%;
+        object-fit: cover;
+        border: 3px solid yellowgreen;
+    }
+    
+    // Text Content
+    .banner-content {
+        position: absolute;
+        border: 3px solid darkgoldenrod;
+        z-index: 2;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
