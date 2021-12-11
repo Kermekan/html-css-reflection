@@ -15,7 +15,7 @@
     
     @include respond-to-up(sm) {
         // Change padding on screens larger than 768px
-        padding: 0 0.625rem; // 0 10px
+        padding-top: 1.25rem;
     }
     
     flex-direction: column;
@@ -28,6 +28,7 @@
     */
 }
 
+// Inner Styling
 .inner {
     position: relative;
     width: 100%;
@@ -50,7 +51,24 @@
     }
 }
 
+// Padding-X Styling for larger screens
+.padding-x {
+    @include respond-to-up(sm) {
+        // Change padding on screens larger than 768px
+        padding: 0 0.625rem; // 0 10px
+    }
+}
 
+//Remove padding from container
+.container {
+    padding: 0;
+}
+
+//Buttons styling
+.btn {
+    border-radius: 3px;
+    @include btnLine;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                              Responsive Layout                             */

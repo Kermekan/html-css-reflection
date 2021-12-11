@@ -29,10 +29,6 @@ li {
   border: 0;
 }
 
-// make span elements inline block
-span {
-  display: inline-block;
-}
 /* Set core root defaults */
 html {
   font-size: 16px;
@@ -42,9 +38,9 @@ html {
 
 // Body Styling
 body {
-   font-family: 'Poppins', sans-serif;
-   position: relative;
-   width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  width: 100vw;
    height: 100vh;
   //  overflow-y: hidden;
    overflow-x: hidden;
@@ -88,3 +84,23 @@ img {
   max-width: 100%;
   display: block;
 }
+
+// Remove list styling
+ul,
+ol,
+li {
+  list-style: none;
+}
+// make span elements inline block
+span {
+  display: inline-block;
+
+}
+
+
+
+
+
+
+
+

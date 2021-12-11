@@ -25,7 +25,6 @@ $breakpoints: (
             @content;
         }        
     }
-    
 }
 
 @mixin respond-to-down($breakpoint) {                    // Viewports lower than target will apply media query

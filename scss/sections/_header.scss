@@ -5,17 +5,21 @@
 header {
     position: relative;
     width: 100%;
-    margin-bottom: 1.25rem; //spacing between banner
+    @include sectionSpacing
+    // flex-direction: column;
     
-    border: 3px solid purple;
+    // border: 3px solid purple;
 }
 
 .header-inner {
     position: relative;
-    // justify-content: space-between;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    margin-bottom: 1.25rem; //18px // Separates mobile search form
+    
+    @include respond-to-down(sm) {
+        margin-bottom: 1.25rem; //18px // Separates mobile search form
+    }
     
     // border: 2px solid wheat;
 }
@@ -25,6 +29,8 @@ header {
     width: fit-content;
     max-width: 25.125rem; //402px
     padding: 0;
+    align-items: start;
+    // flex-direction: column;
     
     //Logo shrinks on small phones instead of taking up whole screen
     margin-right: 1.5rem; //24px
@@ -39,7 +45,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: fit-content;
-    padding: 0.438rem 0.938rem; //7px
+    padding: 0.438rem 0; //7px
     // border: 2px solid firebrick; 
 }
 

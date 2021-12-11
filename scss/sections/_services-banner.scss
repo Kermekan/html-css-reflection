@@ -2,55 +2,193 @@
 @use '../utilities/mixins' as *;
 @use '../utilities/breakpoints' as *;
 
-.services {
+#services {
     width: 100vw;
     height: 100%;
     position: relative;
-    border: 3px solid violet;
-    
+    // margin-left: -20px;
+    // border: 3px solid violet;
 }
 
 .banner {
     position: relative;
-    text-align: center;
     flex-direction: column;
     width: 100%;
-    height: 90%;
-    color: $white;    
-    border: 3px solid indianred;
+    height: 90%; //height of container
+    // border: 3px solid indianred;
+    
+    @include respond-to-down(xs) {
+        height: 100%;
+    }
     
     // Shadow effect
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     left: 0;
-    //     right: 0;
-    //     top: 0;
-    //     bottom: 0;
-    //     z-index: 1;
-    //     background: linear-gradient(270deg,transparent 25%,#000);
-    //     -webkit-background: linear-gradient(270deg,transparent 25%,#000);
-    // }
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        background: linear-gradient(270deg,transparent 25%,#000);
+        -webkit-background: linear-gradient(270deg,transparent 25%,#000);
+    }
+    
+    // Overlay for medium screens and below
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        background:rgba(0, 0, 0, 0.5);
+    }
+    
+    // Overlay for medium and above
+    @include respond-to-up(md) {
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+            background:rgba(0, 0, 0, 0.2);
+        }
+    }
     
     // image styling
     img {
         position: relative;
-        width: 200%;
-        height: 200%;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        border: 3px solid yellowgreen;
-    }
-    
-    // Text Content
-    .banner-content {
-        position: absolute;
-        border: 3px solid darkgoldenrod;
-        z-index: 2;
+        
+        // border: 3px solid yellowgreen;
     }
 }
 
+/* ----------------------------- Services Slider ---------------------------- */
+// Content Container
+.banner-content {
+    position: absolute;
+    justify-content: start !important;
+    z-index: 2; //places image above shadow overlay
+    height: 100%;
+    // border: 2px solid darkgoldenrod;
+}
 
+// Contains description & button
+.banner-info {
+    color: $white !important;    
+    padding: 0 0.625rem; //10px
+    flex-direction: column; //places button under text
+    height: 100%;
+    // border: 2px solid white;
+    
+    //Want to make container fit content only but then "margin: auto 0" doesn't work
+    // height: fit-content; 
+    // margin: auto 0; 
+    
+    // Align content to left above 992px
+    @include respond-to-up(md) {
+        align-items: start;
+    }
+    /* ------------------------------ Text-styling ------------------------------ */
+    .banner-text {
+        display: block;
+        width: fit-content;
+        text-align: center;
+        // border: 3px solid violet;
+        
+        // Breakpoints
+        // increase width above 768px
+        @include respond-to-up (sm) {
+            width: 100%;
+        }
+        
+        // Align text to left above 992px
+        @include respond-to-up(md) {
+            text-align: start;
+        }
+        
+        // Title Styling
+        h1 {
+            font-size: 3rem; //48px
+            font-weight: 400;
+            margin-bottom: 1.563rem; //25px
+        }
+        
+        // Description Styling
+        p {
+            font-size: 1.25rem;
+            line-height: 2.25rem; //36px
+            margin-bottom: 2.188rem; //35px
+        }
+        
+    }
+}
 
+/* ------------------------------ Owl Controls ------------------------------ */
+.owl-controls {
+    position: absolute;
+    bottom: 10%; //controls height of buttons
+    width: 100%;
+    height: fit-content;
+    color: white;
+    padding: 0.625rem 0; //10px
+    // border: 2px solid olive;
+    
+    .owl-nav {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        cursor: pointer;
+        // border: 2px solid darkcyan;
+        
+        // Owl Dots
+        .owl-container {
+            position: relative;
+            margin: 0 0.625rem; // 0 10px
+            height: fit-content;
+            // border: 2px solid darkkhaki;
+            
+            span {
+                position: relative;
+                background-color: $owl;
+                opacity: 0.5;
+                width: 0.688rem; //11px
+                height: 0.688rem;
+                border-radius: 50%;
+                
+                &:hover {
+                    background-color: $owl-hover;
+                }
+            }
+        }
+        
+        // Styling when button is activated
+        .active  span {
+            background-color: $white;
+            opacity: 1;
+            
+            &::after {
+                content: "";
+                position: absolute;
+                top: -6px;
+                left: -6px;
+                width: 1.438rem; //11px
+                height: 1.438rem; //11px
+                border-radius: 50%;
+                border: 2px solid $white;
+            }
+        }
+    }
+    
+}
 
 
 

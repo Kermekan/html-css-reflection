@@ -20,33 +20,42 @@ $primary-hover: darken($primary, 10%);
 
 //SERVICES COLORS
 $web: #926fb1;
+$web-hover: darken($web, 5%);
 $web-darken: darken($web, 10%);
 
-$software: #67809F;
-$software-darken: darken($software, 10%);
-
-$it-support: #4183d7;
-$it-support-darken: darken($it-support, 10%);
-
 $digital: #2ecc71;
+$digital-hover: darken($digital, 5%);
 $digital-darken: darken($digital, 10%);
 
+$software: #67809F;
+$software-hover: darken($software, 5%);
+$software-darken: darken($software, 10%);
+
 $telecoms: #d64541;
+$telecoms-hover: darken($telecoms, 5%);
 $telecoms-darken: darken($telecoms, 10%);
 
 $security: #f62459;
+$security-hover: darken($security, 5%);
 $security-darken: darken($security, 10%);
 
+$it-support: #4183d7;
+$it-support-hover: darken($it-support, 5%);
+$it-support-darken: darken($it-support, 10%);
 
 // Button Colors
+$btn-white: $white;
+$btn-white-hover: darken($white, 10%);
+
 $btn-gray: #999aa2;
 $btn-gray-hover: darken($btn-gray, 10%);
 
 $btn-blue: #4183d7;
 $btn-blue-hover: darken($btn-blue, 10%);
 
-$btn-white: $white;
-$btn-white-hover: darken($white, 10%);
+//Owl Colours
+$owl: rgba(255, 255, 255, 0.5);
+$owl-hover: darken($owl, 20%);
 
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

@@ -26,12 +26,6 @@
     // border-radius: 5px;
 }
 
-// Button Hover
-@mixin btnHover($color) {
-    background-color: $color;
-}
-
-
 // Absolute Center
 @mixin absoluteCenter {
     position: absolute;
@@ -39,6 +33,137 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// Sets space between sections
+@mixin sectionSpacing {
+    margin-bottom: 1.25rem;
+}
+
+
+
+/* ------------------------------ // Menu Hover ----------------------------- */
+@mixin submenuHover($color, $color-darken) {
+    .icon {
+        color: $color;
+    }
+    
+    /* --------------------------- All Elements Hover --------------------------- */
+    &:hover {
+        // background color change
+        background-color: $color;
+        
+        // Icon color change
+        .icon {
+            color: $white;
+        }
+        
+        /* ---------------------------- Sub menu styling ---------------------------- */
+        .sub-menu {
+            color: white;
+            display: block;
+            
+            position: absolute;
+            z-index: 3;
+            left: 0;
+            
+            //Full Width ======
+            &::before,
+            &::after {
+                content: "";
+                background-color: $color-darken;
+                width: 200%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+            }
+
+            // Pushes pseudo element to left side of screen
+            &::after {
+                right: 100%;
+            }
+            
+            // Text Styling
+            .sub-menu-inner {
+                width: fit-content;
+                font-size: 1rem;
+                position: relative;
+                z-index: 3;
+                padding: 0;
+                justify-content: start; //moves text to start of row 
+                // border: 1px solid green;
+                
+                &--text {
+                    position: relative;
+                    // padding: 1rem 0;
+                    // border: 1px solid red;
+                    
+                    // text-styling
+                    a {
+                        font-size: 0.813rem; //13px
+                        line-height: 2.813rem;
+                        padding-left: 0.313rem; //5px adds spacing between seperator and text
+                        
+                        // Breakpoint
+                        @media (min-width: 1260px) {
+                            font-size: 1rem;
+                            font-weight: 400;
+                        }
+                    }
+                    
+                    // Removes left padding from first child
+                    &:first-child a {
+                        padding-left: 0;
+                    }
+                    
+                    // link seperator
+                    &:not(:last-child) a::after {
+                        content: "-";
+                        padding-left: 1.5rem; //24px
+                        
+                        // Breakpoint @ 1260px
+                        @media (min-width: 1260px) {
+                            padding-left: 34px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Buttons                                  */
+/* -------------------------------------------------------------------------- */
+// Button Hover
+@mixin btnHover($color) {
+    background-color: $color;
+}
+
+// Keep Button Contents on single line
+@mixin btnLine {
+    white-space: nowrap; //makes icon and text on same line
+    align-items: center;
+}
+
+// Header Button Padding
+ @mixin btnHeader {
+    padding: 0.313rem 0.938rem; // 5px 15px
+ }
+
+// Banner button Color
+
+@mixin btnColor($color, $color-darken, $color-hover) {
+    background-color: $color;
+    border: 1px solid $color-darken;
+    
+    &:hover {
+        background-color: $color-hover;
+    } 
+}
+
+
+
+
 
 
 

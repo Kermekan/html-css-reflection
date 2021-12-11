@@ -23,9 +23,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="full-page flex">
-        <!-- ------------------------------- Header -------------------------------- -->
-        <header id="header" class="header">
+    <div class="full-page">
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                                 Header                                  -->
+        <!-- ----------------------------------------------------------------------- -->
+        <header id="header" class="header padding-x">
             <div class="header-inner inner flex">
                 <!-- Logo -->
                 <div class="logo-container flex">
@@ -75,7 +77,6 @@
                     </div>
                 </div><!-- .actions -->
             </div><!-- .header-inner -->
-            
             <!-- Mobile Search // Put it outside of header-inner because it wouldn't go onto new row -->
             <div class="search-sm inner hidden-md hidden-lg hidden-xl hidden-xxl">
                 <form action="#" class="search-form">
@@ -85,37 +86,200 @@
                     </div>
                 </form>
             </div>
-        </header>
-        
+        </header> 
+        <!-- ------------------------ Main Navigation ------------------------ -->
+        <nav class="main-nav hidden-xs hidden-sm hidden-md">
+            <div class="main-nav-inner inner">
+                <!-- Menu Items -->
+                <ul class="nav-container flex">
+                    <!--========== Web ==========-->
+                    <li class="nav-item web">
+                        <a href="" class="flex text-uppercase">
+                            <!-- Icon -->
+                            <span class="icon icon-code"></span>
+                            <!-- Text -->
+                            <span class="small-text text-uppercase">web</span>
+                            design
+                        </a>
+                        <!-- Hover Menu -->
+                        <ul class="sub-menu">
+                            <div class="sub-menu-inner inner flex">
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Stylish Websites</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Ecommerce Stores</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Branding</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Apps</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Web Hosting</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Pay monthly Websites</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                    <!--========== It Support ==========-->
+                    <li class="nav-item it-support">
+                        <a href="" class="flex text-uppercase">
+                            <!-- Icon -->
+                            <span class="icon icon-display"></span>
+                            <!-- Text -->
+                            <span class="small-text text-uppercase">it</span>
+                            support
+                        </a>
+                        <!-- Hover Menu -->
+                        <ul class="sub-menu">
+                            <div class="sub-menu-inner inner flex">
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Managed IT</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Business IT</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Office 365</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Consultancy</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Cloud Provider</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Data Backup</a></li>
+                            </div>
+                        </ul>
+                    </li> 
+                    <!--========== Telecoms ==========-->
+                    <li class="nav-item telecoms">
+                        <a href="" class="flex text-uppercase">
+                            <!-- Icon -->
+                            <span class="icon icon-phone_in_talk"></span>
+                            <!-- Text -->
+                            <span class="small-text text-uppercase">telecoms</span>
+                            services
+                        </a>
+                        <!-- Hover Menu -->
+                        <ul class="sub-menu">
+                            <div class="sub-menu-inner inner flex">
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Business Mobile</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Hosted VOIP</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Business Broadband</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Leased Line</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">3CX Systems</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Data Backup</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                    <!--========== Software ==========-->
+                    <li class="nav-item software">
+                        <a href="" class="flex text-uppercase">
+                            <!-- Icon -->
+                            <span class="icon icon-apps"></span>
+                            <!-- Text -->
+                            <span class="small-text text-uppercase">bespoke</span>
+                            software
+                        </a>
+                        <!-- Hover Menu -->
+                        <ul class="sub-menu">
+                            <div class="sub-menu-inner inner flex">
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Worflow</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Automation</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Integration</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Database</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Sharepoint</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Management</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Navision</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                    <!--========== Digital ==========-->
+                    <li class="nav-item digital">
+                        <a href="" class="flex text-uppercase">
+                            <!-- Icon -->
+                            <span class="icon icon-bars"></span>
+                            <!-- Text -->
+                            <span class="small-text text-uppercase">digital</span>
+                            marketing
+                        </a>
+                        <!-- Hover Menu -->
+                        <ul class="sub-menu">
+                            <div class="sub-menu-inner inner flex">
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Search (SEO)</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Paid (PPC)</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Conversion(CRO)</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Email</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Social Media</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Content</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                    <!--========== Security ==========-->
+                    <li class="nav-item security">
+                        <a href="" class="flex text-uppercase">
+                            <!-- Icon -->
+                            <span class="icon icon-security"></span>
+                            <!-- Text -->
+                            <span class="small-text text-uppercase">cyber</span>
+                            security
+                        </a>
+                        <!-- Hover Menu -->
+                        <ul class="sub-menu">
+                            <div class="sub-menu-inner inner flex">
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Assessment</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Management</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Penetration Testing</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Cyber Essentials</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">PCI/DSS</a></li>
+                                <li class="sub-menu-inner--text text-uppercase"><a href="">Hacker Prevention</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <!-- ----------------------------------------------------------------------- -->
         <!--                                Services                                 -->
         <!-- ----------------------------------------------------------------------- -->
         <section id="services" class="services">
             <!-- ------------------------------- Banner -------------------------------- -->
-            <!-- <div class="banner flex">
-                <!~~ Image ~~>
+            <div class="banner flex">
+                <!-- Image -->
                 <img src="/assets/images/banner-images/banner-1.jpg" alt="Banner Image" class="img-fluid">
-                <div class="banner-content container">
-                    <!~~ Text Overlay ~~>
-                    <div class="content-info">
-                        <div class="container content-container">
-                            <div class="text">
-                                <h1>Web Design</h1>
-                                
-                                <p>For businesses looking to make a strong <br />
-                                    and effective first impression.</p>
-                                    
-                                <div class="banner-button">
-                                    <a href="#" class="btn btn-web">
-                                        Find Out More
-                                        <span class="icon-arrow-thin-right"></span>
-                                    </a>
-                                </div>
+                <!-- Banner Content -->
+                <div class="banner-content inner container">
+                    <!-- Image Description -->
+                    <div class="banner-info flex">
+                        <div class="banner-text">
+                            <h1 class="text-uppercase">Web Design</h1>
+                            <p>
+                                For businesses looking to make a strong <br />
+                                and effective first impression.
+                            </p>
+                        </div>
+                        <!-- Button -->
+                        <div class="btn banner-btn">
+                            <a href="#" class="text-center flex">
+                                Find Out More
+                                <span class="icon-arrow-thin-right"></span>
+                            </a>
+                        </div>
+                    </div><!-- .banner-info -->
+                    <!-- Owl Controls -->
+                    <div class="owl-controls flex">
+                        <div class="owl-nav flex">
+                            <!-- Owl dots -->
+                            <div class="owl-container active">
+                                <span></span>
+                            </div>
+                            <!-- Owl dots -->
+                            <div class="owl-container">
+                                <span></span>
+                            </div>
+                            <!-- Owl dots -->
+                            <div class="owl-container">
+                                <span></span>
+                            </div>
+                            <!-- Owl dots -->
+                            <div class="owl-container">
+                                <span></span>
+                            </div>
+                            <!-- Owl dots -->
+                            <div class="owl-container">
+                                <span></span>
+                            </div>
+                            <!-- Owl dots -->
+                            <div class="owl-container">
+                                <span></span>
                             </div>
                         </div>
-                    </div><!~~ .content-info ~~>
-                </div><!~~ .banner-content ~~>
-            </div><!~~ .banner ~~>   -->
+                    </div><!-- .owl-controls -->
+                </div><!-- .banner-content -->
+            </div><!-- .banner --> 
         </section>
             
     </div>

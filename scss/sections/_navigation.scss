@@ -1,0 +1,94 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+// Nav Container
+.main-nav {
+    position: relative;
+    display: block;
+    height: fit-content;
+    background-color: $primary;
+}
+
+// Nav inner 
+.main-nav-inner {
+    position: relative;
+    // border: 1px solid white;
+}
+
+/* -------------------------------- Nav items ------------------------------- */
+.nav-container {
+    position: relative;
+    justify-content: start;
+    padding: 0;
+    // border: 1px solid yellow;
+    
+    
+    // Nav Item styling
+    .nav-item {
+        // position: relative;
+        flex: 1;
+        // Nav Border Styling
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 1px solid rgba(0, 0, 0, 0.25);
+        
+        
+        .nav-container {
+            padding: 0;
+        }
+        // Styling of all the links
+        a {
+            position: relative;
+            color: $white;
+            flex-direction: column;
+            padding: 1.125rem; // 18px
+            font-size: 1.125rem;
+            line-height: 1;
+            // border: 1px solid purple;
+            
+            // Icon Padding
+            .icon {
+                font-size: 1.5rem; //24px
+                padding-bottom: 0.625rem; //10px
+            }
+            
+            // Top text styling
+            .small-text {
+                font-size: 0.625rem;
+                padding-bottom: 2px;
+            }
+        }
+        
+        //Hide Sub-menu for hover
+        .sub-menu {
+            display: none;
+        }
+    }
+}
+
+/* ----------------------------- Nav Item Colors ---------------------------- */
+.web {
+    @include submenuHover($web, $web-darken);
+}
+
+.it-support {
+    @include submenuHover($it-support, $it-support-darken);
+}
+
+.telecoms {
+    @include submenuHover($telecoms, $telecoms-darken);
+}
+
+.software {
+    @include submenuHover($software, $software-darken);
+}
+
+.digital {
+    @include submenuHover($digital, $digital-darken);
+}
+
+.security {
+    @include submenuHover($security, $security-darken);
+}
+
+

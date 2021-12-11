@@ -11119,6 +11119,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* ------------------------------ // Menu Hover ----------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   Buttons                                  */
+/* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 /*                                 Breakpoints                                */
 /* -------------------------------------------------------------------------- */
@@ -11144,10 +11148,6 @@ li {
   margin: 0;
   padding: 0;
   border: 0;
-}
-
-span {
-  display: inline-block;
 }
 
 /* Set core root defaults */
@@ -11198,6 +11198,16 @@ img {
   display: block;
 }
 
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+span {
+  display: inline-block;
+}
+
 .full-page {
   width: 100vw;
   height: 100vh;
@@ -11214,7 +11224,7 @@ img {
 }
 @media (min-width: 768px) {
   .full-page {
-    padding: 0 0.625rem;
+    padding-top: 1.25rem;
   }
 }
 
@@ -11235,6 +11245,22 @@ img {
   .inner {
     width: 60.625rem;
   }
+}
+
+@media (min-width: 768px) {
+  .padding-x {
+    padding: 0 0.625rem;
+  }
+}
+
+.container {
+  padding: 0;
+}
+
+.btn {
+  border-radius: 3px;
+  white-space: nowrap;
+  align-items: center;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -11318,11 +11344,8 @@ img {
   height: 3.5rem;
 }
 .buttons a {
-  white-space: nowrap;
-  align-items: center;
   margin-right: 1.4rem;
   padding: 0.313rem 0.938rem;
-  border-radius: 3px;
 }
 .buttons a span {
   color: #fff;
@@ -11347,24 +11370,47 @@ img {
   background-color: #7e808a;
 }
 
+/* -------------------------- Banner Button Styling ------------------------- */
+.banner-btn {
+  background-color: #926fb1;
+  border: 1px solid #79539a;
+}
+.banner-btn:hover {
+  background-color: #855ea8;
+}
+.banner-btn a {
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 0.313rem 1.25rem;
+  line-height: 3.125rem;
+}
+.banner-btn a span {
+  margin-left: 12px;
+}
+
 header {
   position: relative;
   width: 100%;
   margin-bottom: 1.25rem;
-  border: 3px solid purple;
 }
 
 .header-inner {
   position: relative;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  margin-bottom: 1.25rem;
+}
+@media (max-width: 768px) {
+  .header-inner {
+    margin-bottom: 1.25rem;
+  }
 }
 
 .logo-container {
   width: fit-content;
   max-width: 25.125rem;
   padding: 0;
+  align-items: start;
   margin-right: 1.5rem;
   flex-shrink: 1;
 }
@@ -11374,7 +11420,7 @@ header {
   align-items: center;
   justify-content: space-between;
   height: fit-content;
-  padding: 0.438rem 0.938rem;
+  padding: 0.438rem 0;
 }
 
 .contact-sm {
@@ -11494,33 +11540,595 @@ header {
   }
 }
 
-.services {
+.main-nav {
+  position: relative;
+  display: block;
+  height: fit-content;
+  background-color: #333645;
+}
+
+.main-nav-inner {
+  position: relative;
+}
+
+/* -------------------------------- Nav items ------------------------------- */
+.nav-container {
+  position: relative;
+  justify-content: start;
+  padding: 0;
+}
+.nav-container .nav-item {
+  flex: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+.nav-container .nav-item .nav-container {
+  padding: 0;
+}
+.nav-container .nav-item a {
+  position: relative;
+  color: #fff;
+  flex-direction: column;
+  padding: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 1;
+}
+.nav-container .nav-item a .icon {
+  font-size: 1.5rem;
+  padding-bottom: 0.625rem;
+}
+.nav-container .nav-item a .small-text {
+  font-size: 0.625rem;
+  padding-bottom: 2px;
+}
+.nav-container .nav-item .sub-menu {
+  display: none;
+}
+
+/* ----------------------------- Nav Item Colors ---------------------------- */
+.web {
+  /* --------------------------- All Elements Hover --------------------------- */
+}
+.web .icon {
+  color: #926fb1;
+}
+.web:hover {
+  background-color: #926fb1;
+  /* ---------------------------- Sub menu styling ---------------------------- */
+}
+.web:hover .icon {
+  color: #fff;
+}
+.web:hover .sub-menu {
+  color: white;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+}
+.web:hover .sub-menu::before, .web:hover .sub-menu::after {
+  content: "";
+  background-color: #79539a;
+  width: 200%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.web:hover .sub-menu::after {
+  right: 100%;
+}
+.web:hover .sub-menu .sub-menu-inner {
+  width: fit-content;
+  font-size: 1rem;
+  position: relative;
+  z-index: 3;
+  padding: 0;
+  justify-content: start;
+}
+.web:hover .sub-menu .sub-menu-inner--text {
+  position: relative;
+}
+.web:hover .sub-menu .sub-menu-inner--text a {
+  font-size: 0.813rem;
+  line-height: 2.813rem;
+  padding-left: 0.313rem;
+}
+@media (min-width: 1260px) {
+  .web:hover .sub-menu .sub-menu-inner--text a {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+.web:hover .sub-menu .sub-menu-inner--text:first-child a {
+  padding-left: 0;
+}
+.web:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
+  content: "-";
+  padding-left: 1.5rem;
+}
+@media (min-width: 1260px) {
+  .web:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
+    padding-left: 34px;
+  }
+}
+
+.it-support {
+  /* --------------------------- All Elements Hover --------------------------- */
+}
+.it-support .icon {
+  color: #4183d7;
+}
+.it-support:hover {
+  background-color: #4183d7;
+  /* ---------------------------- Sub menu styling ---------------------------- */
+}
+.it-support:hover .icon {
+  color: #fff;
+}
+.it-support:hover .sub-menu {
+  color: white;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+}
+.it-support:hover .sub-menu::before, .it-support:hover .sub-menu::after {
+  content: "";
+  background-color: #286abd;
+  width: 200%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.it-support:hover .sub-menu::after {
+  right: 100%;
+}
+.it-support:hover .sub-menu .sub-menu-inner {
+  width: fit-content;
+  font-size: 1rem;
+  position: relative;
+  z-index: 3;
+  padding: 0;
+  justify-content: start;
+}
+.it-support:hover .sub-menu .sub-menu-inner--text {
+  position: relative;
+}
+.it-support:hover .sub-menu .sub-menu-inner--text a {
+  font-size: 0.813rem;
+  line-height: 2.813rem;
+  padding-left: 0.313rem;
+}
+@media (min-width: 1260px) {
+  .it-support:hover .sub-menu .sub-menu-inner--text a {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+.it-support:hover .sub-menu .sub-menu-inner--text:first-child a {
+  padding-left: 0;
+}
+.it-support:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
+  content: "-";
+  padding-left: 1.5rem;
+}
+@media (min-width: 1260px) {
+  .it-support:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
+    padding-left: 34px;
+  }
+}
+
+.telecoms {
+  /* --------------------------- All Elements Hover --------------------------- */
+}
+.telecoms .icon {
+  color: #d64541;
+}
+.telecoms:hover {
+  background-color: #d64541;
+  /* ---------------------------- Sub menu styling ---------------------------- */
+}
+.telecoms:hover .icon {
+  color: #fff;
+}
+.telecoms:hover .sub-menu {
+  color: white;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+}
+.telecoms:hover .sub-menu::before, .telecoms:hover .sub-menu::after {
+  content: "";
+  background-color: #bc2c28;
+  width: 200%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.telecoms:hover .sub-menu::after {
+  right: 100%;
+}
+.telecoms:hover .sub-menu .sub-menu-inner {
+  width: fit-content;
+  font-size: 1rem;
+  position: relative;
+  z-index: 3;
+  padding: 0;
+  justify-content: start;
+}
+.telecoms:hover .sub-menu .sub-menu-inner--text {
+  position: relative;
+}
+.telecoms:hover .sub-menu .sub-menu-inner--text a {
+  font-size: 0.813rem;
+  line-height: 2.813rem;
+  padding-left: 0.313rem;
+}
+@media (min-width: 1260px) {
+  .telecoms:hover .sub-menu .sub-menu-inner--text a {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+.telecoms:hover .sub-menu .sub-menu-inner--text:first-child a {
+  padding-left: 0;
+}
+.telecoms:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
+  content: "-";
+  padding-left: 1.5rem;
+}
+@media (min-width: 1260px) {
+  .telecoms:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
+    padding-left: 34px;
+  }
+}
+
+.software {
+  /* --------------------------- All Elements Hover --------------------------- */
+}
+.software .icon {
+  color: #67809F;
+}
+.software:hover {
+  background-color: #67809F;
+  /* ---------------------------- Sub menu styling ---------------------------- */
+}
+.software:hover .icon {
+  color: #fff;
+}
+.software:hover .sub-menu {
+  color: white;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+}
+.software:hover .sub-menu::before, .software:hover .sub-menu::after {
+  content: "";
+  background-color: #526781;
+  width: 200%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.software:hover .sub-menu::after {
+  right: 100%;
+}
+.software:hover .sub-menu .sub-menu-inner {
+  width: fit-content;
+  font-size: 1rem;
+  position: relative;
+  z-index: 3;
+  padding: 0;
+  justify-content: start;
+}
+.software:hover .sub-menu .sub-menu-inner--text {
+  position: relative;
+}
+.software:hover .sub-menu .sub-menu-inner--text a {
+  font-size: 0.813rem;
+  line-height: 2.813rem;
+  padding-left: 0.313rem;
+}
+@media (min-width: 1260px) {
+  .software:hover .sub-menu .sub-menu-inner--text a {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+.software:hover .sub-menu .sub-menu-inner--text:first-child a {
+  padding-left: 0;
+}
+.software:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
+  content: "-";
+  padding-left: 1.5rem;
+}
+@media (min-width: 1260px) {
+  .software:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
+    padding-left: 34px;
+  }
+}
+
+.digital {
+  /* --------------------------- All Elements Hover --------------------------- */
+}
+.digital .icon {
+  color: #2ecc71;
+}
+.digital:hover {
+  background-color: #2ecc71;
+  /* ---------------------------- Sub menu styling ---------------------------- */
+}
+.digital:hover .icon {
+  color: #fff;
+}
+.digital:hover .sub-menu {
+  color: white;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+}
+.digital:hover .sub-menu::before, .digital:hover .sub-menu::after {
+  content: "";
+  background-color: #25a25a;
+  width: 200%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.digital:hover .sub-menu::after {
+  right: 100%;
+}
+.digital:hover .sub-menu .sub-menu-inner {
+  width: fit-content;
+  font-size: 1rem;
+  position: relative;
+  z-index: 3;
+  padding: 0;
+  justify-content: start;
+}
+.digital:hover .sub-menu .sub-menu-inner--text {
+  position: relative;
+}
+.digital:hover .sub-menu .sub-menu-inner--text a {
+  font-size: 0.813rem;
+  line-height: 2.813rem;
+  padding-left: 0.313rem;
+}
+@media (min-width: 1260px) {
+  .digital:hover .sub-menu .sub-menu-inner--text a {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+.digital:hover .sub-menu .sub-menu-inner--text:first-child a {
+  padding-left: 0;
+}
+.digital:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
+  content: "-";
+  padding-left: 1.5rem;
+}
+@media (min-width: 1260px) {
+  .digital:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
+    padding-left: 34px;
+  }
+}
+
+.security {
+  /* --------------------------- All Elements Hover --------------------------- */
+}
+.security .icon {
+  color: #f62459;
+}
+.security:hover {
+  background-color: #f62459;
+  /* ---------------------------- Sub menu styling ---------------------------- */
+}
+.security:hover .icon {
+  color: #fff;
+}
+.security:hover .sub-menu {
+  color: white;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+}
+.security:hover .sub-menu::before, .security:hover .sub-menu::after {
+  content: "";
+  background-color: #de093f;
+  width: 200%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.security:hover .sub-menu::after {
+  right: 100%;
+}
+.security:hover .sub-menu .sub-menu-inner {
+  width: fit-content;
+  font-size: 1rem;
+  position: relative;
+  z-index: 3;
+  padding: 0;
+  justify-content: start;
+}
+.security:hover .sub-menu .sub-menu-inner--text {
+  position: relative;
+}
+.security:hover .sub-menu .sub-menu-inner--text a {
+  font-size: 0.813rem;
+  line-height: 2.813rem;
+  padding-left: 0.313rem;
+}
+@media (min-width: 1260px) {
+  .security:hover .sub-menu .sub-menu-inner--text a {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+.security:hover .sub-menu .sub-menu-inner--text:first-child a {
+  padding-left: 0;
+}
+.security:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
+  content: "-";
+  padding-left: 1.5rem;
+}
+@media (min-width: 1260px) {
+  .security:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
+    padding-left: 34px;
+  }
+}
+
+#services {
   width: 100vw;
   height: 100%;
   position: relative;
-  border: 3px solid violet;
 }
 
 .banner {
   position: relative;
-  text-align: center;
   flex-direction: column;
   width: 100%;
   height: 90%;
-  color: #fff;
-  border: 3px solid indianred;
+}
+@media (max-width: 576px) {
+  .banner {
+    height: 100%;
+  }
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background: linear-gradient(270deg, transparent 25%, #000);
+  -webkit-background: linear-gradient(270deg, transparent 25%, #000);
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 992px) {
+  .banner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
 .banner img {
   position: relative;
-  width: 200%;
-  height: 200%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 3px solid yellowgreen;
 }
-.banner .banner-content {
+
+/* ----------------------------- Services Slider ---------------------------- */
+.banner-content {
   position: absolute;
-  border: 3px solid darkgoldenrod;
+  justify-content: start !important;
   z-index: 2;
+  height: 100%;
+}
+
+.banner-info {
+  color: #fff !important;
+  padding: 0 0.625rem;
+  flex-direction: column;
+  height: 100%;
+  /* ------------------------------ Text-styling ------------------------------ */
+}
+@media (min-width: 992px) {
+  .banner-info {
+    align-items: start;
+  }
+}
+.banner-info .banner-text {
+  display: block;
+  width: fit-content;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .banner-info .banner-text {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .banner-info .banner-text {
+    text-align: start;
+  }
+}
+.banner-info .banner-text h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1.563rem;
+}
+.banner-info .banner-text p {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  margin-bottom: 2.188rem;
+}
+
+/* ------------------------------ Owl Controls ------------------------------ */
+.owl-controls {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  height: fit-content;
+  color: white;
+  padding: 0.625rem 0;
+}
+.owl-controls .owl-nav {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+.owl-controls .owl-nav .owl-container {
+  position: relative;
+  margin: 0 0.625rem;
+  height: fit-content;
+}
+.owl-controls .owl-nav .owl-container span {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
+  width: 0.688rem;
+  height: 0.688rem;
+  border-radius: 50%;
+}
+.owl-controls .owl-nav .owl-container span:hover {
+  background-color: rgba(204, 204, 204, 0.5);
+}
+.owl-controls .owl-nav .active span {
+  background-color: #fff;
+  opacity: 1;
+}
+.owl-controls .owl-nav .active span::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 1.438rem;
+  height: 1.438rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

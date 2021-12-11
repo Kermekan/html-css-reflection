@@ -32,14 +32,11 @@
     height: 3.5rem; //56px
     // border: 3px solid sandybrown;
     
-    // Style header buttons for large screens buttons
+    // Style both header buttons for large screens buttons
     a {
-        white-space: nowrap; //makes icon and text on same line
-        align-items: center;
         margin-right: 1.4rem;
-        padding: 0.313rem 0.938rem; // 5px 15px
-        border-radius: 3px;
-        // border: 3px solid sandybrown;
+        @include btnHeader;
+        // border: 3px solid fuchsia;
         
         span {
             color: $white;
@@ -68,6 +65,24 @@
         background-color: $btn-gray;
         &:hover {
             @include btnHover($btn-gray-hover)
+        }
+    }
+}
+
+
+/* -------------------------- Banner Button Styling ------------------------- */
+.banner-btn {
+    @include btnColor($web, $web-darken, $web-hover);
+    
+    a {
+        color: $white;
+        font-size: 1.25rem;
+        
+        padding: 0.313rem 1.25rem; //5px 20px
+        line-height: 3.125rem; //50px
+        
+        span {
+            margin-left: 12px;
         }
     }
 }
