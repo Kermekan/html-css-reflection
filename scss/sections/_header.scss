@@ -5,8 +5,10 @@
 header {
     position: relative;
     width: 100%;
-    @include sectionSpacing
-    // flex-direction: column;
+    
+    @include respond-to-down(sm) {
+        @include headerSpacing;        // Separates mobile search from banner
+    }
     
     // border: 3px solid purple;
 }
@@ -16,28 +18,28 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
+    @include headerSpacing;
     
-    @include respond-to-down(sm) {
-        margin-bottom: 1.25rem; //18px // Separates mobile search form
+    @include respond-to-up(sm) {
+        @include headerSpacing;        // Separates mobile search from header-inner
     }
     
     // border: 2px solid wheat;
 }
 
-// Logo Styling
+/* ------------------------------ Logo Styling ------------------------------ */
 .logo-container {
     width: fit-content;
+    justify-content: start;
     max-width: 25.125rem; //402px
     padding: 0;
     align-items: start;
-    // flex-direction: column;
     
     //Logo shrinks on small phones instead of taking up whole screen
     margin-right: 1.5rem; //24px
     flex-shrink: 1;
     
     // border: 3px solid lightblue;
-    
 }
 
 /* ----------------------------- Action Buttons ----------------------------- */
@@ -45,7 +47,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: fit-content;
-    padding: 0.438rem 0; //7px
+    padding: 0.438rem 0; //7px 0
     // border: 2px solid firebrick; 
 }
 
@@ -64,9 +66,9 @@ header {
     }
     
     // Icon Styling
-    span {
+    .icon {
         color: $primary;
-        font-size: 2rem; //32px
+        font-size: 2rem !important; //32px
         margin-left: auto;
         // border: 2px solid darkcyan; 
         
@@ -80,12 +82,11 @@ header {
 .menu-btn {
     position: relative;
     flex-direction: column;
-    padding: 1.25rem 0.938rem 0.625rem 0.938rem; //20px 15px 10px 15px
+    flex-wrap: nowrap;
+    padding: 1.563rem 0.938rem 0.625rem 0.938rem; //25px 15px 10px 15px
     margin-left: 1.25rem; //20px  
     width: 3.938rem; //63px
-    height: 3.5rem; //56px
-    // @include transitionSpeed;
-    
+    height: 3.5rem; //56px    
     &:hover {
         @include btnHover($primary-hover);
     }
@@ -128,6 +129,7 @@ header {
     // Title
     .menu-title {
         font-size: 0.75rem; //12px
+        display: block;
         margin-bottom: 5px;
     }
 }

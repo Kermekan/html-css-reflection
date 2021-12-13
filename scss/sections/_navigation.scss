@@ -1,6 +1,7 @@
 @use '../custom' as *;
 @use '../utilities/mixins' as *;
 @use '../utilities/breakpoints' as *;
+@use '../components/sub-menu-hover' as *;
 
 // Nav Container
 .main-nav {
@@ -48,7 +49,6 @@
             
             // Icon Padding
             .icon {
-                font-size: 1.5rem; //24px
                 padding-bottom: 0.625rem; //10px
             }
             

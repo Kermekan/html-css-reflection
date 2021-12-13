@@ -1,5 +1,4 @@
 @use '../custom' as *;
-// @use '../utilities/breakpoints' as *;
 
 // Full Size
 @mixin fullSize {
@@ -19,6 +18,7 @@
     transition: all .5s ease-in-out;
 }
 
+//Burger lines
 @mixin burger {
     background-color: $white;
     width: 33px;
@@ -34,106 +34,37 @@
     transform: translate(-50%, -50%);
 }
 
-// Sets space between sections
+// Spacing between Sections
 @mixin sectionSpacing {
-    margin-bottom: 1.25rem;
+    padding: 3.125rem 0;  //50px    
 }
 
+// Sets space between sections
+@mixin headerSpacing {
+    margin-bottom: 1.25rem; //20px
+}
 
-
-/* ------------------------------ // Menu Hover ----------------------------- */
-@mixin submenuHover($color, $color-darken) {
-    .icon {
-        color: $color;
-    }
+// line for services cards
+@mixin servicesLine {
     
-    /* --------------------------- All Elements Hover --------------------------- */
-    &:hover {
-        // background color change
-        background-color: $color;
-        
-        // Icon color change
-        .icon {
-            color: $white;
-        }
-        
-        /* ---------------------------- Sub menu styling ---------------------------- */
-        .sub-menu {
-            color: white;
-            display: block;
-            
-            position: absolute;
-            z-index: 3;
-            left: 0;
-            
-            //Full Width ======
-            &::before,
-            &::after {
-                content: "";
-                background-color: $color-darken;
-                width: 200%;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-            }
-
-            // Pushes pseudo element to left side of screen
-            &::after {
-                right: 100%;
-            }
-            
-            // Text Styling
-            .sub-menu-inner {
-                width: fit-content;
-                font-size: 1rem;
-                position: relative;
-                z-index: 3;
-                padding: 0;
-                justify-content: start; //moves text to start of row 
-                // border: 1px solid green;
-                
-                &--text {
-                    position: relative;
-                    // padding: 1rem 0;
-                    // border: 1px solid red;
-                    
-                    // text-styling
-                    a {
-                        font-size: 0.813rem; //13px
-                        line-height: 2.813rem;
-                        padding-left: 0.313rem; //5px adds spacing between seperator and text
-                        
-                        // Breakpoint
-                        @media (min-width: 1260px) {
-                            font-size: 1rem;
-                            font-weight: 400;
-                        }
-                    }
-                    
-                    // Removes left padding from first child
-                    &:first-child a {
-                        padding-left: 0;
-                    }
-                    
-                    // link seperator
-                    &:not(:last-child) a::after {
-                        content: "-";
-                        padding-left: 1.5rem; //24px
-                        
-                        // Breakpoint @ 1260px
-                        @media (min-width: 1260px) {
-                            padding-left: 34px;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    &::after {
+        content: "";
+        width: 1.75rem; //28px
+        height: 0.188rem; //3px
+        display: block;
+        margin: 1.125rem auto 0 auto;
+        background-color: $primary;
+   }
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                   Buttons                                  */
-/* -------------------------------------------------------------------------- */
+// Circle
+@mixin circle {
+    width: 3.75rem; // 60px
+    height: 3.75rem;
+    border-radius: 50%;
+}
+
+/* --------------------------------- Buttons -------------------------------- */
 // Button Hover
 @mixin btnHover($color) {
     background-color: $color;
@@ -160,7 +91,6 @@
         background-color: $color-hover;
     } 
 }
-
 
 
 

@@ -11445,6 +11445,7 @@ header {
 /* ------------------------------ Logo Styling ------------------------------ */
 .logo-container {
   width: fit-content;
+  justify-content: start;
   max-width: 25.125rem;
   padding: 0;
   align-items: start;
@@ -12015,17 +12016,16 @@ header {
 }
 
 #services {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   position: relative;
-  border: 3px solid violet;
 }
 
 .banner {
   position: relative;
   flex-direction: column;
   width: 100%;
-  height: fit-content;
+  height: 100%;
 }
 @media (max-width: 576px) {
   .banner {
@@ -12082,6 +12082,7 @@ header {
 
 .banner-info {
   color: #fff !important;
+  padding: 0 0.625rem;
   flex-direction: column;
   height: 100%;
   /* ------------------------------ Text-styling ------------------------------ */
@@ -12610,7 +12611,7 @@ header {
 
 @media (min-width: 768px) {
   .card-sm {
-    flex-basis: 47%;
+    flex-basis: 47.5%;
     display: flex;
     flex-direction: column;
   }

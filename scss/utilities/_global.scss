@@ -28,6 +28,12 @@
     */
 }
 
+
+    
+#main {
+    // @include fullSize;
+}
+
 // Inner Styling
 .inner {
     position: relative;
@@ -42,41 +48,58 @@
     /* ------------------------------- Breakpoints ------------------------------ */
     // width=750px from 768px to 992px viewport
     @media only screen and (min-width: 768px) and (max-width: 991px) {
-        width: 46.875rem; //750px
+        max-width: 46.875rem; //750px
     }
     
     // width=970px from 993px to 1260px viewport
     @media only screen and (min-width: 992px) and (max-width: 1259px) {
-        width: 60.625rem; //970px
+        max-width: 60.625rem; //970px
     }
 }
 
-// Padding-X Styling for larger screens
-.padding-x {
-    @include respond-to-up(sm) {
-        // Change padding on screens larger than 768px
-        padding: 0 0.625rem; // 0 10px
-    }
-}
+// //Remove padding from container
+// .container {
+//     padding: 0;
+// }
 
-//Remove padding from container
-.container {
+// Remove padding from rows and wrappers
+.row, .card-wrapper {
     padding: 0;
+    margin: 0;
 }
 
-//Buttons styling
+
+.row {
+    margin: 0;
+}
+
+// Icon font
+.icon {
+    font-size: 1.438rem; //23px
+}
+
+// generic buttons styling
 .btn {
     border-radius: 3px;
     @include btnLine;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                              Responsive Layout                             */
-/* -------------------------------------------------------------------------- */
+// All Card Styling
+.card {
+    background-color: white;
+    color: $primary;
+    border-radius: 3px;
+    border: 1px solid $gray-300;
+    box-shadow: 0 3px 2.188rem rgba(0,0,0,0.1); // horizontal vertical blur color // 35px blur
+    padding: 1.875rem; //30px
+}
+
+/* ---------------------------- Responsive layout --------------------------- */
 .flex {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     height: 100%;
 }
 
@@ -88,6 +111,10 @@
     align-items: center;
     height: 100%;
 }
+
+
+
+
 
 /* -------------------- Hides Elements based on viewport -------------------- */
 

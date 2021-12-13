@@ -9,8 +9,13 @@
 
 //Components
 @use 'components/buttons';
+@use 'components/sub-menu-hover';
+@use 'components/service-cards-hover';
+@use 'components/typography';
 
 //Sections
 @use 'sections/header';
 @use 'sections/navigation';
 @use 'sections/services-banner';
+@use 'sections/services-cards';
+@use 'sections/about';
