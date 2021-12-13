@@ -1,0 +1,94 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+
+/* ------------------------------ Service cards ----------------------------- */
+.card-container {
+    // position: relative;
+    width: 100%;
+    padding: 0;
+    flex-basis: 100%;
+    // margin-bottom: 1.875rem; //separates cards   
+    // Inside of the card
+    .card-inner {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 1.875rem; //30px
+        text-align: center;
+        @include fullSize;
+    }
+}
+
+/* --------------------------- Service Cards Hover -------------------------- */
+
+@mixin serviceHover($color) {
+    
+    .card-inner {
+        // border: 2px solid gold;
+    
+        // Icon styling
+        .icon-container {
+            position: relative;
+            @include circle;
+            background-color: $color;
+            margin-bottom: 1.125rem; 
+            
+            .icon {
+                @include absoluteCenter;
+                color: $white;
+            }
+        }
+        
+        // Heading styling
+        .heading {
+            font-size: 1.125rem; // 18px
+            margin-bottom: 0.625rem;
+            @include servicesLine;
+        }
+        
+        // description styling
+        .description {
+            font-size: 0.8125rem; // 13px
+            margin-bottom: 0.8125rem; // 13px
+        }
+        
+        .services-btn {
+            color: $white;
+            font-size: 1.063rem;
+            background-color: $color;
+            padding: 0.313rem 0.938rem; //5px 15px
+            line-height: 2.188rem; //35px
+            // border: 2px solid fuchsia;
+        }
+        
+        /* ------------------------------- Hover State ------------------------------ */
+        &:hover {
+            background-color: $color;
+            color: $white;
+            
+            .icon-container {
+                background-color: $white;
+                
+                .icon {
+                    color: $color;
+                }
+            }
+            
+            .heading::after {
+                background-color: $white;
+            }
+            
+            .services-btn {
+                color: $color;
+                background-color: $white;
+            }
+        }
+    }
+}
+
+
+
+
+

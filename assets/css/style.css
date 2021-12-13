@@ -11119,10 +11119,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* ------------------------------ // Menu Hover ----------------------------- */
-/* -------------------------------------------------------------------------- */
-/*                                   Buttons                                  */
-/* -------------------------------------------------------------------------- */
+/* --------------------------------- Buttons -------------------------------- */
 /* -------------------------------------------------------------------------- */
 /*                                 Breakpoints                                */
 /* -------------------------------------------------------------------------- */
@@ -11132,6 +11129,8 @@ textarea.form-control-lg {
 body,
 section,
 main,
+div,
+span,
 img,
 h1,
 h2,
@@ -11238,23 +11237,26 @@ span {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .inner {
-    width: 46.875rem;
+    max-width: 46.875rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1259px) {
   .inner {
-    width: 60.625rem;
+    max-width: 60.625rem;
   }
 }
 
-@media (min-width: 768px) {
-  .padding-x {
-    padding: 0 0.625rem;
-  }
-}
-
-.container {
+.row, .card-wrapper {
   padding: 0;
+  margin: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.icon {
+  font-size: 1.438rem;
 }
 
 .btn {
@@ -11263,13 +11265,21 @@ span {
   align-items: center;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                              Responsive Layout                             */
-/* -------------------------------------------------------------------------- */
+.card {
+  background-color: white;
+  color: #333645;
+  border-radius: 3px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 3px 2.188rem rgba(0, 0, 0, 0.1);
+  padding: 1.875rem;
+}
+
+/* ---------------------------- Responsive layout --------------------------- */
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   height: 100%;
 }
 
@@ -11352,7 +11362,6 @@ span {
 }
 .buttons a .icon {
   margin-right: 0.313rem;
-  font-size: 1.438rem;
 }
 .buttons a .btn-text {
   font-size: 1.125rem;
@@ -11388,10 +11397,36 @@ span {
   margin-left: 12px;
 }
 
+/* ------------------------------- Menu Hover ------------------------------- */
+/* ------------------------------ Service cards ----------------------------- */
+.card-container {
+  width: 100%;
+  padding: 0;
+  flex-basis: 100%;
+}
+.card-container .card-inner {
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 1.875rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* --------------------------- Service Cards Hover -------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
 header {
   position: relative;
   width: 100%;
-  margin-bottom: 1.25rem;
+}
+@media (max-width: 768px) {
+  header {
+    margin-bottom: 1.25rem;
+  }
 }
 
 .header-inner {
@@ -11399,13 +11434,15 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  margin-bottom: 1.25rem;
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .header-inner {
     margin-bottom: 1.25rem;
   }
 }
 
+/* ------------------------------ Logo Styling ------------------------------ */
 .logo-container {
   width: fit-content;
   max-width: 25.125rem;
@@ -11431,12 +11468,12 @@ header {
 .contact-sm a:hover {
   text-decoration: underline;
 }
-.contact-sm span {
+.contact-sm .icon {
   color: #333645;
-  font-size: 2rem;
+  font-size: 2rem !important;
   margin-left: auto;
 }
-.contact-sm span:hover {
+.contact-sm .icon:hover {
   color: #1d1f28;
 }
 
@@ -11444,7 +11481,8 @@ header {
 .menu-btn {
   position: relative;
   flex-direction: column;
-  padding: 1.25rem 0.938rem 0.625rem 0.938rem;
+  flex-wrap: nowrap;
+  padding: 1.563rem 0.938rem 0.625rem 0.938rem;
   margin-left: 1.25rem;
   width: 3.938rem;
   height: 3.5rem;
@@ -11484,6 +11522,7 @@ header {
 }
 .menu-btn .menu-title {
   font-size: 0.75rem;
+  display: block;
   margin-bottom: 5px;
 }
 
@@ -11574,7 +11613,6 @@ header {
   line-height: 1;
 }
 .nav-container .nav-item a .icon {
-  font-size: 1.5rem;
   padding-bottom: 0.625rem;
 }
 .nav-container .nav-item a .small-text {
@@ -11636,7 +11674,6 @@ header {
 @media (min-width: 1260px) {
   .web:hover .sub-menu .sub-menu-inner--text a {
     font-size: 1rem;
-    font-weight: 400;
   }
 }
 .web:hover .sub-menu .sub-menu-inner--text:first-child a {
@@ -11702,7 +11739,6 @@ header {
 @media (min-width: 1260px) {
   .it-support:hover .sub-menu .sub-menu-inner--text a {
     font-size: 1rem;
-    font-weight: 400;
   }
 }
 .it-support:hover .sub-menu .sub-menu-inner--text:first-child a {
@@ -11768,7 +11804,6 @@ header {
 @media (min-width: 1260px) {
   .telecoms:hover .sub-menu .sub-menu-inner--text a {
     font-size: 1rem;
-    font-weight: 400;
   }
 }
 .telecoms:hover .sub-menu .sub-menu-inner--text:first-child a {
@@ -11834,7 +11869,6 @@ header {
 @media (min-width: 1260px) {
   .software:hover .sub-menu .sub-menu-inner--text a {
     font-size: 1rem;
-    font-weight: 400;
   }
 }
 .software:hover .sub-menu .sub-menu-inner--text:first-child a {
@@ -11900,7 +11934,6 @@ header {
 @media (min-width: 1260px) {
   .digital:hover .sub-menu .sub-menu-inner--text a {
     font-size: 1rem;
-    font-weight: 400;
   }
 }
 .digital:hover .sub-menu .sub-menu-inner--text:first-child a {
@@ -11966,7 +11999,6 @@ header {
 @media (min-width: 1260px) {
   .security:hover .sub-menu .sub-menu-inner--text a {
     font-size: 1rem;
-    font-weight: 400;
   }
 }
 .security:hover .sub-menu .sub-menu-inner--text:first-child a {
@@ -11983,16 +12015,17 @@ header {
 }
 
 #services {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   position: relative;
+  border: 3px solid violet;
 }
 
 .banner {
   position: relative;
   flex-direction: column;
   width: 100%;
-  height: 90%;
+  height: fit-content;
 }
 @media (max-width: 576px) {
   .banner {
@@ -12029,7 +12062,7 @@ header {
     top: 0;
     bottom: 0;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.1);
   }
 }
 .banner img {
@@ -12049,7 +12082,6 @@ header {
 
 .banner-info {
   color: #fff !important;
-  padding: 0 0.625rem;
   flex-direction: column;
   height: 100%;
   /* ------------------------------ Text-styling ------------------------------ */
@@ -12129,6 +12161,476 @@ header {
   height: 1.438rem;
   border-radius: 50%;
   border: 2px solid #fff;
+}
+
+.service-cards {
+  position: relative;
+  height: fit-content;
+  padding: 3.125rem 0;
+  border: 2px solid firebrick;
+}
+
+.service-cards-inner {
+  position: inherit;
+  width: 100%;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+}
+
+/* ------------------------------ Card Coloring ----------------------------- */
+.software-card .card-inner {
+  /* ------------------------------- Hover State ------------------------------ */
+}
+.software-card .card-inner .icon-container {
+  position: relative;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background-color: #67809F;
+  margin-bottom: 1.125rem;
+}
+.software-card .card-inner .icon-container .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.software-card .card-inner .heading {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+.software-card .card-inner .heading::after {
+  content: "";
+  width: 1.75rem;
+  height: 0.188rem;
+  display: block;
+  margin: 1.125rem auto 0 auto;
+  background-color: #333645;
+}
+.software-card .card-inner .description {
+  font-size: 0.8125rem;
+  margin-bottom: 0.8125rem;
+}
+.software-card .card-inner .services-btn {
+  color: #fff;
+  font-size: 1.063rem;
+  background-color: #67809F;
+  padding: 0.313rem 0.938rem;
+  line-height: 2.188rem;
+}
+.software-card .card-inner:hover {
+  background-color: #67809F;
+  color: #fff;
+}
+.software-card .card-inner:hover .icon-container {
+  background-color: #fff;
+}
+.software-card .card-inner:hover .icon-container .icon {
+  color: #67809F;
+}
+.software-card .card-inner:hover .heading::after {
+  background-color: #fff;
+}
+.software-card .card-inner:hover .services-btn {
+  color: #67809F;
+  background-color: #fff;
+}
+
+.it-support-card .card-inner {
+  /* ------------------------------- Hover State ------------------------------ */
+}
+.it-support-card .card-inner .icon-container {
+  position: relative;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background-color: #4183d7;
+  margin-bottom: 1.125rem;
+}
+.it-support-card .card-inner .icon-container .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.it-support-card .card-inner .heading {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+.it-support-card .card-inner .heading::after {
+  content: "";
+  width: 1.75rem;
+  height: 0.188rem;
+  display: block;
+  margin: 1.125rem auto 0 auto;
+  background-color: #333645;
+}
+.it-support-card .card-inner .description {
+  font-size: 0.8125rem;
+  margin-bottom: 0.8125rem;
+}
+.it-support-card .card-inner .services-btn {
+  color: #fff;
+  font-size: 1.063rem;
+  background-color: #4183d7;
+  padding: 0.313rem 0.938rem;
+  line-height: 2.188rem;
+}
+.it-support-card .card-inner:hover {
+  background-color: #4183d7;
+  color: #fff;
+}
+.it-support-card .card-inner:hover .icon-container {
+  background-color: #fff;
+}
+.it-support-card .card-inner:hover .icon-container .icon {
+  color: #4183d7;
+}
+.it-support-card .card-inner:hover .heading::after {
+  background-color: #fff;
+}
+.it-support-card .card-inner:hover .services-btn {
+  color: #4183d7;
+  background-color: #fff;
+}
+
+.digital-card .card-inner {
+  /* ------------------------------- Hover State ------------------------------ */
+}
+.digital-card .card-inner .icon-container {
+  position: relative;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background-color: #2ecc71;
+  margin-bottom: 1.125rem;
+}
+.digital-card .card-inner .icon-container .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.digital-card .card-inner .heading {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+.digital-card .card-inner .heading::after {
+  content: "";
+  width: 1.75rem;
+  height: 0.188rem;
+  display: block;
+  margin: 1.125rem auto 0 auto;
+  background-color: #333645;
+}
+.digital-card .card-inner .description {
+  font-size: 0.8125rem;
+  margin-bottom: 0.8125rem;
+}
+.digital-card .card-inner .services-btn {
+  color: #fff;
+  font-size: 1.063rem;
+  background-color: #2ecc71;
+  padding: 0.313rem 0.938rem;
+  line-height: 2.188rem;
+}
+.digital-card .card-inner:hover {
+  background-color: #2ecc71;
+  color: #fff;
+}
+.digital-card .card-inner:hover .icon-container {
+  background-color: #fff;
+}
+.digital-card .card-inner:hover .icon-container .icon {
+  color: #2ecc71;
+}
+.digital-card .card-inner:hover .heading::after {
+  background-color: #fff;
+}
+.digital-card .card-inner:hover .services-btn {
+  color: #2ecc71;
+  background-color: #fff;
+}
+
+.telecoms-card .card-inner {
+  /* ------------------------------- Hover State ------------------------------ */
+}
+.telecoms-card .card-inner .icon-container {
+  position: relative;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background-color: #d64541;
+  margin-bottom: 1.125rem;
+}
+.telecoms-card .card-inner .icon-container .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.telecoms-card .card-inner .heading {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+.telecoms-card .card-inner .heading::after {
+  content: "";
+  width: 1.75rem;
+  height: 0.188rem;
+  display: block;
+  margin: 1.125rem auto 0 auto;
+  background-color: #333645;
+}
+.telecoms-card .card-inner .description {
+  font-size: 0.8125rem;
+  margin-bottom: 0.8125rem;
+}
+.telecoms-card .card-inner .services-btn {
+  color: #fff;
+  font-size: 1.063rem;
+  background-color: #d64541;
+  padding: 0.313rem 0.938rem;
+  line-height: 2.188rem;
+}
+.telecoms-card .card-inner:hover {
+  background-color: #d64541;
+  color: #fff;
+}
+.telecoms-card .card-inner:hover .icon-container {
+  background-color: #fff;
+}
+.telecoms-card .card-inner:hover .icon-container .icon {
+  color: #d64541;
+}
+.telecoms-card .card-inner:hover .heading::after {
+  background-color: #fff;
+}
+.telecoms-card .card-inner:hover .services-btn {
+  color: #d64541;
+  background-color: #fff;
+}
+
+.web-card .card-inner {
+  /* ------------------------------- Hover State ------------------------------ */
+}
+.web-card .card-inner .icon-container {
+  position: relative;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background-color: #926fb1;
+  margin-bottom: 1.125rem;
+}
+.web-card .card-inner .icon-container .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.web-card .card-inner .heading {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+.web-card .card-inner .heading::after {
+  content: "";
+  width: 1.75rem;
+  height: 0.188rem;
+  display: block;
+  margin: 1.125rem auto 0 auto;
+  background-color: #333645;
+}
+.web-card .card-inner .description {
+  font-size: 0.8125rem;
+  margin-bottom: 0.8125rem;
+}
+.web-card .card-inner .services-btn {
+  color: #fff;
+  font-size: 1.063rem;
+  background-color: #926fb1;
+  padding: 0.313rem 0.938rem;
+  line-height: 2.188rem;
+}
+.web-card .card-inner:hover {
+  background-color: #926fb1;
+  color: #fff;
+}
+.web-card .card-inner:hover .icon-container {
+  background-color: #fff;
+}
+.web-card .card-inner:hover .icon-container .icon {
+  color: #926fb1;
+}
+.web-card .card-inner:hover .heading::after {
+  background-color: #fff;
+}
+.web-card .card-inner:hover .services-btn {
+  color: #926fb1;
+  background-color: #fff;
+}
+
+.security-card .card-inner {
+  /* ------------------------------- Hover State ------------------------------ */
+}
+.security-card .card-inner .icon-container {
+  position: relative;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background-color: #f62459;
+  margin-bottom: 1.125rem;
+}
+.security-card .card-inner .icon-container .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.security-card .card-inner .heading {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+.security-card .card-inner .heading::after {
+  content: "";
+  width: 1.75rem;
+  height: 0.188rem;
+  display: block;
+  margin: 1.125rem auto 0 auto;
+  background-color: #333645;
+}
+.security-card .card-inner .description {
+  font-size: 0.8125rem;
+  margin-bottom: 0.8125rem;
+}
+.security-card .card-inner .services-btn {
+  color: #fff;
+  font-size: 1.063rem;
+  background-color: #f62459;
+  padding: 0.313rem 0.938rem;
+  line-height: 2.188rem;
+}
+.security-card .card-inner:hover {
+  background-color: #f62459;
+  color: #fff;
+}
+.security-card .card-inner:hover .icon-container {
+  background-color: #fff;
+}
+.security-card .card-inner:hover .icon-container .icon {
+  color: #f62459;
+}
+.security-card .card-inner:hover .heading::after {
+  background-color: #fff;
+}
+.security-card .card-inner:hover .services-btn {
+  color: #f62459;
+  background-color: #fff;
+}
+
+.training-card {
+  margin-bottom: 0;
+}
+.training-card .card-inner {
+  /* ------------------------------- Hover State ------------------------------ */
+}
+.training-card .card-inner .icon-container {
+  position: relative;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background-color: #926fb1;
+  margin-bottom: 1.125rem;
+}
+.training-card .card-inner .icon-container .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.training-card .card-inner .heading {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+.training-card .card-inner .heading::after {
+  content: "";
+  width: 1.75rem;
+  height: 0.188rem;
+  display: block;
+  margin: 1.125rem auto 0 auto;
+  background-color: #333645;
+}
+.training-card .card-inner .description {
+  font-size: 0.8125rem;
+  margin-bottom: 0.8125rem;
+}
+.training-card .card-inner .services-btn {
+  color: #fff;
+  font-size: 1.063rem;
+  background-color: #926fb1;
+  padding: 0.313rem 0.938rem;
+  line-height: 2.188rem;
+}
+.training-card .card-inner:hover {
+  background-color: #926fb1;
+  color: #fff;
+}
+.training-card .card-inner:hover .icon-container {
+  background-color: #fff;
+}
+.training-card .card-inner:hover .icon-container .icon {
+  color: #926fb1;
+}
+.training-card .card-inner:hover .heading::after {
+  background-color: #fff;
+}
+.training-card .card-inner:hover .services-btn {
+  color: #926fb1;
+  background-color: #fff;
+}
+
+/* ------------------------------ Cards Layout ------------------------------ */
+@media (min-width: 992px) {
+  .card-xs {
+    flex-basis: 31%;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .card-xs {
+    flex-basis: 31.5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-sm {
+    flex-basis: 47%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  .card-sm {
+    flex-basis: 48.4%;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .card-sm {
+    flex-basis: 23%;
+  }
+}
+
+#about {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #333645;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,11 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+#about {
+    @include fullSize;
+    position: relative;
+    background-color: $primary;
+}
+
+

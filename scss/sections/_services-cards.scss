@@ -1,0 +1,90 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+@use '../components/service-cards-hover' as *;
+
+.service-cards {
+    position: relative;
+    height: fit-content;
+    @include sectionSpacing;
+    border: 2px solid firebrick;
+}
+
+
+// cards container
+.service-cards-inner {
+    position: inherit;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+    // border: 2px solid paleturquoise;
+}
+
+/* ------------------------------ Card Coloring ----------------------------- */
+
+.software-card {
+    @include serviceHover($software);
+}
+
+.it-support-card {
+    @include serviceHover($it-support);
+}
+
+.digital-card {
+    @include serviceHover($digital);
+}
+
+.telecoms-card {
+    @include serviceHover($telecoms);
+}
+
+.web-card {
+    @include serviceHover($web);
+}
+
+.security-card {
+    @include serviceHover($security);
+}
+
+.training-card {
+    @include serviceHover($training);
+    margin-bottom: 0;
+    // border: 2px solid red;
+}
+
+/* ------------------------------ Cards Layout ------------------------------ */
+
+
+// Fot top 3 cards
+.card-xs {
+    @include respond-to-up(md) {
+        flex-basis: 31%;
+    }
+    
+    @media screen and (min-width: 1260px) {
+        flex-basis: 31.5%;
+    }
+}
+
+
+.card-sm {
+    @include respond-to-up(sm) {
+        flex-basis: 47.5%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    @include respond-to-up(md) {
+        flex-basis: 48.4%;
+    }
+    
+    @media screen and (min-width: 1260px) {
+        flex-basis: 23%;
+    }
+}
+
+
+
+
