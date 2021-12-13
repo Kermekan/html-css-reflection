@@ -30,8 +30,7 @@ header {
 /* ------------------------------ Logo Styling ------------------------------ */
 .logo-container {
     width: fit-content;
-    justify-content: start;
-    max-width: 25.125rem; //402px
+    max-width: 23.375rem; //374px
     padding: 0;
     align-items: start;
     
@@ -45,6 +44,7 @@ header {
 /* ----------------------------- Action Buttons ----------------------------- */
 .actions {
     align-items: center;
+    flex-wrap: nowrap;
     justify-content: space-between;
     height: fit-content;
     padding: 0.438rem 0; //7px 0
