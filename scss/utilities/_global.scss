@@ -10,22 +10,11 @@
     height: 100vh;
     overflow-x: hidden;
     position: relative;
-    padding-top: 1.25rem; //20px
-    // border: 3px solid red;
-    
-    @include respond-to-up(sm) {
-        // Change padding on screens larger than 768px
-        padding-top: 1.25rem;
-    }
     
     flex-direction: column;
     justify-content: start !important;
     align-items: center;
-    
-    /* For some reason using flexbox pushes some elements out of their parent containers
-     * E.g. the mobile search bar is pushed out of the header, and the header margin 
-     * doesn't include it even though in the html it's part of the header  
-    */
+    // border: 3px solid red;
 }
 
 // Inner Styling
@@ -57,11 +46,10 @@
 // }
 
 // Remove padding from rows and wrappers
-.row, .card-wrapper {
+.row, .card-wrapper .wrapper {
     padding: 0;
     margin: 0;
 }
-
 
 .row {
     margin: 0;
