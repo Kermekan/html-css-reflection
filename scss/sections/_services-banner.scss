@@ -62,7 +62,7 @@
     img { //Image now scales down when screen size is reduxed for some reason
         position: relative;
         width: 100%;
-        height: 100vh; // use vh so it can cover height on large screens
+        height: 85vh; // use vh so it can cover height on large screens
         object-fit: cover;
         
         
@@ -132,7 +132,7 @@
 /* ------------------------------ Owl Controls ------------------------------ */
 .owl-controls {
     position: absolute;
-    bottom: calc(10% + 10vw); // increase height for every +5vw
+    bottom: 10%;
     width: 100%;
     height: fit-content;
     color: white;
