@@ -7,13 +7,13 @@
     position: relative;
     height: fit-content;
     @include sectionSpacing;
-    border: 2px solid firebrick;
+    // border: 2px solid firebrick;
 }
 
 
 // cards container
 .service-cards-inner {
-    // position: absolute;
+    position: relative;
     width: 100%;
     align-items: stretch;
     justify-content: space-between;
