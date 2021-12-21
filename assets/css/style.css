@@ -12079,6 +12079,7 @@ header {
   color: #fff !important;
   padding: 0 0.625rem;
   flex-direction: column;
+  justify-content: center;
   height: 100%;
   /* ------------------------------ Text-styling ------------------------------ */
 }
@@ -12116,7 +12117,7 @@ header {
 /* ------------------------------ Owl Controls ------------------------------ */
 .owl-controls {
   position: absolute;
-  bottom: calc(10% + 5vw);
+  bottom: calc(10% + 10vw);
   width: 100%;
   height: fit-content;
   color: white;

@@ -86,6 +86,7 @@
     color: $white !important;
     padding: 0 0.625rem; //10px
     flex-direction: column; //places button under text
+    justify-content: center;
     height: 100%;
     // border: 2px solid white;
 
@@ -131,7 +132,7 @@
 /* ------------------------------ Owl Controls ------------------------------ */
 .owl-controls {
     position: absolute;
-    bottom: calc(10% + 5vw); // increase height for every +5vw
+    bottom: calc(10% + 10vw); // increase height for every +5vw
     width: 100%;
     height: fit-content;
     color: white;
