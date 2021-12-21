@@ -11227,12 +11227,6 @@ span {
   }
 }
 
-.services-wrapper {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
 .inner {
   position: relative;
   width: 100%;
@@ -12029,7 +12023,7 @@ header {
 #services {
   width: 100vw;
   height: 100%;
-  position: absolute;
+  position: relative;
 }
 
 .banner {
@@ -12072,7 +12066,7 @@ header {
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
     background: rgba(0, 0, 0, 0.1);
   }
 }
@@ -12087,7 +12081,7 @@ header {
 .banner-content {
   position: absolute;
   justify-content: start !important;
-  z-index: 2;
+  z-index: 3;
   height: 100%;
 }
 
@@ -12641,7 +12635,7 @@ header {
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: 2px solid gold;
+  border: 2px solid gold;
   background-color: #333645;
 }
 
