@@ -20,7 +20,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    @include headerSpacing;
+    margin-bottom: 0.625rem; // 10px
     
     @include respond-to-up(sm) {
         @include headerSpacing;        // Separates mobile search from header-inner
@@ -31,7 +31,7 @@ header {
 
 /* ------------------------------ Logo Styling ------------------------------ */
 .logo-container {
-    width: fit-content;
+    // width: fit-content;
     max-width: 23.375rem; //374px
     padding: 0;
     align-items: start;
@@ -40,7 +40,12 @@ header {
     margin-right: 1.5rem; //24px
     flex-shrink: 1;
     
-    // border: 3px solid lightblue;
+    // Increase logo at smaller devices
+    @include respond-to-down(xxs) {
+        margin-right: 0.938rem; // 15px
+    };
+    
+    // border: 2px solid lightblue;
 }
 
 /* ----------------------------- Action Buttons ----------------------------- */
@@ -85,10 +90,11 @@ header {
     position: relative;
     flex-direction: column;
     flex-wrap: nowrap;
-    padding: 1.563rem 0.938rem 0.625rem 0.938rem; //25px 15px 10px 15px
+    padding: 5px 13px;
     margin-left: 1.25rem; //20px  
-    width: 3.938rem; //63px
     height: 3.5rem; //56px    
+    // border: 2px solid grey;
+    
     &:hover {
         @include btnHover($primary-hover);
     }
@@ -97,20 +103,15 @@ header {
     .burger-container {
         position: relative;
         width: 100%;
-        margin-bottom: 3px;
         // border: 2px solid green;
         
         .menu-burger {
-            display: inline-block;
             position: relative;
-            top: -5px; //moves middle line to middle of container
-            left: 0;
             @include burger; //Burger lines
             
             &::before,&::after {
                 content: "";
                 position: absolute;
-                // top: 0;
                 left: 0;
                 @include burger;
             }
@@ -118,12 +119,12 @@ header {
             // Moves other 2 bars in correct position
             &::before {
                 content: "";
-                transform: translateY(-10px);
+                transform: translateY(-8px);
                 
             }
             &::after {
                 content: "";
-                transform: translateY(10px);
+                transform: translateY(8px);
             }
         }
     }
@@ -132,7 +133,7 @@ header {
     .menu-title {
         font-size: 0.75rem; //12px
         display: block;
-        margin-bottom: 5px;
+        margin-top: 5px;
     }
 }
 
@@ -156,11 +157,14 @@ header {
         .input-field {
             padding: 0.313rem 2.5rem 0.313rem 0.938rem; // 5px 40px 5px 15px
             width: 100% !important;
+            
             //Background Coloring
             background-color: rgba(0,0,0,.1);
             outline: 1px solid hsla(0,0%,100%,.2);
             border: 2px solid rgba(0,0,0,.1);
             box-shadow: inset 0 1px 1px rgba(0,0,0,.125); 
+            box-shadow: 0 0 3px $white; 
+            border-radius: 2px;
             
             // border: 2px solid goldenrod;
         }
@@ -198,6 +202,12 @@ header {
         // Width extends at 1260px
         @media only screen and (min-width: 1260px) {
             width: 15rem; //240px
+        }
+        
+        &:focus {
+            border-color: $focus-outline;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.08),
+                        0 0 8px rgba(91,192,222,.6) ;
         }
     }
 }

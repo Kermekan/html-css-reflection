@@ -11319,15 +11319,14 @@ span {
   }
 }
 
-/* -------------------------------------------------------------------------- */
-/*                               Header Buttons                               */
-/* -------------------------------------------------------------------------- */
+/* -------------------- Search Button for medium +screens ------------------- */
 .search-md .search-btn {
   position: relative;
   background-color: #999aa2;
   height: 100%;
   width: 3.938rem;
   margin: 0 auto;
+  border-radius: 0 3px 3px 0;
 }
 .search-md .search-btn span {
   color: white;
@@ -11430,7 +11429,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.625rem;
 }
 @media (min-width: 768px) {
   .header-inner {
@@ -11440,12 +11439,16 @@ header {
 
 /* ------------------------------ Logo Styling ------------------------------ */
 .logo-container {
-  width: fit-content;
   max-width: 23.375rem;
   padding: 0;
   align-items: start;
   margin-right: 1.5rem;
   flex-shrink: 1;
+}
+@media (max-width: 360px) {
+  .logo-container {
+    margin-right: 0.938rem;
+  }
 }
 
 /* ----------------------------- Action Buttons ----------------------------- */
@@ -11479,9 +11482,8 @@ header {
   position: relative;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding: 1.563rem 0.938rem 0.625rem 0.938rem;
+  padding: 5px 13px;
   margin-left: 1.25rem;
-  width: 3.938rem;
   height: 3.5rem;
 }
 .menu-btn:hover {
@@ -11490,13 +11492,9 @@ header {
 .menu-btn .burger-container {
   position: relative;
   width: 100%;
-  margin-bottom: 3px;
 }
 .menu-btn .burger-container .menu-burger {
-  display: inline-block;
   position: relative;
-  top: -5px;
-  left: 0;
   background-color: #fff;
   width: 33px;
   height: 3px;
@@ -11511,16 +11509,16 @@ header {
 }
 .menu-btn .burger-container .menu-burger::before {
   content: "";
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 .menu-btn .burger-container .menu-burger::after {
   content: "";
-  transform: translateY(10px);
+  transform: translateY(8px);
 }
 .menu-btn .menu-title {
   font-size: 0.75rem;
   display: block;
-  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 /* ------------------------------ Mobile Search ----------------------------- */
@@ -11546,6 +11544,8 @@ header {
   outline: 1px solid rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 0 3px #fff;
+  border-radius: 2px;
 }
 .search-sm .input-container span {
   position: absolute;
@@ -11574,6 +11574,10 @@ header {
   .search-md .input-field {
     width: 15rem;
   }
+}
+.search-md .input-field:focus {
+  border-color: #5bc0de;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
 .main-nav {
@@ -12063,7 +12067,7 @@ header {
 .banner img {
   position: relative;
   width: 100%;
-  height: 85vh;
+  height: 87vh;
   object-fit: cover;
 }
 
@@ -12077,7 +12081,6 @@ header {
 
 .banner-info {
   color: #fff !important;
-  padding: 0 0.625rem;
   flex-direction: column;
   justify-content: center;
   height: 100%;

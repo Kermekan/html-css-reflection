@@ -61,5 +61,8 @@ $btn-blue-hover: darken($btn-blue, 10%);
 $owl: rgba(255, 255, 255, 0.5);
 $owl-hover: darken($owl, 20%);
 
+// Focus outline
+$focus-outline: #5bc0de; 
+
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
