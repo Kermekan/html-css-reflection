@@ -11430,7 +11430,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.625rem;
 }
 @media (min-width: 768px) {
   .header-inner {
@@ -11440,12 +11440,16 @@ header {
 
 /* ------------------------------ Logo Styling ------------------------------ */
 .logo-container {
-  width: fit-content;
   max-width: 23.375rem;
   padding: 0;
   align-items: start;
   margin-right: 1.5rem;
   flex-shrink: 1;
+}
+@media (max-width: 360px) {
+  .logo-container {
+    margin-right: 0.938rem;
+  }
 }
 
 /* ----------------------------- Action Buttons ----------------------------- */
@@ -11479,7 +11483,7 @@ header {
   position: relative;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding: 5px 15px;
+  padding: 5px 13px;
   margin-left: 1.25rem;
   height: 3.5rem;
 }
@@ -11540,7 +11544,8 @@ header {
   background-color: rgba(0, 0, 0, 0.1);
   outline: 1px solid rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 0 3px #fff;
+  border-radius: 2px;
 }
 .search-sm .input-container span {
   position: absolute;
