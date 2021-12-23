@@ -11479,9 +11479,8 @@ header {
   position: relative;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding: 1.563rem 0.938rem 0.625rem 0.938rem;
+  padding: 5px 15px;
   margin-left: 1.25rem;
-  width: 3.938rem;
   height: 3.5rem;
 }
 .menu-btn:hover {
@@ -11490,13 +11489,9 @@ header {
 .menu-btn .burger-container {
   position: relative;
   width: 100%;
-  margin-bottom: 3px;
 }
 .menu-btn .burger-container .menu-burger {
-  display: inline-block;
   position: relative;
-  top: -5px;
-  left: 0;
   background-color: #fff;
   width: 33px;
   height: 3px;
@@ -11511,16 +11506,16 @@ header {
 }
 .menu-btn .burger-container .menu-burger::before {
   content: "";
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 .menu-btn .burger-container .menu-burger::after {
   content: "";
-  transform: translateY(10px);
+  transform: translateY(8px);
 }
 .menu-btn .menu-title {
   font-size: 0.75rem;
   display: block;
-  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 /* ------------------------------ Mobile Search ----------------------------- */

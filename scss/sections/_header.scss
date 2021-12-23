@@ -85,10 +85,11 @@ header {
     position: relative;
     flex-direction: column;
     flex-wrap: nowrap;
-    padding: 1.563rem 0.938rem 0.625rem 0.938rem; //25px 15px 10px 15px
+    padding: 5px 15px;
     margin-left: 1.25rem; //20px  
-    width: 3.938rem; //63px
     height: 3.5rem; //56px    
+    // border: 2px solid grey;
+    
     &:hover {
         @include btnHover($primary-hover);
     }
@@ -97,20 +98,15 @@ header {
     .burger-container {
         position: relative;
         width: 100%;
-        margin-bottom: 3px;
         // border: 2px solid green;
         
         .menu-burger {
-            display: inline-block;
             position: relative;
-            top: -5px; //moves middle line to middle of container
-            left: 0;
             @include burger; //Burger lines
             
             &::before,&::after {
                 content: "";
                 position: absolute;
-                // top: 0;
                 left: 0;
                 @include burger;
             }
@@ -118,12 +114,12 @@ header {
             // Moves other 2 bars in correct position
             &::before {
                 content: "";
-                transform: translateY(-10px);
+                transform: translateY(-8px);
                 
             }
             &::after {
                 content: "";
-                transform: translateY(10px);
+                transform: translateY(8px);
             }
         }
     }
@@ -132,7 +128,7 @@ header {
     .menu-title {
         font-size: 0.75rem; //12px
         display: block;
-        margin-bottom: 5px;
+        margin-top: 5px;
     }
 }
 
