@@ -3,16 +3,14 @@
 @use '../utilities/breakpoints' as *;
 
 
-/* -------------------------------------------------------------------------- */
-/*                               Header Buttons                               */
-/* -------------------------------------------------------------------------- */
-// Search Button for medium +screens
+/* -------------------- Search Button for medium +screens ------------------- */
 .search-md .search-btn {
     position: relative;
     background-color: $btn-gray;
     height: 100%;
     width: 3.938rem; //63px
     margin: 0 auto;
+    border-radius: 0 3px 3px 0; // tl tr br bl
     // border: 2px solid rebeccapurple;
     
     span {

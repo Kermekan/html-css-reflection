@@ -40,9 +40,11 @@ header {
     margin-right: 1.5rem; //24px
     flex-shrink: 1;
     
+    // Increase logo at smaller devices
     @include respond-to-down(xxs) {
         margin-right: 0.938rem; // 15px
     };
+    
     // border: 2px solid lightblue;
 }
 
@@ -160,7 +162,8 @@ header {
             background-color: rgba(0,0,0,.1);
             outline: 1px solid hsla(0,0%,100%,.2);
             border: 2px solid rgba(0,0,0,.1);
-            box-shadow: inset 0 0 3px $white; 
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.125); 
+            box-shadow: 0 0 3px $white; 
             border-radius: 2px;
             
             // border: 2px solid goldenrod;
@@ -199,6 +202,12 @@ header {
         // Width extends at 1260px
         @media only screen and (min-width: 1260px) {
             width: 15rem; //240px
+        }
+        
+        &:focus {
+            border-color: $focus-outline;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.08),
+                        0 0 8px rgba(91,192,222,.6) ;
         }
     }
 }
