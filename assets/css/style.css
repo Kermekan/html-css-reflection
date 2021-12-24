@@ -11161,7 +11161,6 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
 }
 
 /* Remove list styles*/
@@ -11210,8 +11209,8 @@ span {
 .full-page {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
   position: relative;
+  overflow-x: hidden;
   flex-direction: column;
   justify-content: start !important;
   align-items: center;
@@ -11239,6 +11238,11 @@ span {
 .row, .card-wrapper .wrapper {
   padding: 0;
   margin: 0;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
 }
 
 .row {
@@ -12016,7 +12020,7 @@ header {
 }
 
 #services {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   position: relative;
 }
@@ -12220,6 +12224,11 @@ header {
   padding: 0.313rem 0.938rem;
   line-height: 2.188rem;
 }
+@media only screen and (min-width: 992px) and (max-width: 1259px) {
+  .software-card .card-inner .services-btn {
+    margin-top: auto;
+  }
+}
 .software-card .card-inner:hover {
   background-color: #67809F;
   color: #fff;
@@ -12278,6 +12287,11 @@ header {
   background-color: #4183d7;
   padding: 0.313rem 0.938rem;
   line-height: 2.188rem;
+}
+@media only screen and (min-width: 992px) and (max-width: 1259px) {
+  .it-support-card .card-inner .services-btn {
+    margin-top: auto;
+  }
 }
 .it-support-card .card-inner:hover {
   background-color: #4183d7;
@@ -12338,6 +12352,11 @@ header {
   padding: 0.313rem 0.938rem;
   line-height: 2.188rem;
 }
+@media only screen and (min-width: 992px) and (max-width: 1259px) {
+  .digital-card .card-inner .services-btn {
+    margin-top: auto;
+  }
+}
 .digital-card .card-inner:hover {
   background-color: #2ecc71;
   color: #fff;
@@ -12396,6 +12415,11 @@ header {
   background-color: #d64541;
   padding: 0.313rem 0.938rem;
   line-height: 2.188rem;
+}
+@media only screen and (min-width: 992px) and (max-width: 1259px) {
+  .telecoms-card .card-inner .services-btn {
+    margin-top: auto;
+  }
 }
 .telecoms-card .card-inner:hover {
   background-color: #d64541;
@@ -12456,6 +12480,11 @@ header {
   padding: 0.313rem 0.938rem;
   line-height: 2.188rem;
 }
+@media only screen and (min-width: 992px) and (max-width: 1259px) {
+  .web-card .card-inner .services-btn {
+    margin-top: auto;
+  }
+}
 .web-card .card-inner:hover {
   background-color: #926fb1;
   color: #fff;
@@ -12514,6 +12543,11 @@ header {
   background-color: #f62459;
   padding: 0.313rem 0.938rem;
   line-height: 2.188rem;
+}
+@media only screen and (min-width: 992px) and (max-width: 1259px) {
+  .security-card .card-inner .services-btn {
+    margin-top: auto;
+  }
 }
 .security-card .card-inner:hover {
   background-color: #f62459;
@@ -12577,6 +12611,11 @@ header {
   padding: 0.313rem 0.938rem;
   line-height: 2.188rem;
 }
+@media only screen and (min-width: 992px) and (max-width: 1259px) {
+  .training-card .card-inner .services-btn {
+    margin-top: auto;
+  }
+}
 .training-card .card-inner:hover {
   background-color: #926fb1;
   color: #fff;
@@ -12626,10 +12665,11 @@ header {
 }
 
 #about {
+  padding: 3.125rem 0;
   width: 100%;
   height: 100%;
   position: relative;
-  border: 2px solid gold;
+  color: #fff;
   background-color: #333645;
 }
 

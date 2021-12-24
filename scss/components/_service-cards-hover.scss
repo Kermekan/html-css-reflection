@@ -51,6 +51,7 @@
         .description {
             font-size: 0.8125rem; // 13px
             margin-bottom: 0.8125rem; // 13px
+            
         }
         
         .services-btn {
@@ -60,6 +61,11 @@
             padding: 0.313rem 0.938rem; //5px 15px
             line-height: 2.188rem; //35px
             // border: 2px solid fuchsia;
+            
+            // Forces button at bottom of cards
+            @media only screen and (min-width: 992px) and (max-width: 1259px) {
+                margin-top: auto;
+            }
         }
         
         /* ------------------------------- Hover State ------------------------------ */

@@ -57,7 +57,7 @@
 /* ------------------------------ Cards Layout ------------------------------ */
 
 
-// Fot top 3 cards
+// For top 3 cards
 .card-xs {
     @include respond-to-up(md) {
         flex-basis: 31%;
@@ -68,7 +68,7 @@
     }
 }
 
-
+// For bottom 3 cards
 .card-sm {
     @include respond-to-up(sm) {
         flex-basis: 47.5%;

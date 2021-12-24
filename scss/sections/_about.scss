@@ -3,11 +3,13 @@
 @use '../utilities/breakpoints' as *;
 
 #about {
-    width: 100%;
-    height: 100%;
+    @include sectionSpacing;
+    @include fullSize;
     position: relative;
-    border: 2px solid gold;
+    color: $white;
     background-color: $primary;
+    
+    // border: 2px solid gold;
 }
 
 

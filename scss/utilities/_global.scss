@@ -8,8 +8,8 @@
 .full-page {
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
     position: relative;
+    overflow-x: hidden;
     
     flex-direction: column;
     justify-content: start !important;
@@ -49,6 +49,13 @@
 .row, .card-wrapper .wrapper {
     padding: 0;
     margin: 0;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    
+    // border: 2px solid limegreen;
 }
 
 .row {
@@ -93,10 +100,6 @@
     align-items: center;
     height: 100%;
 }
-
-
-
-
 
 /* -------------------- Hides Elements based on viewport -------------------- */
 
