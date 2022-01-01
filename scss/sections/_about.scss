@@ -4,12 +4,40 @@
 
 #about {
     @include sectionSpacing;
-    @include fullSize;
+    width: 100%;
     position: relative;
     color: $white;
     background-color: $primary;
     
+    // Image styling
+    @include respond-to-up(md) {
+        background-image: url("/assets/images/logo/logo-transparent.png");
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: 100%;
+    }
     // border: 2px solid gold;
 }
 
 
+/* --------------------------- About brand Styling --------------------------- */
+  
+// text styling
+.about-content {
+    // border: 2px solid brown;
+    
+    // Box size half at 1260px
+    @media (min-width: 1260px) {
+        width: 50%;
+    }
+    
+    h1 {
+        font-size: 2.25rem; // 36px
+        margin-bottom: 1.75rem;  
+    }
+    
+    p {
+        margin-bottom: 1.563rem; // 50px
+        line-height: 1.875rem; // 30px
+    }
+}

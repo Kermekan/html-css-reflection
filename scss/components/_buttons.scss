@@ -78,12 +78,24 @@
         padding: 0.313rem 1.25rem; //5px 20px
         line-height: 3.125rem; //50px
         
-        span {
-            margin-left: 12px;
-        }
+        @include btnIconSpace;
     }
 }
 
+/* -------------------------- About Button Styling -------------------------- */
 
-
-
+.about-btn {
+    @include btnColor($btn-white, $btn-white-darken, $btn-white-hover);
+    // border: 3px solid sandybrown;
+    a {
+        color: $primary;
+        font-size: 1.063rem; // 17px
+        
+        padding: 0.313rem 0.938rem; // 5px 15px
+        line-height: 35px;
+        
+        @include btnIconSpace;
+        
+        // background-color: white;
+    }
+}

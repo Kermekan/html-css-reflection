@@ -26,7 +26,7 @@
     margin: 0 auto;
     padding: 0 0.938rem; //15px
     
-    // border: 3px solid gray;
+    // border: 1px solid gray;
     
     /* ------------------------------- Breakpoints ------------------------------ */
     // width=750px from 768px to 992px viewport
@@ -46,8 +46,8 @@
 // }
 
 // Remove padding from rows and wrappers
-.row, .card-wrapper .wrapper {
-    padding: 0;
+.row, .container, .card-wrapper, .wrapper {
+    padding: 0 !important;
     margin: 0;
 }
 
@@ -58,9 +58,9 @@
     // border: 2px solid limegreen;
 }
 
-.row {
-    margin: 0;
-}
+// .row {
+//     margin: 0;
+// }
 
 // Icon font
 .icon {
@@ -69,7 +69,7 @@
 
 // generic buttons styling
 .btn {
-    border-radius: 3px;
+    border-radius: 3px !important;
     @include btnLine;
 }
 

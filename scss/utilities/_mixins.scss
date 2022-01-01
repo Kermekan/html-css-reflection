@@ -52,7 +52,9 @@
         width: 1.75rem; //28px
         height: 0.188rem; //3px
         display: block;
-        margin: 1.125rem auto 0 auto;
+        
+        // Controls position of line
+        margin: 1.063rem auto 0 auto;  
         background-color: $primary;
    }
 }
@@ -81,8 +83,7 @@
     padding: 0.313rem 0.938rem; // 5px 15px
  }
 
-// Banner button Color
-
+// Button Colour
 @mixin btnColor($color, $color-darken, $color-hover) {
     background-color: $color;
     border: 1px solid $color-darken;
@@ -92,6 +93,14 @@
     } 
 }
 
+
+
+// Spacing for Icons
+@mixin btnIconSpace {
+    span {
+        margin-left: 0.75rem;
+    }
+}
 
 
 

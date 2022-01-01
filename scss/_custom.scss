@@ -48,21 +48,28 @@ $it-support-hover: darken($it-support, 5%);
 $it-support-darken: darken($it-support, 10%);
 
 // Button Colors
+$btn-primary: $primary;
+$btn-primary-hover: darken($primary, 10%);
+$btn-primary-darken: darken($primary, 15%);
+
 $btn-white: $white;
-$btn-white-hover: darken($white, 10%);
+$btn-white-hover: darken($white, 8%);
+$btn-white-darken: darken($white, 13%);
 
 $btn-gray: #999aa2;
-$btn-gray-hover: darken($btn-gray, 10%);
+$btn-gray-hover: darken($btn-gray, 5%);
+$btn-gray-darken: darken($btn-gray, 10%);
 
 $btn-blue: #4183d7;
-$btn-blue-hover: darken($btn-blue, 10%);
+$btn-blue-hover: darken($btn-blue, 5%);
+$btn-blue-darken: darken($btn-blue, 10%);
 
 //Owl Colours
 $owl: rgba(255, 255, 255, 0.5);
 $owl-hover: darken($owl, 20%);
+$it-support-darken: darken($it-support, 10%);
 
 // Focus outline
 $focus-outline: #5bc0de; 
-
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
