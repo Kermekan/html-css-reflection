@@ -93,7 +93,13 @@
     } 
 }
 
-
+// Styling for buttons
+@mixin btnSpacing($color, $font-size, $paddingY, $paddingX, $line-height) {
+    color: $color;
+    font-size: $font-size;
+    padding: $paddingY $paddingX;
+    line-height: $line-height;
+}
 
 // Spacing for Icons
 @mixin btnIconSpace {

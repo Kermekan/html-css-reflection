@@ -72,11 +72,12 @@
     @include btnColor($web, $web-darken, $web-hover);
     
     a {
-        color: $white;
-        font-size: 1.25rem;
-        
-        padding: 0.313rem 1.25rem; //5px 20px
-        line-height: 3.125rem; //50px
+        @include btnSpacing(
+            $white,
+            1.25rem,
+            0.313rem, 1.25rem, // 5px 20px
+            3.125rem // 50px
+        );
         
         @include btnIconSpace;
     }
@@ -88,11 +89,12 @@
     @include btnColor($btn-white, $btn-white-darken, $btn-white-hover);
     // border: 3px solid sandybrown;
     a {
-        color: $primary;
-        font-size: 1.063rem; // 17px
-        
-        padding: 0.313rem 0.938rem; // 5px 15px
-        line-height: 35px;
+        @include btnSpacing(
+            $primary,
+            1.063rem,
+            0.313rem, 0.938rem, // 5px 15px
+            2.188rem // 35px
+        );
         
         @include btnIconSpace;
         
