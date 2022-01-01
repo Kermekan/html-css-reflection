@@ -12702,7 +12702,7 @@ header {
 }
 @media (min-width: 992px) {
   #about {
-    background-image: url("/assets/images/logo/logo-transparent.png");
+    background-image: url(/assets/images/logo/logo-transparent.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: 100%;
