@@ -12050,6 +12050,7 @@ header {
   position: relative;
   flex-direction: column;
   width: 100%;
+  border-top: 1px solid rgba(51, 54, 69, 0.5);
 }
 @media (max-width: 576px) {
   .banner {
