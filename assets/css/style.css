@@ -11398,7 +11398,7 @@ span {
   color: #333645;
   font-size: 1.063rem;
   padding: 0.313rem 0.938rem;
-  line-height: 35px;
+  line-height: 2.188rem;
 }
 .about-btn a span {
   margin-left: 0.75rem;
@@ -11619,6 +11619,8 @@ header {
   position: relative;
   justify-content: start;
   padding: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
 }
 .nav-container .nav-item {
   flex: 1;
@@ -11709,7 +11711,7 @@ header {
 }
 @media (min-width: 1260px) {
   .web:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-    padding-left: 34px;
+    padding-left: 2.125rem;
   }
 }
 
@@ -11774,7 +11776,7 @@ header {
 }
 @media (min-width: 1260px) {
   .it-support:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-    padding-left: 34px;
+    padding-left: 2.125rem;
   }
 }
 
@@ -11839,7 +11841,7 @@ header {
 }
 @media (min-width: 1260px) {
   .telecoms:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-    padding-left: 34px;
+    padding-left: 2.125rem;
   }
 }
 
@@ -11904,7 +11906,7 @@ header {
 }
 @media (min-width: 1260px) {
   .software:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-    padding-left: 34px;
+    padding-left: 2.125rem;
   }
 }
 
@@ -11969,7 +11971,7 @@ header {
 }
 @media (min-width: 1260px) {
   .digital:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-    padding-left: 34px;
+    padding-left: 2.125rem;
   }
 }
 
@@ -12034,7 +12036,7 @@ header {
 }
 @media (min-width: 1260px) {
   .security:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-    padding-left: 34px;
+    padding-left: 2.125rem;
   }
 }
 
@@ -12709,11 +12711,12 @@ header {
 /* --------------------------- About brand Styling --------------------------- */
 @media (min-width: 1260px) {
   .about-content {
-    width: 50%;
+    width: 49.4%;
   }
 }
 .about-content h1 {
   font-size: 2.25rem;
+  margin-top: -6px;
   margin-bottom: 1.75rem;
 }
 .about-content p {
