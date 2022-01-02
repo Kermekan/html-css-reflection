@@ -75,7 +75,6 @@
                     </div>
                 </div><!-- .actions -->
             </div><!-- .header-inner -->
-            <!-- Mobile Search // Put it outside of header-inner because it wouldn't go onto new row -->
             <div class="search-sm inner hidden-md hidden-lg hidden-xl hidden-xxl">
                 <form action="#" class="search-form">
                     <div class="input-container flex">
@@ -280,7 +279,7 @@
                     <div class="inner service-cards-inner flex">
                         <!-- -------------------------- Individual Cards --------------------------- -->
                         <!--========== Bespoke ==========-->
-                        <div class="card-container software-card card card-xs">
+                        <div class="card-container card card-xs software-card">
                             <a href="#" class="card-inner flex">
                                 <span class="icon-container">
                                     <span class="icon icon-apps"></span>
@@ -296,7 +295,7 @@
                             </a>
                         </div>
                         <!--========== IT Support ==========-->
-                        <div class="card-container it-support-card card-xs card">
+                        <div class="card-container card card-xs it-support-card">
                             <a href="#" class="card-inner flex">
                                 <span class="icon-container ">
                                     <span class="icon icon-display"></span>
@@ -311,7 +310,7 @@
                             </a>
                         </div>
                         <!--========== Digital ==========-->
-                        <div class="card-container digital-card card card-xs">
+                        <div class="card-container card card-xs digital-card">
                             <a href="#" class="card-inner flex">
                                 <span class="icon-container ">
                                     <span class="icon icon-bars"></span>
@@ -326,7 +325,7 @@
                             </a>
                         </div>
                         <!--========== Telecoms ==========-->
-                        <div class="card-sm card-container telecoms-card card">
+                        <div class="card-container card card-sm telecoms-card">
                             <a href="#" class="card-inner flex">
                                 <span class="icon-container ">
                                     <span class="icon icon-phone_in_talk"></span>
@@ -341,7 +340,7 @@
                             </a>
                         </div>
                         <!--========== Web ==========-->
-                        <div class="card-sm card-container web-card card">
+                        <div class="card-container card card-sm web-card">
                             <a href="#" class="card-inner flex">
                                 <span class="icon-container ">
                                     <span class="icon icon-code"></span>
@@ -356,7 +355,7 @@
                             </a>
                         </div>
                         <!--========== Security ==========-->
-                        <div class="card-sm card-container security-card card">
+                        <div class="card-container card card-sm security-card">
                             <a href="#" class="card-inner flex">
                                 <span class="icon-container ">
                                     <span class="icon icon-security"></span>
@@ -371,7 +370,7 @@
                             </a>
                         </div>
                         <!--========== Training ==========-->
-                        <div class="card-sm card-container training-card card">
+                        <div class="card-container card card-sm training-card">
                             <a href="#" class="card-inner flex">
                                 <span class="icon-container ">
                                     <span class="icon icon-graduation-cap"></span>
@@ -396,8 +395,10 @@
                 <div class="about-content">
                     <h1 class="text-uppercase">Netmatters</h1>
                     <p>
-                        <strong>Netmatters Ltd is a leading web design, IT support and digital marketing agency based in the East of England with offices in Cambridge, 
-                            Wymondham and Great Yarmouth.
+                        <strong
+                            >Netmatters Ltd is a leading web design, IT support and digital 
+                            marketing agency based in the East of England with offices in
+                            Cambridge, Wymondham and Great Yarmouth.
                         </strong>
                     </p>
                     <p>
@@ -420,16 +421,41 @@
                 </div><!-- .about-content -->
             </div><!-- .about-inner -->
         </section>
-
+        
+        <!-- -------------------------------- News --------------------------------- -->
+        <section id="news" class="news">
+            <!-- News Bar -->
+            <div class="news-bar">
+                <div class="inner bar-inner">
+                    <span class="text-uppercase">Latest</span>
+                </div>
+            </div>
+            <!-- ---------------------------- Cards Section ---------------------------- -->
+            <div class="news-articles">
+                <div class="inner news-inner">
+                    <div class="article-list flex">
+                        <!-- Individual articles -->
+                        <div class="article-container">
+                            <!-- Image -->
+                            <div class="img-container">
+                                <a href="#">
+                                    <img src="assets/images/news-cards/card-1.jpg" alt="">
+                                </a>
+                            </div>
+                            <!-- Content -->
+                            <div class="article-content card">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit
+                            </div>
+                        </div>
+                        
+                        <div class="article-container card">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-
-
-
-
-
-
-
-
 
 
     <!-- Bootstrap -->

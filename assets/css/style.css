@@ -12725,4 +12725,59 @@ header {
   line-height: 1.875rem;
 }
 
+.news {
+  position: relative;
+  width: 100%;
+}
+
+/* ------------------------------- Bar Styling ------------------------------ */
+.news-bar {
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+}
+.news-bar span {
+  position: relative;
+  padding: 2.5rem 0;
+  color: #333645;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.news-bar span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333645;
+  height: 0.313rem;
+}
+
+.news-articles {
+  padding: 3.125rem 0;
+}
+
+.news-inner {
+  position: relative;
+}
+
+/* --------------------------- News Cards styling --------------------------- */
+.article-list {
+  position: relative;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1.875rem;
+}
+
+.article-container .img-container {
+  position: relative;
+}
+.article-container .img-container a {
+  display: block;
+  position: relative;
+}
+.article-container .img-container a img {
+  position: relative;
+  object-fit: contain;
+  width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */

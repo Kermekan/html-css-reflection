@@ -34,12 +34,18 @@
     }
 }
 
-.news-inner {
+.news-articles {
     @include sectionSpacing;
+    
+}
+
+.news-inner {
+    position: relative;
 }
 
 /* --------------------------- News Cards styling --------------------------- */
 .article-list {
+    position: relative;
     flex-direction: column;
     justify-content: start;
     gap: 1.875rem;
@@ -47,7 +53,24 @@
 }
 
 .article-container {
-    width: 100%;
+    // Image styling
+    .img-container {
+        position: relative;
+        // border: 2px solid fuchsia;
+        
+        a {
+            display: block;
+            position: relative;
+            // border: 2px solid lightcoral;
+            
+            img {
+                position: relative;
+                object-fit: contain;
+                width: 100%;
+                // border: 2px solid cadetblue;
+            }
+        }
+    }
 }
 
 

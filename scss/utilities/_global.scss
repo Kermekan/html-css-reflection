@@ -40,11 +40,6 @@
     }
 }
 
-// //Remove padding from container
-// .container {
-//     padding: 0;
-// }
-
 // Remove padding from rows and wrappers
 .row, .container, .card-wrapper, .wrapper {
     padding: 0 !important;
@@ -57,10 +52,6 @@
     
     // border: 2px solid limegreen;
 }
-
-// .row {
-//     margin: 0;
-// }
 
 // Icon font
 .icon {
@@ -80,6 +71,7 @@
     border-radius: 3px;
     border: 1px solid $gray-300;
     box-shadow: 0 3px 2.188rem rgba(0,0,0,0.1); // horizontal vertical blur color // 35px blur
+    // overflow: hidden;
     padding: 1.875rem; //30px
 }
 
