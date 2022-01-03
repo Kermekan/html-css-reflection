@@ -95,8 +95,7 @@
 }
 
 // Styling for buttons
-@mixin btnSpacing($color, $font-size, $paddingY, $paddingX, $line-height) {
-    color: $color;
+@mixin btnSpacing( $font-size, $paddingY, $paddingX, $line-height) {
     font-size: $font-size;
     padding: $paddingY $paddingX;
     line-height: $line-height;

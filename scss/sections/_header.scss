@@ -92,7 +92,8 @@ header {
     flex-wrap: nowrap;
     padding: 5px 13px;
     margin-left: 1.25rem; //20px  
-    height: 3.5rem; //56px    
+    height: 3.5rem; //56px
+    line-height: 1.5;    
     
     // Button Color
     @include btnColor($btn-primary, $btn-primary-darken, $btn-primary-hover);

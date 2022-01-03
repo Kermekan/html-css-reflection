@@ -8,10 +8,11 @@
 @use 'utilities/global';
 
 //Components
+@use 'components/typography';
 @use 'components/buttons';
 @use 'components/sub-menu-hover';
 @use 'components/service-cards-hover';
-@use 'components/typography';
+@use 'components/articles-colors';
 
 //Sections
 @use 'sections/header';

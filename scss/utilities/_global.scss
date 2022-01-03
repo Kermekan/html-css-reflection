@@ -62,6 +62,9 @@
 .btn {
     border-radius: 3px !important;
     @include btnLine;
+    font-size: 1.063rem;
+    padding: 0.313rem 0.938rem; //5px 15px
+    line-height: 2.188rem; //35px
 }
 
 // All Card Styling
@@ -69,8 +72,8 @@
     background-color: white;
     color: $primary;
     border-radius: 3px;
-    border: 1px solid $gray-300;
-    box-shadow: 0 3px 2.188rem rgba(0,0,0,0.1); // horizontal vertical blur color // 35px blur
+    border: 1px solid $gray-400;
+    box-shadow: 0 3px 2.188rem rgba(0,0,0,.2); // horizontal vertical blur color // 35px blur
     // overflow: hidden;
     padding: 1.875rem; //30px
 }
@@ -119,6 +122,13 @@
 // Hide elements between 991px & 1199px
 .hidden-lg {
     @media (min-width: 992px) and (max-width: 1199px) {
+        display: none !important;
+    }
+}
+
+// Hide elements between 991px & 1260px
+.hidden-1260 {
+    @media (min-width: 992px) and (max-width: 1260px) {
         display: none !important;
     }
 }

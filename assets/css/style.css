@@ -11253,14 +11253,17 @@ span {
   border-radius: 3px !important;
   white-space: nowrap;
   align-items: center;
+  font-size: 1.063rem;
+  padding: 0.313rem 0.938rem;
+  line-height: 2.188rem;
 }
 
 .card {
   background-color: white;
   color: #333645;
   border-radius: 3px;
-  border: 1px solid #dee2e6;
-  box-shadow: 0 3px 2.188rem rgba(0, 0, 0, 0.1);
+  border: 1px solid #ced4da;
+  box-shadow: 0 3px 2.188rem rgba(0, 0, 0, 0.2);
   padding: 1.875rem;
 }
 
@@ -11307,6 +11310,12 @@ span {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1260px) {
+  .hidden-1260 {
+    display: none !important;
+  }
+}
+
 @media (min-width: 1200px) and (max-width: 1399px) {
   .hidden-xl {
     display: none !important;
@@ -11317,6 +11326,18 @@ span {
   .hidden-xxl {
     display: none !important;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.1;
+  color: inherit;
 }
 
 /* -------------------- Search Button for medium +screens ------------------- */
@@ -11396,9 +11417,6 @@ span {
 }
 .about-btn a {
   color: #333645;
-  font-size: 1.063rem;
-  padding: 0.313rem 0.938rem;
-  line-height: 2.188rem;
 }
 .about-btn a span {
   margin-left: 0.75rem;
@@ -11422,18 +11440,6 @@ span {
 }
 
 /* --------------------------- Service Cards Hover -------------------------- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: inherit;
-  font-weight: 400;
-  line-height: 1.1;
-  color: inherit;
-}
-
 header {
   position: relative;
   width: 100%;
@@ -11506,6 +11512,7 @@ header {
   padding: 5px 13px;
   margin-left: 1.25rem;
   height: 3.5rem;
+  line-height: 1.5;
   background-color: #333645;
   border: 1px solid #121419;
 }
@@ -12242,10 +12249,7 @@ header {
 }
 .software-card .card-inner .services-btn {
   color: #fff;
-  font-size: 1.063rem;
   background-color: #67809F;
-  padding: 0.313rem 0.938rem;
-  line-height: 2.188rem;
 }
 @media only screen and (min-width: 992px) and (max-width: 1259px) {
   .software-card .card-inner .services-btn {
@@ -12307,10 +12311,7 @@ header {
 }
 .it-support-card .card-inner .services-btn {
   color: #fff;
-  font-size: 1.063rem;
   background-color: #4183d7;
-  padding: 0.313rem 0.938rem;
-  line-height: 2.188rem;
 }
 @media only screen and (min-width: 992px) and (max-width: 1259px) {
   .it-support-card .card-inner .services-btn {
@@ -12372,10 +12373,7 @@ header {
 }
 .digital-card .card-inner .services-btn {
   color: #fff;
-  font-size: 1.063rem;
   background-color: #2ecc71;
-  padding: 0.313rem 0.938rem;
-  line-height: 2.188rem;
 }
 @media only screen and (min-width: 992px) and (max-width: 1259px) {
   .digital-card .card-inner .services-btn {
@@ -12437,10 +12435,7 @@ header {
 }
 .telecoms-card .card-inner .services-btn {
   color: #fff;
-  font-size: 1.063rem;
   background-color: #d64541;
-  padding: 0.313rem 0.938rem;
-  line-height: 2.188rem;
 }
 @media only screen and (min-width: 992px) and (max-width: 1259px) {
   .telecoms-card .card-inner .services-btn {
@@ -12502,10 +12497,7 @@ header {
 }
 .web-card .card-inner .services-btn {
   color: #fff;
-  font-size: 1.063rem;
   background-color: #926fb1;
-  padding: 0.313rem 0.938rem;
-  line-height: 2.188rem;
 }
 @media only screen and (min-width: 992px) and (max-width: 1259px) {
   .web-card .card-inner .services-btn {
@@ -12567,10 +12559,7 @@ header {
 }
 .security-card .card-inner .services-btn {
   color: #fff;
-  font-size: 1.063rem;
   background-color: #f62459;
-  padding: 0.313rem 0.938rem;
-  line-height: 2.188rem;
 }
 @media only screen and (min-width: 992px) and (max-width: 1259px) {
   .security-card .card-inner .services-btn {
@@ -12635,10 +12624,7 @@ header {
 }
 .training-card .card-inner .services-btn {
   color: #fff;
-  font-size: 1.063rem;
   background-color: #926fb1;
-  padding: 0.313rem 0.938rem;
-  line-height: 2.188rem;
 }
 @media only screen and (min-width: 992px) and (max-width: 1259px) {
   .training-card .card-inner .services-btn {
@@ -12752,32 +12738,144 @@ header {
 }
 
 .news-articles {
+  position: relative;
   padding: 3.125rem 0;
+  border: 2px solid grey;
 }
 
 .news-inner {
   position: relative;
 }
 
-/* --------------------------- News Cards styling --------------------------- */
-.article-list {
+/* ----------------------------- Articles Cards ----------------------------- */
+.articles-list {
   position: relative;
   flex-direction: column;
-  justify-content: start;
   gap: 1.875rem;
 }
+@media (min-width: 768px) {
+  .articles-list {
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
+.article-container {
+  position: relative;
+  border: 2px solid lightcoral;
+}
 .article-container .img-container {
   position: relative;
+  border: 1px solid #ced4da;
+  border-bottom: 0;
+  overflow: hidden;
 }
-.article-container .img-container a {
+.article-container .img-container .image-inner {
   display: block;
-  position: relative;
 }
-.article-container .img-container a img {
+.article-container .img-container .image-inner img {
   position: relative;
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
+}
+
+/* ------------------- Card sizing for different viewports ------------------ */
+@media (min-width: 768px) {
+  .article-sm {
+    width: 47.9%;
+  }
+}
+
+@media (min-width: 1259px) {
+  .article-lg {
+    width: 29% !important;
+  }
+}
+
+/* --------------------------- News Cards Colors --------------------------- */
+.web-article .category {
+  background-color: #926fb1;
+}
+.web-article .article-content--title a {
+  color: #926fb1;
+}
+.web-article .article-content .article-btn {
+  background-color: #926fb1;
+  border: 1px solid #79539a;
+}
+.web-article .article-content .article-btn:hover {
+  background-color: #855ea8;
+}
+
+.it-article .category {
+  background-color: #4183d7;
+}
+.it-article .article-content--title a {
+  color: #4183d7;
+}
+.it-article .article-content .article-btn {
+  background-color: #4183d7;
+  border: 1px solid #286abd;
+}
+.it-article .article-content .article-btn:hover {
+  background-color: #2c75d2;
+}
+
+.security-article .category {
+  background-color: #f62459;
+}
+.security-article .article-content--title a {
+  color: #f62459;
+}
+.security-article .article-content .article-btn {
+  background-color: #f62459;
+  border: 1px solid #de093f;
+}
+.security-article .article-content .article-btn:hover {
+  background-color: #f50c46;
+}
+
+.telecoms-article .category {
+  background-color: #d64541;
+}
+.telecoms-article .article-content--title a {
+  color: #d64541;
+}
+.telecoms-article .article-content .article-btn {
+  background-color: #d64541;
+  border: 1px solid #bc2c28;
+}
+.telecoms-article .article-content .article-btn:hover {
+  background-color: #d1312d;
+}
+
+.software-article .category {
+  background-color: #67809F;
+}
+.software-article .article-content--title a {
+  color: #67809F;
+}
+.software-article .article-content .article-btn {
+  background-color: #67809F;
+  border: 1px solid #526781;
+}
+.software-article .article-content .article-btn:hover {
+  background-color: #5c7391;
+}
+
+.digital-article .category {
+  background-color: #2ecc71;
+}
+.digital-article .article-content--title a {
+  color: #2ecc71;
+}
+.digital-article .article-content .article-btn {
+  background-color: #2ecc71;
+  border: 1px solid #25a25a;
+}
+.digital-article .article-content .article-btn:hover {
+  background-color: #29b765;
 }
 
 /*# sourceMappingURL=style.css.map */
