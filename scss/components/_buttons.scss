@@ -72,8 +72,9 @@
     @include btnColor($web, $web-darken, $web-hover);
     
     a {
+        color: $white;
+        
         @include btnSpacing(
-            $white,
             1.25rem,
             0.313rem, 1.25rem, // 5px 20px
             3.125rem // 50px
@@ -89,13 +90,7 @@
     @include btnColor($btn-white, $btn-white-darken, $btn-white-hover);
     // border: 3px solid sandybrown;
     a {
-        @include btnSpacing(
-            $primary,
-            1.063rem,
-            0.313rem, 0.938rem, // 5px 15px
-            2.188rem // 35px
-        );
-        
+        color: $primary;
         @include btnIconSpace;
         
         // background-color: white;

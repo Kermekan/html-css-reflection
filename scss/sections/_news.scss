@@ -1,6 +1,7 @@
 @use '../custom' as *;
 @use '../utilities/mixins' as *;
 @use '../utilities/breakpoints' as *;
+@use '../components/articles-colors' as *;
 
 .news {
     position: relative;
@@ -35,45 +36,92 @@
 }
 
 .news-articles {
+    position: relative;
     @include sectionSpacing;
-    
+    border: 2px solid grey;
 }
 
 .news-inner {
-    position: relative;
+    position: relative;    
+    // border: 2px solid red;
 }
 
-/* --------------------------- News Cards styling --------------------------- */
-.article-list {
+/* ----------------------------- Articles Cards ----------------------------- */
+.articles-list {
     position: relative;
+    // justify-content: center;
     flex-direction: column;
-    justify-content: start;
     gap: 1.875rem;
-    // border: 2px solid darkblue;
+    
+    // Switch to flex row
+    @include respond-to-up(sm) {
+        // overflow: hidden;
+        align-items: stretch;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .article-container {
-    // Image styling
+    position: relative;
+    border: 2px solid lightcoral;
+    
+    // Image Styling
     .img-container {
         position: relative;
-        // border: 2px solid fuchsia;
+        border: 1px solid $gray-400;
+        border-bottom: 0;
+        overflow: hidden;
         
-        a {
-            display: block;
-            position: relative;
-            // border: 2px solid lightcoral;
+        .image-inner {
+            display: block;            
             
             img {
                 position: relative;
-                object-fit: contain;
+                object-fit: cover;
                 width: 100%;
-                // border: 2px solid cadetblue;
             }
         }
     }
 }
 
+/* ------------------- Card sizing for different viewports ------------------ */
 
+// Breakpoints
+.article-sm {
+    @include respond-to-up(sm) {
+        width: 47.9%;
+    }
+}
 
+.article-lg {
+    @media (min-width: 1259px) {
+        width: 29% !important;    
+    }
+}
 
+/* --------------------------- News Cards Colors --------------------------- */
+.web-article {
+    @include articleColor($web, $web-darken, $web-hover);
+}
+
+.it-article {
+    @include articleColor($it-support, $it-support-darken, $it-support-hover);
+}
+
+.security-article {
+    @include articleColor($security, $security-darken, $security-hover);
+}
+
+.telecoms-article {
+    @include articleColor($telecoms, $telecoms-darken, $telecoms-hover);
+}
+
+.software-article {
+    @include articleColor($software, $software-darken, $software-hover);
+}
+
+.digital-article {
+    @include articleColor($digital, $digital-darken, $digital-hover);
+}
 
