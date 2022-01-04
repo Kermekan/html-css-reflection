@@ -60,7 +60,7 @@
 
 // generic buttons styling
 .btn {
-    border-radius: 3px !important;
+    border-radius: 3px;
     @include btnLine;
     font-size: 1.063rem;
     padding: 0.313rem 0.938rem; //5px 15px

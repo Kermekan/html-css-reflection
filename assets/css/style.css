@@ -11251,7 +11251,7 @@ span {
 }
 
 .btn {
-  border-radius: 3px !important;
+  border-radius: 3px;
   white-space: nowrap;
   align-items: center;
   font-size: 1.063rem;
@@ -12213,6 +12213,7 @@ header {
 
 /* ------------------------------ Card Coloring ----------------------------- */
 .software-card .card-inner {
+  border-radius: 3px;
   /* ------------------------------- Hover State ------------------------------ */
 }
 .software-card .card-inner .icon-container {
@@ -12275,6 +12276,7 @@ header {
 }
 
 .it-support-card .card-inner {
+  border-radius: 3px;
   /* ------------------------------- Hover State ------------------------------ */
 }
 .it-support-card .card-inner .icon-container {
@@ -12337,6 +12339,7 @@ header {
 }
 
 .digital-card .card-inner {
+  border-radius: 3px;
   /* ------------------------------- Hover State ------------------------------ */
 }
 .digital-card .card-inner .icon-container {
@@ -12399,6 +12402,7 @@ header {
 }
 
 .telecoms-card .card-inner {
+  border-radius: 3px;
   /* ------------------------------- Hover State ------------------------------ */
 }
 .telecoms-card .card-inner .icon-container {
@@ -12461,6 +12465,7 @@ header {
 }
 
 .web-card .card-inner {
+  border-radius: 3px;
   /* ------------------------------- Hover State ------------------------------ */
 }
 .web-card .card-inner .icon-container {
@@ -12523,6 +12528,7 @@ header {
 }
 
 .security-card .card-inner {
+  border-radius: 3px;
   /* ------------------------------- Hover State ------------------------------ */
 }
 .security-card .card-inner .icon-container {
@@ -12588,6 +12594,7 @@ header {
   margin-bottom: 0;
 }
 .training-card .card-inner {
+  border-radius: 3px;
   /* ------------------------------- Hover State ------------------------------ */
 }
 .training-card .card-inner .icon-container {
@@ -12770,7 +12777,6 @@ header {
 }
 .article-container .img-container {
   position: relative;
-  border-bottom: 0;
   overflow: hidden;
 }
 .article-container .img-container .image-inner {
@@ -12808,6 +12814,8 @@ header {
   justify-content: start;
   height: fit-content;
   align-items: start;
+  border-radius: 0px 0 3px 3px;
+  border-top: 0;
 }
 .article-content--title {
   font-size: 1rem;
@@ -13033,6 +13041,10 @@ header {
   border-color: #333645 transparent transparent;
   border-style: solid;
   border-width: 35px 36px 0;
+}
+
+.newsletter {
+  border: 3px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */

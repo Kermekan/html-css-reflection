@@ -27,7 +27,8 @@
     
     .card-inner {
         // border: 2px solid gold;
-    
+        border-radius: 3px;
+
         .icon-container {
             position: relative; //keeps icon in circle
             @include circle;
