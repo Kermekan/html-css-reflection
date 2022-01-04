@@ -66,6 +66,14 @@
     border-radius: 50%;
 }
 
+// input highlight
+@mixin inputFocus {
+    &:focus {
+        border-color: $focus-outline;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.08),
+                    0 0 8px rgba(91,192,222,.6) ;
+    }
+}
 
 /* --------------------------------- Buttons -------------------------------- */
 // Button Hover
