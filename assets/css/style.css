@@ -11264,7 +11264,7 @@ span {
   color: #333645;
   border-radius: 3px;
   border: 1px solid #ced4da;
-  box-shadow: 0 3px 2.188rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 2.188rem rgba(0, 0, 0, 0.1);
   padding: 1.875rem;
 }
 
@@ -12770,7 +12770,6 @@ header {
 }
 .article-container .img-container {
   position: relative;
-  border: 1px solid #ced4da;
   border-bottom: 0;
   overflow: hidden;
 }
