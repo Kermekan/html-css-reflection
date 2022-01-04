@@ -178,6 +178,10 @@
     @include respond-to-up(sm) {
         width: 47.9%;
     }
+    
+    @include respond-to-up(md) {
+        width: 48.4%;
+    }
 }
 
 .article-lg {

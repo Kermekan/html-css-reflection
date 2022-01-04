@@ -12852,6 +12852,11 @@ header {
     width: 47.9%;
   }
 }
+@media (min-width: 992px) {
+  .article-sm {
+    width: 48.4%;
+  }
+}
 
 @media (min-width: 1259px) {
   .article-lg {
