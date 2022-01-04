@@ -3,20 +3,26 @@
 @use '../utilities/breakpoints' as *;
 
 #about {
-    @include sectionSpacing;
     width: 100%;
     position: relative;
     color: $white;
     background-color: $primary;
     
+    // border: 2px solid gold;
+}
+
+.about-bg {
+    @include sectionSpacing;
+    @include fullSize;
+    position: relative;
+    // border: 2px solid silver;
+    
     // Image styling
     @include respond-to-up(md) {
-        background-image: url(../assets/images/logo/logo-transparent.png);
-        background-repeat: no-repeat;
+        background: url("../assets/images/logo/logo-transparent.png") no-repeat;
         background-size: auto 100%;
         background-position: 100%;
     }
-    // border: 2px solid gold;
 }
 
 
