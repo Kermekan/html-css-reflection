@@ -6,17 +6,108 @@
 .clients {
     position: relative;
     @include sectionSpacing;
-    box-shadow: inset 0 15px 20px rgba(0,0,0,.1);
+    box-shadow: inset 0 15px 35px rgba(0,0,0,.1);
     // border: 2px solid gray;
 }
 
 .clients-list {
     align-items: center;
     justify-content: space-between;
-    border: 2px solid gold;
+    flex-wrap: nowrap;
+    // border: 2px solid gold;
 }
 
+/* -------------------------- Clients Items Styling ------------------------- */
 .client-items {
-    border: 2px solid greenyellow;
+    position: relative;
+    padding: 0 1.25rem;
+    width: fit-content;
+    // border: 2px solid greenyellow;
+    
+    // Hide colored img
+    .colored {
+        display: none;
+    }
+    
+    // Description box
+    .desciption {
+        display: none;
+    }
+    
+    &:hover {
+        // Show color img, hide grayscale
+        .grayscale {
+            display: none;
+        }
+        
+        .colored {
+            display: inline;
+        }
+        
+        // Description hover
+        .desciption {
+            display: block;
+            position: absolute;
+            bottom: 100%;
+            left: -200px;
+            right: -200px;
+            
+            .box {
+                flex-direction: column;
+                background-color: $primary;
+                color: $white;
+                width: 16.25rem;
+                margin: 0 auto 1.5rem;
+                padding: 1.25rem;
+                font-size: 0.875rem;
+                
+                // Title
+                h3 {
+                    position: relative;
+                    margin-bottom: 0.688rem;
+                    padding-bottom: 1rem;
+                    font-size: 1.125rem;
+                    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 1.75rem;
+                        height: 3px;
+                        display: block;
+                        background-color: $white;
+                    }
+                }
+                
+                // Text
+                p {
+                    font-size: .8125rem;
+                    line-height: 1.375rem;
+                    margin-bottom: 0;
+                }
+                
+                // Arrow
+                .arrow {
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    margin-left: -36px;
+                    
+                    &::after {
+                        content: "";
+                        margin: auto;
+                        display: inline-block;
+                        border-color: #333645 transparent transparent;
+                        border-style: solid;
+                        border-width: 35px 36px 0;
+                    }
+                }
+            }
+        }
+    }
 }
+
 
