@@ -71,7 +71,7 @@
 // For bottom 4 cards
 .card-sm {
     @include respond-to-up(sm) {
-        flex-basis: 47.5%;
+        flex-basis: 47.9%;
         display: flex;
         flex-direction: column;
     }
