@@ -38,7 +38,7 @@
 .news-articles {
     position: relative;
     @include sectionSpacing;
-    border: 2px solid grey;
+    // border: 2px solid grey;
 }
 
 .news-inner {
@@ -52,19 +52,20 @@
     // justify-content: center;
     flex-direction: column;
     gap: 1.875rem;
+    overflow: hidden;
+    // border: 1px solid darkcyan;
     
     // Switch to flex row
     @include respond-to-up(sm) {
-        // overflow: hidden;
         align-items: stretch;
         flex-direction: row;
-        justify-content: space-between;
     }
 }
 
+// Container Styling
 .article-container {
     position: relative;
-    border: 2px solid lightcoral;
+    // border: 2px solid lightcoral;
     
     // Image Styling
     .img-container {
@@ -82,6 +83,85 @@
                 width: 100%;
             }
         }
+        
+        // Category Styling
+        .category {
+            color: $white;
+            font-size: 0.75rem; // 12px
+            font-weight: 600;
+            
+            padding: 0 0.625rem; // 10px
+            line-height: 1.438rem; // 23px
+            
+            position: absolute;
+            z-index: 1;
+            right: -1px;
+            top: 10px;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* ----------------------------- Content Styling ---------------------------- */
+.article-content {
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    height: fit-content;
+    align-items: start;
+    // border: 2px solid orchid;
+    
+    // title
+    &--title {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.938rem;
+        min-height: 3.3rem; // 53px
+        // border: 2px solid orchid;
+        
+        a {
+            font-weight: 600;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    // Text styling
+    &--text {
+        font-size: 0.8125rem; // 13px
+        line-height: 1.375rem;
+        margin-bottom: 1.563rem;
+        min-height: 4.125rem; // 66px
+        // border: 2px solid orchid;
+    }
+    
+    // Button Styling
+    .article-btn {
+        margin-bottom: 1.875rem;
+        
+        a {
+            color: $white;
+        }
+    }
+    
+    // Details Styling
+    &--details {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        width: 100%;
+        justify-content: start;
+        
+        padding-top: 1.875rem;
+        border-top: 1px solid $gray-400;
+        
+        .logo {
+            margin-right: 1.25rem;
+        }
     }
 }
 
@@ -96,7 +176,7 @@
 
 .article-lg {
     @media (min-width: 1259px) {
-        width: 29% !important;    
+        width: 31.62%;    
     }
 }
 
