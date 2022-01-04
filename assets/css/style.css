@@ -11250,6 +11250,22 @@ span {
   font-size: 1.438rem;
 }
 
+input {
+  width: 100%;
+  border: 1px solid #dee2e6;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
+}
+input:focus {
+  border-color: #5bc0de;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.required::after {
+  content: "*";
+  color: #d24d57;
+}
+
 .btn {
   border-radius: 3px;
   white-space: nowrap;
@@ -11591,8 +11607,6 @@ header {
 }
 .search-md .input-field {
   width: 10.875rem;
-  border: 1px solid #dee2e6;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
   padding: 0.313rem 0.938rem;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1259px) {
@@ -11604,10 +11618,6 @@ header {
   .search-md .input-field {
     width: 15rem;
   }
-}
-.search-md .input-field:focus {
-  border-color: #5bc0de;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
 .main-nav {
@@ -13051,7 +13061,64 @@ header {
 
 .newsletter {
   padding: 3.125rem 0;
-  background-color: #dee2e6;
+  background-color: #dddddd;
+}
+
+.newsletter-inner {
+  position: relative;
+}
+.newsletter-inner .title {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 0.938rem;
+}
+
+/* ------------------------------ Form Styling ------------------------------ */
+.content-wrapper {
+  position: relative;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  margin: 0 30px;
+}
+
+.sign-up {
+  position: relative;
+  width: 100%;
+  justify-content: start;
+  flex-direction: row;
+}
+.sign-up .input-group {
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  width: 100%;
+}
+.sign-up .input-group .input-wrapper {
+  width: 100%;
+  margin-bottom: 0.938rem;
+}
+@media (min-width: 992px) {
+  .sign-up .input-group .input-wrapper {
+    width: 48.3%;
+  }
+}
+@media (min-width: 1260px) {
+  .sign-up .input-group .input-wrapper {
+    width: 48.7%;
+  }
+}
+.sign-up .input-group .input-wrapper label {
+  color: #333645;
+  font-weight: 600;
+  margin-bottom: 0.313rem;
+}
+.sign-up .input-group .input-wrapper input {
+  font-size: 0.875rem;
+  height: 2.938rem;
+  padding: 0.313rem 0.938rem;
+  border-radius: 2px;
+  border-color: #ccc;
 }
 
 /*# sourceMappingURL=style.css.map */

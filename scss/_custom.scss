@@ -11,6 +11,7 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
+$gray-ddd: #dddddd !default;
 $black:    #000 !default;
 
 // THEME COLOURS
@@ -71,5 +72,8 @@ $it-support-darken: darken($it-support, 10%);
 
 // Focus outline
 $focus-outline: #5bc0de; 
+
+// form required
+$required: #d24d57;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
