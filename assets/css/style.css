@@ -11193,6 +11193,7 @@ a:not([class]) {
 /* Make images responsive to container size */
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -11279,7 +11280,6 @@ span {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -12663,7 +12663,7 @@ header {
 
 @media (min-width: 768px) {
   .card-sm {
-    flex-basis: 47.5%;
+    flex-basis: 47.9%;
     display: flex;
     flex-direction: column;
   }
@@ -12688,7 +12688,7 @@ header {
 }
 @media (min-width: 992px) {
   #about {
-    background-image: url(assets/images/logo/logo-transparent.png);
+    background-image: url(../assets/images/logo/logo-transparent.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: 100%;
@@ -12943,11 +12943,23 @@ header {
 .clients-list {
   align-items: center;
   justify-content: space-between;
-  border: 2px solid gold;
+  flex-wrap: nowrap;
 }
 
+/* -------------------------- Clients Items Styling ------------------------- */
 .client-items {
-  border: 2px solid greenyellow;
+  position: relative;
+  padding: 0 1.25rem;
+  width: fit-content;
+}
+.client-items .colored {
+  display: none;
+}
+.client-items:hover .grayscale {
+  display: none;
+}
+.client-items:hover .colored {
+  display: inline;
 }
 
 /*# sourceMappingURL=style.css.map */
