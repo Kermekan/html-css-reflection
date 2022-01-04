@@ -1,3 +1,80 @@
 @use '../custom' as *;
 @use '../utilities/mixins' as *;
 @use '../utilities/breakpoints' as *;
+
+.newsletter {
+    @include sectionSpacing;
+    background-color: $gray-ddd;
+}
+
+.newsletter-inner {
+    position: relative;
+    // border: 3px solid red;
+    
+    .title {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 0.938rem;
+    }
+}
+
+/* ------------------------------ Form Styling ------------------------------ */
+.content-wrapper {
+    position: relative;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    margin: 0 30px/* 1.875rem */;
+    // border: 3px solid purple;
+}
+
+.sign-up {
+    position: relative;
+    width: 100%;
+    justify-content: start;
+    flex-direction: row;
+    // border: 2px solid black;
+    
+    // input group styling
+    .input-group {
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+        width: 100%;
+        
+        // individual input fields
+        .input-wrapper {
+            width: 100%;
+            margin-bottom: 0.938rem;
+            
+            // Controls width of input fields at large screens
+            @include respond-to-up(md) {
+                width: 48.3%;
+            }
+            
+            @media (min-width: 1260px) {
+                width: 48.7%;
+            }
+            
+            // label styling
+            label {
+                color: $primary;
+                font-weight: 600;
+                margin-bottom: 0.313rem;
+            }
+            
+            // Input styling
+            input {
+                font-size: 0.875rem;
+                height: 2.938rem; // 47px
+                padding: 0.313rem 0.938rem;
+                border-radius: 2px;
+                border-color: #ccc;
+            }
+        }
+    }
+}
+
+
+
+
