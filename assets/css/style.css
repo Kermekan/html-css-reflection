@@ -12694,7 +12694,7 @@ header {
 }
 @media (min-width: 992px) {
   .about-bg {
-    background: url("https://assets/images/logo/logo-transparent.png") no-repeat;
+    background: url("/assets/images/logo/logo-transparent.png") no-repeat;
     background-size: auto 100%;
     background-position: 100%;
   }
