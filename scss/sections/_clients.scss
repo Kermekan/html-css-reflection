@@ -13,7 +13,9 @@
 .clients-list {
     align-items: center;
     justify-content: space-between;
-    // flex-wrap: nowrap;
+    
+    // forces img on 1 line
+    flex-wrap: nowrap;
     // border: 2px solid gold;
 }
 
