@@ -12688,7 +12688,7 @@ header {
 }
 @media (min-width: 992px) {
   #about {
-    background-image: url(/assets/images/logo/logo-transparent.png);
+    background-image: url(assets/images/logo/logo-transparent.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: 100%;
@@ -12849,7 +12849,7 @@ header {
   }
 }
 
-/* --------------------------- News Cards Colors --------------------------- */
+/* ------------------------- News Categories Colors ------------------------- */
 .web-article .category {
   background-color: #926fb1;
 }
@@ -12932,6 +12932,22 @@ header {
 }
 .digital-article .article-content .article-btn:hover {
   background-color: #29b765;
+}
+
+.clients {
+  position: relative;
+  padding: 3.125rem 0;
+  box-shadow: inset 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.clients-list {
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid gold;
+}
+
+.client-items {
+  border: 2px solid greenyellow;
 }
 
 /*# sourceMappingURL=style.css.map */
