@@ -19,7 +19,7 @@
     
     // Image styling
     @include respond-to-up(md) {
-        background: url("/assets/images/logo/logo-transparent.png") no-repeat;
+        background: url("https://kermekan.github.io/html-css-reflection/assets/images/logo/logo-transparent.png") no-repeat;
         background-size: auto 100%;
         background-position: 100%;
     }
