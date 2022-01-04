@@ -76,11 +76,17 @@
         
         .image-inner {
             display: block;            
-            
+                    
             img {
                 position: relative;
                 object-fit: cover;
                 width: 100%;
+            }
+            
+            &:hover {
+                transform: scale(1.1);
+                opacity: 0.75;
+                transition: all 400ms;
             }
         }
         
