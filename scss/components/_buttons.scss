@@ -10,7 +10,7 @@
     height: 100%;
     width: 3.938rem; //63px
     margin: 0 auto;
-    border-radius: 0 3px 3px 0; // tl tr br bl
+    border-radius: 0px 3px 3px 0 !important; // tl tr br bl
     // border: 2px solid rebeccapurple;
     
     span {
