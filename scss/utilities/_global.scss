@@ -58,6 +58,26 @@
     font-size: 1.438rem; //23px
 }
 
+// Input styling
+input {
+    width: 100%;
+    border: 1px solid $gray-300;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.125);
+    
+    &:focus {
+        border-color: $focus-outline;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.08),
+        0 0 8px rgba(91,192,222,.6) ;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+}
+
+// Form required asterisk
+.required::after {
+    content: "*";
+    color: $required;
+}
+
 // generic buttons styling
 .btn {
     border-radius: 3px;
