@@ -13,7 +13,7 @@
 .clients-list {
     align-items: center;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    // flex-wrap: nowrap;
     // border: 2px solid gold;
 }
 
@@ -45,7 +45,7 @@
             display: inline;
         }
         
-        // Description hover
+        /* ---------------------------- Description hover --------------------------- */
         .desciption {
             display: block;
             position: absolute;
