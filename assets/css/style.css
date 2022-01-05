@@ -13326,8 +13326,8 @@ header {
   position: relative;
   text-align: center;
   padding: 7px 10px 10px;
-  max-height: 38px;
-  max-width: 38px;
+  height: 36px;
+  width: 36px;
   border-radius: 50%;
 }
 .social-media .item span {
