@@ -12,7 +12,8 @@
 
 .clients-list {
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    // margin: 0 1.25rem;
     
     // forces img on 1 line
     flex-wrap: nowrap;
@@ -23,7 +24,7 @@
 /* -------------------------- Clients Items Styling ------------------------- */
 .client-items {
     position: relative;
-    padding: 0 1.25rem;
+    margin: 0 1.25rem;
     width: fit-content;
     // border: 2px solid greenyellow;
     
@@ -60,7 +61,7 @@
                 flex-direction: column;
                 background-color: $primary;
                 color: $white;
-                width: 16.25rem;
+                max-width: 16.25rem;
                 margin: 0 auto 1.5rem;
                 padding: 1.25rem;
                 font-size: 0.875rem;

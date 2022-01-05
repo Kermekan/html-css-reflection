@@ -12981,14 +12981,14 @@ header {
 
 .clients-list {
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: nowrap;
 }
 
 /* -------------------------- Clients Items Styling ------------------------- */
 .client-items {
   position: relative;
-  padding: 0 1.25rem;
+  margin: 0 1.25rem;
   width: fit-content;
 }
 .client-items .colored {
@@ -13017,7 +13017,7 @@ header {
   flex-direction: column;
   background-color: #333645;
   color: #fff;
-  width: 16.25rem;
+  max-width: 16.25rem;
   margin: 0 auto 1.5rem;
   padding: 1.25rem;
   font-size: 0.875rem;
