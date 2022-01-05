@@ -78,9 +78,10 @@
     }
 }
 
-// Checkbox Styling
+/* ---------------------------- Checkbox Styling ---------------------------- */
 .label {
     justify-content: start;
+    margin-bottom: 2.625rem;
     // border: 2px solid blue;
     
     label {
@@ -148,11 +149,10 @@
     }
 }
 
-
 // Checkbox Checked state
 .check-holder .cb:checked + .check {
     background: $primary;
-  }
+}
 
 .check-holder .cb:checked + .check::before {
     font-family: "Font Awesome 5 Free";
@@ -161,6 +161,14 @@
     position: absolute;
     top: -2px;
     left: 5px;
+}
+
+.signup-btn {
+    @include btnColor($btn-primary, $btn-primary-darken, $btn-primary-hover);
+    
+    a {
+        color: $white;
+    }
 }
 
 

@@ -11438,6 +11438,7 @@ h6 {
   margin-left: 0.75rem;
 }
 
+/* ---------------------------- Newsletter button --------------------------- */
 /* ------------------------------- Menu Hover ------------------------------- */
 /* ------------------------------ Service cards ----------------------------- */
 .card-container {
@@ -13126,8 +13127,10 @@ header {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
+/* ---------------------------- Checkbox Styling ---------------------------- */
 .label {
   justify-content: start;
+  margin-bottom: 2.625rem;
 }
 .label label {
   cursor: pointer;
@@ -13188,6 +13191,17 @@ header {
   position: absolute;
   top: -2px;
   left: 5px;
+}
+
+.signup-btn {
+  background-color: #333645;
+  border: 1px solid #121419;
+}
+.signup-btn:hover {
+  background-color: #1d1f28;
+}
+.signup-btn a {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
