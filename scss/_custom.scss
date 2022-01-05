@@ -50,8 +50,8 @@ $it-support-darken: darken($it-support, 10%);
 
 // Button Colors
 $btn-primary: $primary;
-$btn-primary-hover: darken($primary, 10%);
-$btn-primary-darken: darken($primary, 15%);
+$btn-primary-hover: darken($primary, 5%);
+$btn-primary-darken: darken($primary, 10%);
 
 $btn-white: $white;
 $btn-white-hover: darken($white, 8%);

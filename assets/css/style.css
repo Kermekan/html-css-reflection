@@ -11531,10 +11531,10 @@ header {
   height: 3.5rem;
   line-height: 1.5;
   background-color: #333645;
-  border: 1px solid #121419;
+  border: 1px solid #1d1f28;
 }
 .menu-btn:hover {
-  background-color: #1d1f28;
+  background-color: #282b36;
 }
 .menu-btn .burger-container {
   position: relative;
@@ -13194,10 +13194,10 @@ header {
 
 .signup-btn {
   background-color: #333645;
-  border: 1px solid #121419;
+  border: 1px solid #1d1f28;
 }
 .signup-btn:hover {
-  background-color: #1d1f28;
+  background-color: #282b36;
 }
 .signup-btn a {
   color: #fff;
