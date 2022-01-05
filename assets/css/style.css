@@ -13066,6 +13066,7 @@ header {
 
 .newsletter-inner {
   position: relative;
+  color: #333645;
 }
 .newsletter-inner .title {
   font-size: 2rem;
@@ -13088,41 +13089,105 @@ header {
   justify-content: start;
   flex-direction: row;
 }
-.sign-up .input-group {
+
+.input-group {
   padding: 0;
   margin: 0;
   justify-content: space-between;
   width: 100%;
 }
-.sign-up .input-group .input-wrapper {
+.input-group .input-wrapper {
   width: 100%;
   margin-bottom: 0.938rem;
 }
 @media (min-width: 992px) {
-  .sign-up .input-group .input-wrapper {
+  .input-group .input-wrapper {
     width: 48.3%;
   }
 }
 @media (min-width: 1260px) {
-  .sign-up .input-group .input-wrapper {
+  .input-group .input-wrapper {
     width: 48.65%;
   }
 }
-.sign-up .input-group .input-wrapper label {
-  color: #333645;
+.input-group .input-wrapper label {
   font-weight: 600;
   margin-bottom: 0.313rem;
 }
-.sign-up .input-group .input-wrapper input {
+.input-group .input-wrapper input {
   font-size: 0.875rem;
   height: 2.938rem;
   padding: 0.313rem 0.938rem;
   border-radius: 2px;
   border-color: #ccc;
 }
-.sign-up .input-group .input-wrapper input:focus {
+.input-group .input-wrapper input:focus {
   border-color: #5bc0de;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+.label {
+  justify-content: start;
+}
+.label label {
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 2;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+}
+.label label .check-holder {
+  position: relative;
+  width: fit-content;
+  margin-right: 1.25rem;
+}
+.label label .check-holder .checkbox {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+}
+.label label .check-holder .checkbox input {
+  position: relative;
+  display: none;
+  width: 2em;
+  height: 2em;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.label label .check-holder .check {
+  display: block;
+  position: relative;
+  z-index: 4;
+  min-width: 2em;
+  height: 2em;
+  border: 3px solid #333645;
+  background-color: #dddddd;
+  border-radius: 3px;
+}
+@media (min-width: 768px) {
+  .label label .text {
+    margin-right: 1.25rem;
+  }
+}
+.label label .text a {
+  text-decoration: underline;
+}
+
+.check-holder .cb:checked + .check {
+  background: #333645;
+}
+
+.check-holder .cb:checked + .check::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  color: #fff;
+  position: absolute;
+  top: -2px;
+  left: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
