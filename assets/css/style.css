@@ -13208,10 +13208,14 @@ header {
   color: #fff;
   padding: 2.938rem 0 2.688rem;
 }
-.footer a {
+
+.footer-inner {
+  font-size: 0.8125rem;
+}
+.footer-inner a {
   color: #fff;
 }
-.footer a:hover {
+.footer-inner a:hover {
   text-decoration: underline;
 }
 
@@ -13258,8 +13262,68 @@ header {
   list-style: none;
 }
 .services-list .services ul li, .offices-list .offices ul li {
-  font-size: 0.8125rem;
   line-height: 1.375rem;
+}
+
+.footer-bottom {
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: nowrap;
+  margin-top: 0.625rem;
+  padding-top: 0.625rem;
+  border-top: 1px solid #dddddd;
+}
+.footer-bottom .license {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.313rem;
+}
+.footer-bottom .license br {
+  display: none;
+}
+@media (max-width: 767px) {
+  .footer-bottom .license br {
+    display: block;
+  }
+}
+.footer-bottom .license span {
+  margin: 0 0.625rem;
+}
+.footer-bottom ul {
+  white-space: nowrap;
+  margin-top: -2px;
+  margin-left: -5px;
+}
+
+/* ------------------------------ Social Media ------------------------------ */
+.social-media {
+  flex-wrap: nowrap;
+  font-size: 0.9rem;
+  margin-top: -5px;
+}
+.social-media .item {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 7px 10px 10px;
+  border-radius: 50%;
+  max-height: 38px;
+}
+
+.social-media .facebook:hover {
+  background-color: #3b5998;
+}
+
+.social-media .twitter:hover {
+  background-color: #00aced;
+}
+
+.social-media .instagram:hover {
+  background-color: #d93175;
+}
+
+.social-media .linked-in:hover {
+  background-color: #0077b5;
 }
 
 /*# sourceMappingURL=style.css.map */

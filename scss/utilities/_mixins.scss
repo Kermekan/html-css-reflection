@@ -75,6 +75,12 @@
     }
 }
 
+// Social Media hover
+@mixin socialHover($color) {
+    &:hover {
+        background-color: $color;
+    }
+}
 /* --------------------------------- Buttons -------------------------------- */
 // Button Hover
 @mixin btnHover($color) {
@@ -115,6 +121,7 @@
         margin-left: 0.75rem;
     }
 }
+
 
 
 

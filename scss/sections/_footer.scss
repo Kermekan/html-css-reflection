@@ -7,6 +7,10 @@
     background-color: $primary;
     color: $white;
     padding: 2.938rem 0 2.688rem;
+}
+
+.footer-inner {
+    font-size: 0.8125rem;
     
     a {
         color: $white;
@@ -15,9 +19,6 @@
             text-decoration: underline;
         }
     }
-}
-
-.footer-inner {
     // border: 2px solid red;
 }
 
@@ -69,13 +70,78 @@
         list-style: none;
         
         li {
-            font-size: 0.8125rem;
             line-height: 1.375rem;
         }
     }
 }
 
+// Bottom Styling
+.footer-bottom {
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: nowrap;
+    margin-top: 0.625rem;
+    padding-top: 0.625rem;
+    border-top: 1px solid $gray-ddd;
+    
+    // License Styling
+    .license {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0.313rem;
+        
+        br {
+            display: none;
+            
+            @media (max-width: 767px) {
+                display: block;
+            }
+        }
+        
+        span {
+            margin: 0 0.625rem;
+        }
+    }
+    
+    // Forces sitemap on 1 line
+    ul {
+        white-space: nowrap;
+        margin-top: -2px;
+        margin-left: -5px;
+        // margin-right: 3px;
+    }
+}
 
+/* ------------------------------ Social Media ------------------------------ */
+.social-media {
+    flex-wrap: nowrap;
+    font-size: 0.9rem;
+    margin-top: -5px;
+    
+    .item {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 7px 10px 10px;
+        border-radius: 50%;
+        max-height: 38px;
+    }
+}
+
+// Hover states
+.social-media .facebook {
+    @include socialHover($facebook);
+}
+
+.social-media .twitter {
+    @include socialHover($twitter);
+}
+.social-media .instagram {
+    @include socialHover($instagram);
+}
+.social-media .linked-in {
+    @include socialHover($linked-in);
+}
 
 
 
