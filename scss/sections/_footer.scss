@@ -98,6 +98,7 @@
             }
         }
         
+        // Hypen
         span {
             margin: 0 0.625rem;
         }
@@ -120,11 +121,17 @@
     
     .item {
         display: block;
+        position: relative;
         text-align: center;
-        text-decoration: none;
         padding: 7px 10px 10px;
-        border-radius: 50%;
         max-height: 38px;
+        max-width: 38px;
+        border-radius: 50%;
+        
+        span {
+            position: relative;
+            // top: 4px;
+        }
     }
 }
 
