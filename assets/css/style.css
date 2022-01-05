@@ -12076,6 +12076,26 @@ header {
   height: 80vh;
   border-top: 1px solid rgba(51, 54, 69, 0.5);
 }
+@media (max-width: 768px) and (orientation: landscape) {
+  .banner {
+    height: 110vh;
+  }
+}
+@media (max-width: 576px) {
+  .banner {
+    height: 80vh;
+  }
+}
+@media (max-width: 360px) {
+  .banner {
+    height: 90vh;
+  }
+}
+@media (max-height: 321px) and (orientation: landscape) {
+  .banner {
+    height: 110vh;
+  }
+}
 .banner::before {
   content: "";
   position: absolute;
@@ -12164,12 +12184,11 @@ header {
 
 /* ------------------------------ Owl Controls ------------------------------ */
 .owl-controls {
-  position: absolute;
+  position: relative;
   bottom: 10%;
   width: 100%;
   height: fit-content;
   color: white;
-  padding: 0.625rem 0;
 }
 .owl-controls .owl-nav {
   position: relative;

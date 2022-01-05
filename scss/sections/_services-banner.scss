@@ -16,8 +16,38 @@
     border-top: 1px solid rgba(51,54,69,.5);
     // border: 3px solid indianred;
     
+    @include respond-to-down(sm) {
+        // height: 90vh;
+        @media (orientation: landscape) {
+            height: 110vh;
+        }
+    }
+    
     @include respond-to-down(xs) {
-        // height: 100%;
+        height: 80vh;
+        // border: 2px solid red;
+        
+        @media (orientation: landscape) {
+            // border: 2px solid red;
+        }
+    }
+    
+    @include respond-to-down(xxs) {
+        height: 90vh;
+        // border: 2px solid yellow;
+        
+        @media (orientation: landscape) {
+            // border: 2px solid yellow;
+        }
+    }
+    
+    @media (max-height: 321px) {
+        // border: 3px solid purple;
+        
+        @media (orientation: landscape) {
+            height: 110vh;
+            // border: 2px solid indianred;
+        }
     }
     
     // Shadow effect
@@ -128,14 +158,16 @@
 
 /* ------------------------------ Owl Controls ------------------------------ */
 .owl-controls {
-    position: absolute;
+    position: relative;
     bottom: 10%;
     width: 100%;
     height: fit-content;
     color: white;
-    padding: 0.625rem 0; //10px
     // border: 2px solid olive;
     
+    @include respond-to-down(sm) {
+        // bottom: 15%;
+    }
     .owl-nav {
         position: relative;
         width: fit-content;
