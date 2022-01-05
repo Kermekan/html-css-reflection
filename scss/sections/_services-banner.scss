@@ -12,11 +12,12 @@
     position: relative;
     flex-direction: column;
     width: 100%;
+    height: 80vh;
     border-top: 1px solid rgba(51,54,69,.5);
     // border: 3px solid indianred;
     
     @include respond-to-down(xs) {
-        height: 100%;
+        // height: 100%;
     }
     
     // Shadow effect
@@ -62,7 +63,7 @@
     img { //Image now scales down when screen size is reduced for some reason
         position: relative;
         width: 100%;
-        height: 87vh; // use vh so it can cover height on large screens
+        height: 100%; // use vh so it can cover height on large screens
         object-fit: cover;
         // border: 3px solid yellowgreen;
     }
