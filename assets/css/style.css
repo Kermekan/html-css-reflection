@@ -13168,7 +13168,6 @@ header {
   min-width: 2em;
   height: 2em;
   border: 3px solid #333645;
-  background-color: #dddddd;
   border-radius: 3px;
 }
 @media (min-width: 768px) {
