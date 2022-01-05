@@ -11326,7 +11326,7 @@ input:focus {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1260px) {
+@media (min-width: 992px) and (max-width: 1259px) {
   .hidden-1260 {
     display: none !important;
   }
@@ -11363,7 +11363,12 @@ h6 {
   height: 100%;
   width: 3.938rem;
   margin: 0 auto;
-  border-radius: 0px 3px 3px 0 !important;
+  border-radius: 0px 3px 3px 0;
+}
+@media (min-width: 992px) and (max-width: 1259px) {
+  .search-md .search-btn {
+    border-radius: 3px;
+  }
 }
 .search-md .search-btn span {
   color: white;
