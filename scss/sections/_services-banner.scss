@@ -19,7 +19,9 @@
     @include respond-to-down(sm) {
         // height: 90vh;
         @media (orientation: landscape) {
-            height: 110vh;
+            height: 110vw;
+        // border: 3px solid purple;
+            
         }
     }
     

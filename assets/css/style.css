@@ -11124,7 +11124,6 @@ textarea.form-control-lg {
 /*                                 Breakpoints                                */
 /* -------------------------------------------------------------------------- */
 /* --------------------- Targets anything within a range -------------------- */
-/* don't know how to declare variable multiple times to create mixin with it */
 /* Remove default margin and padding */
 body,
 section,
@@ -12078,7 +12077,7 @@ header {
 }
 @media (max-width: 768px) and (orientation: landscape) {
   .banner {
-    height: 110vh;
+    height: 110vw;
   }
 }
 @media (max-width: 576px) {
