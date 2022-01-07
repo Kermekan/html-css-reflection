@@ -1,0 +1,21 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+@use '../components/articles-colors' as *;
+
+.accreditation {
+    @include sectionSpacing;
+    border: 2px solid hotpink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
