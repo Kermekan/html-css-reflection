@@ -13395,7 +13395,7 @@ header {
 }
 .content .accreditation-list #google-box {
   display: flex;
-  width: fit-content;
+  justify-content: center;
 }
 .content .accreditation-list #google {
   width: 220px;
