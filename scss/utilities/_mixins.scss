@@ -46,8 +46,7 @@
 
 // line for services cards
 @mixin servicesLine {
-    
-    &::after {
+     &::after {
         content: "";
         width: 1.75rem; //28px
         height: 0.188rem; //3px
@@ -56,7 +55,8 @@
         // Controls position of line
         margin: 1.063rem auto 0 auto;  
         background-color: $primary;
-   }
+    }
+    
 }
 
 // Circle
@@ -81,6 +81,26 @@
         background-color: $color;
     }
 }
+
+// Change img color on hover
+@mixin imgHover {
+    .colored {
+        display: none;
+    }
+    
+    &:hover {
+        .grayscale {
+            display: none;
+        }
+        
+        .colored {
+            display: block;
+        }
+        
+    }
+    
+}
+
 /* --------------------------------- Buttons -------------------------------- */
 // Button Hover
 @mixin btnHover($color) {
