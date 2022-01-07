@@ -11413,15 +11413,15 @@ h6 {
 .banner-btn {
   background-color: #926fb1;
   border: 1px solid #79539a;
+  font-size: 1.25rem;
+  padding: 0.313rem 1.25rem;
+  line-height: 3.125rem;
 }
 .banner-btn:hover {
   background-color: #855ea8;
 }
 .banner-btn a {
   color: #fff;
-  font-size: 1.25rem;
-  padding: 0.313rem 1.25rem;
-  line-height: 3.125rem;
 }
 .banner-btn a span {
   margin-left: 0.75rem;
@@ -11605,7 +11605,9 @@ header {
 }
 .search-sm .input-container span {
   position: absolute;
-  font-size: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20.2px;
   cursor: pointer;
   margin-right: 0.625rem;
 }
@@ -12816,10 +12818,10 @@ header {
   overflow: hidden;
   height: fit-content;
   border-radius: 3px 3px 0 0;
-  transition: all 400ms ease-in-out;
 }
 .article-container .img-container .image-inner {
   display: block;
+  transition: all 400ms ease-in-out;
 }
 .article-container .img-container .image-inner img {
   position: relative;
@@ -12860,13 +12862,17 @@ header {
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 0.938rem;
-  min-height: 3.3rem;
 }
 .article-content--title a {
   font-weight: 600;
 }
 .article-content--title a:hover {
   text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .article-content--title {
+    min-height: 3rem;
+  }
 }
 .article-content--text {
   font-size: 0.8125rem;
@@ -13166,7 +13172,7 @@ header {
 /* ---------------------------- Checkbox Styling ---------------------------- */
 .label {
   justify-content: start;
-  margin-bottom: 2.625rem;
+  margin-bottom: 1.875rem;
 }
 .label label {
   cursor: pointer;
