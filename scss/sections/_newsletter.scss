@@ -81,7 +81,7 @@
 /* ---------------------------- Checkbox Styling ---------------------------- */
 .label {
     justify-content: start;
-    margin-bottom: 2.625rem;
+    margin-bottom: 1.875rem;
     // border: 2px solid blue;
     
     label {
@@ -92,7 +92,7 @@
         justify-content: start;
         align-items: start;
         flex-wrap: nowrap;
-        // border: 2px solid black;
+        // border: 2px solid yellow;
         
         .check-holder {
             position: relative;
@@ -135,7 +135,9 @@
             
         }
         
+        // Text
         .text {
+            // margin-bottom: -10px;
             @include respond-to-up(sm) {
                 margin-right: 1.25rem;
             }
@@ -161,12 +163,14 @@
     left: 5px;
 }
 
+// Button
 .signup-btn {
     @include btnColor($btn-primary, $btn-primary-darken, $btn-primary-hover);
     
     a {
         color: $white;
     }
+    border: 2px solid red;
 }
 
 
