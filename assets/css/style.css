@@ -13414,6 +13414,9 @@ header {
   background: url("https://kermekan.github.io/html-css-reflection/assets/images/accreditations/google.png") no-repeat;
   background-size: 100% 100%;
 }
+.content .accreditation-list #PPC img:hover {
+  cursor: pointer;
+}
 @media (min-width: 992px) {
   .content .accreditation-list {
     justify-content: space-around;
