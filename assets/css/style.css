@@ -13403,6 +13403,11 @@ header {
   background: url("https://kermekan.github.io/html-css-reflection/assets/images/accreditations/google.png") no-repeat;
   background-size: 100% 100%;
 }
+@media (min-width: 992px) {
+  .content .accreditation-list {
+    justify-content: space-around;
+  }
+}
 
 @media (min-width: 992px) and (max-width: 1259px) {
   .content .item {

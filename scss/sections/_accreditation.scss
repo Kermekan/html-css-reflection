@@ -48,6 +48,13 @@
             background: url("https://kermekan.github.io/html-css-reflection/assets/images/accreditations/google.png") no-repeat;
             background-size: 100% 100%;
         }
+        
+        // Breakpoints
+        @include respond-to-up(md) {
+            justify-content: space-around;
+            // border: 2px solid pink;
+            
+        }
     }
 }
 
