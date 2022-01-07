@@ -40,6 +40,8 @@
             justify-content: center;
             // border: 2px solid blue;
         } 
+        
+        // Google fixed size
         #google {
             width: 220px;
             height: 82px;
@@ -47,6 +49,11 @@
             
             background: url("https://kermekan.github.io/html-css-reflection/assets/images/accreditations/google.png") no-repeat;
             background-size: 100% 100%;
+        }
+        
+        // PPC Mouse over
+        #PPC img:hover {
+            cursor: pointer;
         }
         
         // Breakpoints
