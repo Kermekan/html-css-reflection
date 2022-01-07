@@ -5,12 +5,65 @@
 
 .accreditation {
     @include sectionSpacing;
-    border: 2px solid hotpink;
+    // border: 2px solid hotpink;
 }
 
+// Item List
 
+.content {
+    gap: 1.25rem;
+    
+    .accreditation-list {
+        justify-content: space-between;
+        align-items: start;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: fit-content;
+        // border: 2px solid black;
+        
+        .item {
+            position: relative;
+            padding: 0 1.25rem;
+            width: fit-content;
+            @include imgHover;
+            // border: 1px solid firebrick;
+            
+            img {
+                width: 100%;
+                height: auto;
+                // border: 2px solid peru;
+            }
+        }
+        
+        #google-box {
+            display: flex;
+            width: fit-content;
+            // border: 2px solid purple;
+        } 
+        #google {
+            width: 220px;
+            height: 82px;
+            // border: 2px solid hotpink;
+            
+            background: url("https://kermekan.github.io/html-css-reflection/assets/images/accreditations/google.png") no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+}
 
-
+@media (min-width: 992px) and (max-width: 1259px) {
+    .content {
+        // border: 2px solid greenyellow;
+        
+        .item {
+            flex-grow: 1;
+        }
+        
+        img {
+            width: fit-content;
+        }
+    }
+}
 
 
 

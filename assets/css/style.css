@@ -13012,7 +13012,7 @@ header {
 
 .clients-list {
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: nowrap;
 }
 
@@ -13025,17 +13025,17 @@ header {
 .client-items .colored {
   display: none;
 }
+.client-items:hover .grayscale {
+  display: none;
+}
+.client-items:hover .colored {
+  display: block;
+}
 .client-items .desciption {
   display: none;
 }
 .client-items:hover {
   /* ---------------------------- Description hover --------------------------- */
-}
-.client-items:hover .grayscale {
-  display: none;
-}
-.client-items:hover .colored {
-  display: inline;
 }
 .client-items:hover .desciption {
   display: block;
@@ -13359,6 +13359,58 @@ header {
 
 .social-media .linked-in:hover {
   background-color: #0077b5;
+}
+
+.accreditation {
+  padding: 3.125rem 0;
+}
+
+.content {
+  gap: 1.25rem;
+}
+.content .accreditation-list {
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: fit-content;
+}
+.content .accreditation-list .item {
+  position: relative;
+  padding: 0 1.25rem;
+  width: fit-content;
+}
+.content .accreditation-list .item .colored {
+  display: none;
+}
+.content .accreditation-list .item:hover .grayscale {
+  display: none;
+}
+.content .accreditation-list .item:hover .colored {
+  display: block;
+}
+.content .accreditation-list .item img {
+  width: 100%;
+  height: auto;
+}
+.content .accreditation-list #google-box {
+  display: flex;
+  width: fit-content;
+}
+.content .accreditation-list #google {
+  width: 220px;
+  height: 82px;
+  background: url("https://kermekan.github.io/html-css-reflection/assets/images/accreditations/google.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+@media (min-width: 992px) and (max-width: 1259px) {
+  .content .item {
+    flex-grow: 1;
+  }
+  .content img {
+    width: fit-content;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
