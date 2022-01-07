@@ -75,15 +75,14 @@
 .banner-btn {
     @include btnColor($web, $web-darken, $web-hover);
     
+    @include btnSpacing(
+        1.25rem,
+        0.313rem, 1.25rem, // 5px 20px
+        3.125rem // 50px
+    );
+    
     a {
         color: $white;
-        
-        @include btnSpacing(
-            1.25rem,
-            0.313rem, 1.25rem, // 5px 20px
-            3.125rem // 50px
-        );
-        
         @include btnIconSpace;
     }
 }

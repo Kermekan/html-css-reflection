@@ -11487,11 +11487,15 @@ header {
 
 /* ------------------------------ Logo Styling ------------------------------ */
 .logo-container {
-  max-width: 23.375rem;
   padding: 0;
   align-items: start;
   margin-right: 1.5rem;
   flex-shrink: 1;
+}
+@media (min-width: 768px) {
+  .logo-container {
+    max-width: 23.375rem;
+  }
 }
 @media (max-width: 360px) {
   .logo-container {
@@ -11523,6 +11527,7 @@ header {
 }
 .contact-sm .icon:hover {
   color: #1d1f28;
+  text-decoration: underline;
 }
 
 /* -------------------------------- Menu btn -------------------------------- */
@@ -12811,6 +12816,7 @@ header {
   overflow: hidden;
   height: fit-content;
   border-radius: 3px 3px 0 0;
+  transition: all 400ms ease-in-out;
 }
 .article-container .img-container .image-inner {
   display: block;
@@ -12825,7 +12831,6 @@ header {
 .article-container .img-container .image-inner:hover {
   transform: scale(1.1);
   opacity: 0.75;
-  transition: all 400ms;
 }
 .article-container .img-container .category {
   color: #fff;

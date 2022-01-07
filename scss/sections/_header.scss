@@ -32,13 +32,16 @@ header {
 /* ------------------------------ Logo Styling ------------------------------ */
 .logo-container {
     // width: fit-content;
-    max-width: 23.375rem; //374px
     padding: 0;
     align-items: start;
     
     //Logo shrinks on small phones instead of taking up whole screen
     margin-right: 1.5rem; //24px
     flex-shrink: 1;
+    
+    @include respond-to-up(sm) {
+        max-width: 23.375rem; //374px
+    };
     
     // Increase logo at smaller devices
     @include respond-to-down(xxs) {
@@ -81,6 +84,7 @@ header {
         
         &:hover {
             color: $primary-hover;
+            text-decoration: underline;
         }
     }
 }
@@ -173,7 +177,10 @@ header {
         // Icon for small devices
         span {
             position: absolute;
-            font-size: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            
+            font-size: 20.2px;
             cursor: pointer;
             margin-right: 0.625rem; //10px //positions icon inside input field
             // border: 2px solid purple;
