@@ -12,7 +12,7 @@
 
 .clients-list {
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     // margin: 0 1.25rem;
     
     // forces img on 1 line
@@ -29,9 +29,7 @@
     // border: 2px solid greenyellow;
     
     // Hide colored img
-    .colored {
-        display: none;
-    }
+    @include imgHover;
     
     // Description box
     .desciption {
@@ -40,15 +38,6 @@
     
     // Hover 
     &:hover {
-        // Show color img, hide grayscale
-        .grayscale {
-            display: none;
-        }
-        
-        .colored {
-            display: inline;
-        }
-        
         /* ---------------------------- Description hover --------------------------- */
         .desciption {
             display: block;
