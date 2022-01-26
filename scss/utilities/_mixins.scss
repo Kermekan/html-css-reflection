@@ -6,6 +6,13 @@
     height: 100%;
 }
 
+// Hover, active, focus states
+@mixin hoverFocusActive {
+    &:hover, &:focus, &:active {
+        @content;
+    }
+}
+
 // Center an Element
 @mixin absoluteCenter {
     position: absolute;
@@ -21,9 +28,9 @@
 //Burger lines
 @mixin burger {
     background-color: $white;
-    width: 33px;
+    border-radius: 0px !important;
+    width: 100%;
     height: 3px;
-    // border-radius: 5px;
 }
 
 // Absolute Center

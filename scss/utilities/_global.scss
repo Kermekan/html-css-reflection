@@ -6,15 +6,35 @@
 // For Utility Classes and such
 
 .full-page {
+    position: relative;
     width: 100vw;
     height: 100vh;
-    position: relative;
     overflow-x: hidden;
     
     flex-direction: column;
-    justify-content: start !important;
+    justify-content: start;
     align-items: center;
-    // border: 3px solid red;
+    // border: 3px solid lightblue;
+    
+    &.is-active {
+        overflow: hidden ;
+    }
+}
+
+.page-container {
+    position: relative;
+    z-index: 1;
+    height: fit-content;
+    // border: 2px solid purple;
+    
+    &.is-active {
+        right: 275px;
+        overflow: hidden ;
+        
+        @include respond-to-up(md) {
+            right: 333px;
+        }
+    }
 }
 
 // Inner Styling
@@ -85,6 +105,10 @@ input {
     font-size: 1.063rem;
     padding: 0.313rem 0.938rem; //5px 15px
     line-height: 2.188rem; //35px
+    
+    @include hoverFocusActive {
+        box-shadow: none !important;
+    }
 }
 
 // All Card Styling
@@ -118,6 +142,10 @@ input {
 
 /* -------------------- Hides Elements based on viewport -------------------- */
 
+.hidden {
+    display: none !important;
+}
+
 // Hide elements below 575px
 .hidden-xs {
     @media (max-width: 575px) {
@@ -127,35 +155,35 @@ input {
 
 // Hide elements between 576px & 767px
 .hidden-sm {
-    @media (min-width: 576px) and (max-width: 767px) {
+    @media (min-width: 576px) and (max-width: 769px) {
         display: none !important;
     }
 }
 
 // Hide elements between 768px & 991px
 .hidden-md {
-    @media (min-width: 768px) and (max-width: 991px) {
+    @media (min-width: 769px) and (max-width: 991px) {
         display: none !important;
     }
 }
 
 // Hide elements between 991px & 1199px
 .hidden-lg {
-    @media (min-width: 992px) and (max-width: 1199px) {
+    @media (min-width: 993px) and (max-width: 1199px) {
         display: none !important;
     }
 }
 
 // Hide elements between 991px & 1260px
 .hidden-1260 {
-    @media (min-width: 992px) and (max-width: 1259px) {
+    @media (min-width: 993px) and (max-width: 1259px) {
         display: none !important;
     }
 }
 
 // Hide elements between 1200px & 1399px
 .hidden-xl {
-    @media (min-width: 1200px) and (max-width: 1399px) {
+    @media (min-width: 1201px) and (max-width: 1399px) {
         display: none !important;
     }
 }
@@ -166,7 +194,6 @@ input {
         display: none !important;
     }
 }
-
 
 
 

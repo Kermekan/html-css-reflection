@@ -1,0 +1,145 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+// Overlay
+.sidebar-container {
+    display: none;
+    animation: fade 500ms;
+}
+
+// Side Menu
+.sidebar-container.is-active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 997;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    justify-content: end;
+    flex-direction: row;
+    
+    .overlay {
+        position: relative;
+        @include fullSize;
+        z-index: 998;
+        // border: 2px solid orange;
+    }
+    
+    // border: 2px solid purple;
+}
+// Sidebar styling
+.sidebar {
+    position: fixed;
+    z-index: 999;
+    width: 275px;
+    color: $white;
+    
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: nowrap;
+    align-items: start;
+    overflow-y: scroll;
+       
+    background-color: $primary;
+    animation: fade1 50ms;
+    // border: 2px solid red;
+    
+    @include respond-to-up(md) {
+        width: 350px;
+    }
+}
+
+// Nav sections global styling
+.sidebar .upper,
+.sidebar .lower {
+    width: 100%;
+    height: fit-content;
+    
+    flex-direction: column;
+    justify-content: start;
+    // align-items: start;
+    margin: 0;
+    
+    // Text styling
+    a {
+        color: $white;
+        display: block;
+        text-transform: uppercase;
+        position: relative;
+        line-height: 1;
+    }
+    // border: 2px solid black;
+}
+
+/* ------------------------------ Upper styling ----------------------------- */
+.sidebar .upper {
+    border: 2px solid white;
+    
+    
+    @include respond-to-up(md) {
+        display: none;
+    }
+}
+
+/* ------------------------------ Lower styling ----------------------------- */
+.sidebar .lower {    
+    .item-container {
+        border-top: 1px solid rgba(0, 0, 0, 0.25); // Black
+        border-bottom: 1px solid hsla(0,0%,100%,.1); //White
+        @include fullSize;
+        
+        .item {
+            // background-color: red;
+            border-top: 1px solid hsla(0,0%,100%,.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+            
+            // Text
+            & > a {
+                padding: 1.25rem;
+                // color: red;
+                position: relative;
+                line-height: 1;
+            }
+            
+            // Sub-menu
+            .item-links {
+                
+                li {
+                    width: 100%;
+                    // background-color: red;
+                    border-top: 1px solid rgba(0,0,0,.45);
+                    
+                    // Text styling
+                    a {
+                        background-color: $side-primary;
+                        border-top:1px solid hsla(0,0%,100%,.05);
+                        font-size: 0.875rem;
+                        padding: 1.125rem 1.25rem;
+                        line-height: 1;
+                        
+                        // Arrow
+                        &::before {
+                            content: "\BB";
+                            padding-right: 0.938rem;
+                        }
+                    }
+                }
+            }
+            @include hoverFocusActive {
+                
+                & > a {
+                    background-color: hsla(0,0%,100%,.05);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

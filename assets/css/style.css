@@ -11123,7 +11123,8 @@ textarea.form-control-lg {
 /* -------------------------------------------------------------------------- */
 /*                                 Breakpoints                                */
 /* -------------------------------------------------------------------------- */
-/* --------------------- Targets anything within a range -------------------- */
+/* -------------------------- Landscape Breakpoints ------------------------- */
+/* --------------------------- height breakpoints --------------------------- */
 /* Remove default margin and padding */
 body,
 section,
@@ -11160,6 +11161,7 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
+  line-height: 1.4;
 }
 
 /* Remove list styles*/
@@ -11207,13 +11209,31 @@ span {
 }
 
 .full-page {
+  position: relative;
   width: 100vw;
   height: 100vh;
-  position: relative;
   overflow-x: hidden;
   flex-direction: column;
-  justify-content: start !important;
+  justify-content: start;
   align-items: center;
+}
+.full-page.is-active {
+  overflow: hidden;
+}
+
+.page-container {
+  position: relative;
+  z-index: 1;
+  height: fit-content;
+}
+.page-container.is-active {
+  right: 275px;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .page-container.is-active {
+    right: 333px;
+  }
 }
 
 .inner {
@@ -11273,6 +11293,9 @@ input:focus {
   padding: 0.313rem 0.938rem;
   line-height: 2.188rem;
 }
+.btn:hover, .btn:focus, .btn:active {
+  box-shadow: none !important;
+}
 
 .card {
   background-color: white;
@@ -11301,37 +11324,41 @@ input:focus {
 }
 
 /* -------------------- Hides Elements based on viewport -------------------- */
+.hidden {
+  display: none !important;
+}
+
 @media (max-width: 575px) {
   .hidden-xs {
     display: none !important;
   }
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 769px) {
   .hidden-sm {
     display: none !important;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 769px) and (max-width: 991px) {
   .hidden-md {
     display: none !important;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 993px) and (max-width: 1199px) {
   .hidden-lg {
     display: none !important;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1259px) {
+@media (min-width: 993px) and (max-width: 1259px) {
   .hidden-1260 {
     display: none !important;
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1399px) {
+@media (min-width: 1201px) and (max-width: 1399px) {
   .hidden-xl {
     display: none !important;
   }
@@ -11343,6 +11370,22 @@ input:focus {
   }
 }
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 h1,
 h2,
 h3,
@@ -11461,12 +11504,117 @@ h6 {
 }
 
 /* --------------------------- Service Cards Hover -------------------------- */
+.sidebar-container {
+  display: none;
+  animation: fade 500ms;
+}
+
+.sidebar-container.is-active {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 997;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: end;
+  flex-direction: row;
+}
+.sidebar-container.is-active .overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 999;
+  width: 275px;
+  color: #fff;
+  flex-direction: column;
+  justify-content: start;
+  flex-wrap: nowrap;
+  align-items: start;
+  overflow-y: scroll;
+  background-color: #333645;
+  animation: fade1 50ms;
+}
+@media (min-width: 992px) {
+  .sidebar {
+    width: 350px;
+  }
+}
+
+.sidebar .upper,
+.sidebar .lower {
+  width: 100%;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: start;
+  margin: 0;
+}
+.sidebar .upper a,
+.sidebar .lower a {
+  color: #fff;
+  display: block;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 1;
+}
+
+/* ------------------------------ Upper styling ----------------------------- */
+.sidebar .upper {
+  border: 2px solid white;
+}
+@media (min-width: 992px) {
+  .sidebar .upper {
+    display: none;
+  }
+}
+
+/* ------------------------------ Lower styling ----------------------------- */
+.sidebar .lower .item-container {
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 100%;
+}
+.sidebar .lower .item-container .item {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.sidebar .lower .item-container .item > a {
+  padding: 1.25rem;
+  position: relative;
+  line-height: 1;
+}
+.sidebar .lower .item-container .item .item-links li {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
+}
+.sidebar .lower .item-container .item .item-links li a {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.875rem;
+  padding: 1.125rem 1.25rem;
+  line-height: 1;
+}
+.sidebar .lower .item-container .item .item-links li a::before {
+  content: "»";
+  padding-right: 0.938rem;
+}
+.sidebar .lower .item-container .item:hover > a, .sidebar .lower .item-container .item:focus > a, .sidebar .lower .item-container .item:active > a {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
 header {
   position: relative;
   width: 100%;
   padding-top: 1.25rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   header {
     margin-bottom: 1.25rem;
   }
@@ -11479,7 +11627,7 @@ header {
   flex-wrap: nowrap;
   margin-bottom: 0.625rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .header-inner {
     margin-bottom: 1.25rem;
   }
@@ -11492,7 +11640,7 @@ header {
   margin-right: 1.5rem;
   flex-shrink: 1;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .logo-container {
     max-width: 23.375rem;
   }
@@ -11531,7 +11679,7 @@ header {
 }
 
 /* -------------------------------- Menu btn -------------------------------- */
-.menu-btn {
+.hamburger {
   position: relative;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -11539,45 +11687,57 @@ header {
   margin-left: 1.25rem;
   height: 3.5rem;
   line-height: 1.5;
+  transition: all 150ms ease-in-out;
   background-color: #333645;
   background-color: #333645;
   border: 1px solid #1d1f28;
 }
-.menu-btn:hover {
+.hamburger:hover {
   background-color: #1d1f28;
+  opacity: 1;
 }
-.menu-btn:hover {
+.hamburger:hover {
   background-color: #282b36;
 }
-.menu-btn .burger-container {
-  width: 100%;
-}
-.menu-btn .burger-container .menu-burger {
-  position: relative;
-  background-color: #fff;
+.hamburger .hamburger-box {
+  position: relative !important;
   width: 33px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: start;
+}
+.hamburger .hamburger-box .hamburger-inner {
+  position: relative;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 0px !important;
+  width: 100%;
   height: 3px;
 }
-.menu-btn .burger-container .menu-burger::before, .menu-btn .burger-container .menu-burger::after {
+.hamburger .hamburger-box .hamburger-inner::before, .hamburger .hamburger-box .hamburger-inner::after {
   content: "";
   position: absolute;
-  left: 0;
   background-color: #fff;
-  width: 33px;
+  border-radius: 0px !important;
+  width: 100%;
   height: 3px;
 }
-.menu-btn .burger-container .menu-burger::before {
-  content: "";
-  transform: translateY(-8px);
+.hamburger .hamburger-box .hamburger-inner::after {
+  bottom: 8px;
 }
-.menu-btn .burger-container .menu-burger::after {
-  content: "";
-  transform: translateY(8px);
+.hamburger .hamburger-box .hamburger-inner::before {
+  top: 8px;
 }
-.menu-btn .menu-title {
+.hamburger.is-active .hamburger-inner::after {
+  bottom: 0;
+}
+.hamburger.is-active:hover {
+  background-color: #1d1f28;
+  opacity: 1;
+}
+.hamburger .menu-title {
   font-size: 0.75rem;
   display: block;
-  margin-top: 5px;
 }
 
 /* ------------------------------ Mobile Search ----------------------------- */
@@ -12085,7 +12245,7 @@ header {
   height: 80vh;
   border-top: 1px solid rgba(51, 54, 69, 0.5);
 }
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-width: 769px) and (orientation: landscape) {
   .banner {
     height: 110vw;
   }
@@ -12170,7 +12330,7 @@ header {
   width: fit-content;
   text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .banner-info .banner-text {
     width: 100%;
   }
@@ -12708,7 +12868,7 @@ header {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .card-sm {
     flex-basis: 47.9%;
     display: flex;
@@ -12805,7 +12965,7 @@ header {
   gap: 1.875rem;
   overflow: hidden;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .articles-list {
     align-items: stretch;
     flex-direction: row;
@@ -12872,7 +13032,7 @@ header {
 .article-content--title a:hover {
   text-decoration: underline;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .article-content--title {
     min-height: 3rem;
   }
@@ -12916,7 +13076,7 @@ header {
 }
 
 /* ------------------- Card sizing for different viewports ------------------ */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .article-sm {
     width: 47.9%;
   }
@@ -13215,7 +13375,7 @@ header {
   border: 3px solid #333645;
   border-radius: 3px;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .label label .text {
     margin-right: 1.25rem;
   }
@@ -13277,7 +13437,7 @@ header {
   flex-wrap: wrap;
   width: 100%;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .services-list, .offices-list {
     justify-content: space-evenly;
   }

@@ -19,6 +19,9 @@ $primary: #333645 !default;
 $primary-hover: darken($primary, 10%);
 $primary-dark: #262934 !default;
 
+// Side Menu colours
+$side-primary: rgba(0,0,0,.25);
+
 //SERVICES COLORS
 $web: #926fb1;
 $web-hover: darken($web, 5%);

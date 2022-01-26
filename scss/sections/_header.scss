@@ -90,18 +90,23 @@ header {
 }
 
 /* -------------------------------- Menu btn -------------------------------- */
-.menu-btn {
+.hamburger {
     position: relative;
     flex-direction: column;
     flex-wrap: nowrap;
+    
     padding: 5px 13px;
     margin-left: 1.25rem; //20px  
     height: 3.5rem; //56px
     line-height: 1.5;    
     
+    transition: all 150ms ease-in-out;
+    
     background-color: $primary;
+    
     &:hover {
         background-color: $primary-hover;
+        opacity: 1;
     }
     
     // Button Color
@@ -110,32 +115,55 @@ header {
     // border: 2px solid grey;
     
     // Hamburger Styling
-    .burger-container {
-        // position: relative;
-        width: 100%;
-        // border: 2px solid green;
+    .hamburger-box {
+        position: relative !important;
+        width: 33px;
+        height: 100%;
+        flex-direction: column;
+        justify-content: start;
+        // border: 1px solid green;
         
-        .menu-burger {
+        .hamburger-inner {
             position: relative;
+            height: fit-content;
             @include burger; //Burger lines
             
             &::before,&::after {
                 content: "";
                 position: absolute;
-                left: 0;
+                // left: 0;
+                
                 @include burger;
             }
             
-            // Moves other 2 bars in correct position
-            &::before {
-                content: "";
-                transform: translateY(-8px);
-                
-            }
+            // top
             &::after {
-                content: "";
-                transform: translateY(8px);
+                bottom: 8px;
+                // transform: translateY(8px);
             }
+            
+            // bottom
+            &::before {
+                top: 8px;
+                // transform: translateY(-8px);
+            }
+        }
+    }
+    
+    // Active state
+    &.is-active {
+        
+        .hamburger-inner {
+            
+            &::after {
+                bottom: 0;
+                // background-color: yellow;
+            }
+        }
+        
+        &:hover {
+            background-color: $primary-hover;
+            opacity: 1;
         }
     }
     
@@ -143,9 +171,9 @@ header {
     .menu-title {
         font-size: 0.75rem; //12px
         display: block;
-        margin-top: 5px;
     }
 }
+
 
 /* ------------------------------ Mobile Search ----------------------------- */
 .search-form,

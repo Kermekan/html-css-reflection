@@ -1,0 +1,22 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+
+// fade
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fade1 {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
