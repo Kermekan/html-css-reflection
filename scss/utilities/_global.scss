@@ -2,7 +2,6 @@
 @use '../utilities/mixins' as *;
 @use '../utilities/breakpoints' as *;
 
-
 // For Utility Classes and such
 
 .full-page {
@@ -120,6 +119,11 @@ input {
     box-shadow: 0 3px 2.188rem rgba(0,0,0,.1); // horizontal vertical spread color // 35px blur
     // overflow: hidden;
     padding: 1.875rem; //30px
+}
+
+
+.small-text {
+    font-size: 0.625rem;
 }
 
 /* ---------------------------- Responsive layout --------------------------- */

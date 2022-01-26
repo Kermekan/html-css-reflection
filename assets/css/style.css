@@ -11306,6 +11306,10 @@ input:focus {
   padding: 1.875rem;
 }
 
+.small-text {
+  font-size: 0.625rem;
+}
+
 /* ---------------------------- Responsive layout --------------------------- */
 .flex {
   display: flex;
@@ -11549,24 +11553,103 @@ h6 {
 
 .sidebar .upper,
 .sidebar .lower {
-  width: 100%;
-  height: fit-content;
+  width: 100% !important;
+  height: fit-content !important;
   flex-direction: column;
   justify-content: start;
   margin: 0;
 }
-.sidebar .upper a,
-.sidebar .lower a {
+.sidebar .upper .item-container .item a,
+.sidebar .lower .item-container .item a {
   color: #fff;
   display: block;
+  width: 100%;
   text-transform: uppercase;
   position: relative;
-  line-height: 1;
+  line-height: 1.25rem;
+}
+.sidebar .upper .item-container .item .item-links,
+.sidebar .lower .item-container .item .item-links {
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+.sidebar .upper .item-container .item .item-links li,
+.sidebar .lower .item-container .item .item-links li {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+.sidebar .upper .item-container .item .item-links a,
+.sidebar .lower .item-container .item .item-links a {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.sidebar .upper .item-container .item:hover > a, .sidebar .upper .item-container .item:focus > a, .sidebar .upper .item-container .item:active > a,
+.sidebar .lower .item-container .item:hover > a,
+.sidebar .lower .item-container .item:focus > a,
+.sidebar .lower .item-container .item:active > a {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* ------------------------------ Upper styling ----------------------------- */
 .sidebar .upper {
-  border: 2px solid white;
+  padding: 1.25rem;
+}
+.sidebar .upper .item-container {
+  width: 100%;
+  height: fit-content;
+}
+.sidebar .upper .item-container .item {
+  margin-bottom: 1.25rem;
+  width: 100%;
+  height: fit-content;
+}
+.sidebar .upper .item-container .item:last-child {
+  margin-bottom: 0;
+}
+.sidebar .upper .item-container .item > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: fit-content !important;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.25;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 100%;
+}
+.sidebar .upper .item-container .item > a .icon {
+  padding-bottom: 0.625rem;
+}
+.sidebar .upper .item-container .item > a .small-text {
+  padding-bottom: 2px;
+}
+.sidebar .upper .item-container .item .item-links {
+  border-radius: 3px;
+}
+.sidebar .upper .item-container .item .item-links li a {
+  padding: 0.625rem;
+}
+.sidebar .upper #web .icon {
+  color: #926fb1;
+}
+.sidebar .upper #it-support .icon {
+  color: #4183d7;
+}
+.sidebar .upper #telecoms .icon {
+  color: #d64541;
+}
+.sidebar .upper #software .icon {
+  color: #67809F;
+}
+.sidebar .upper #digital .icon {
+  color: #2ecc71;
+}
+.sidebar .upper #security .icon {
+  color: #f62459;
 }
 @media (min-width: 992px) {
   .sidebar .upper {
@@ -11583,7 +11666,7 @@ h6 {
 }
 .sidebar .lower .item-container .item {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.45);
 }
 .sidebar .lower .item-container .item > a {
   padding: 1.25rem;
@@ -11592,14 +11675,10 @@ h6 {
 }
 .sidebar .lower .item-container .item .item-links li {
   width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.45);
 }
 .sidebar .lower .item-container .item .item-links li a {
-  background-color: rgba(0, 0, 0, 0.25);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
   font-size: 0.875rem;
-  padding: 1.125rem 1.25rem;
-  line-height: 1;
+  padding: 15px 20px;
 }
 .sidebar .lower .item-container .item .item-links li a::before {
   content: "»";
@@ -11834,7 +11913,6 @@ header {
   padding-bottom: 0.625rem;
 }
 .nav-container .nav-item a .small-text {
-  font-size: 0.625rem;
   padding-bottom: 2px;
 }
 .nav-container .nav-item .sub-menu {

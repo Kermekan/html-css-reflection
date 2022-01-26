@@ -56,29 +56,135 @@
 // Nav sections global styling
 .sidebar .upper,
 .sidebar .lower {
-    width: 100%;
-    height: fit-content;
+    width: 100% !important;
+    height: fit-content !important;
     
     flex-direction: column;
     justify-content: start;
-    // align-items: start;
     margin: 0;
     
-    // Text styling
-    a {
-        color: $white;
-        display: block;
-        text-transform: uppercase;
-        position: relative;
-        line-height: 1;
+    .item-container {
+        .item {
+            // Text styling
+            a {
+                color: $white;
+                display: block;
+                width: 100%;
+                text-transform: uppercase;
+                position: relative;
+                line-height: 1.25rem;
+            }
+            
+            .item-links {
+                background-color: $side-primary;
+                width: 100%;
+                
+                li {
+                    width: 100%;
+                        
+                    border-top: 1px solid rgba(0,0,0,.25);
+                }
+                a {
+                    border-top:1px solid hsla(0,0%,100%,.05);
+                }
+            }
+            
+            @include hoverFocusActive {
+                & > a {
+                    background-color: hsla(0,0%,100%,.05);
+                }
+            }
+        }
     }
+    
     // border: 2px solid black;
 }
 
 /* ------------------------------ Upper styling ----------------------------- */
 .sidebar .upper {
-    border: 2px solid white;
+    padding: 1.25rem;
+    // border: 2px solid white;
     
+    .item-container {
+        width: 100%;
+        height: fit-content;
+        
+        .item {
+            margin-bottom: 1.25rem;
+            width: 100%;
+            height: fit-content;
+            // border: 2px solid red;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+            
+            // Text
+            & > a {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                
+                height: fit-content !important;
+                
+                padding: 1.25rem;
+                margin-bottom: 1.25rem;    
+                
+                text-align: center;
+                font-size: 1.125rem;
+                line-height: 1.25;
+                
+                outline: 1px solid rgba(0,0,0,.25);
+                border-radius: 3px;
+                border: 1px solid hsla(0,0%,100%,.1);
+                
+                @include fullSize;
+                
+                .icon {
+                    padding-bottom: 0.625rem;
+                }
+                
+                .small-text {
+                    padding-bottom: 2px;
+                }
+            }
+            
+            // Sub menu
+            .item-links {
+                border-radius: 3px;
+                li {
+                    a {
+                        padding: 0.625rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Icon Coloring
+    #web .icon {
+        color: $web;
+    }
+    
+    #it-support .icon {
+        color: $it-support;
+    }
+    
+    #telecoms .icon {
+        color: $telecoms;
+    }
+    
+    #software .icon {
+        color: $software;
+    }
+    
+    #digital .icon {
+        color: $digital;
+    }
+    
+    #security .icon {
+        color: $security;
+    }
     
     @include respond-to-up(md) {
         display: none;
@@ -93,9 +199,9 @@
         @include fullSize;
         
         .item {
-            // background-color: red;
+            // background-color: purple;
             border-top: 1px solid hsla(0,0%,100%,.1);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.45);
             
             // Text
             & > a {
@@ -111,15 +217,13 @@
                 li {
                     width: 100%;
                     // background-color: red;
-                    border-top: 1px solid rgba(0,0,0,.45);
                     
                     // Text styling
                     a {
-                        background-color: $side-primary;
-                        border-top:1px solid hsla(0,0%,100%,.05);
+                        
                         font-size: 0.875rem;
-                        padding: 1.125rem 1.25rem;
-                        line-height: 1;
+                        padding: 15px 20px;
+                        // line-height: 1;
                         
                         // Arrow
                         &::before {
