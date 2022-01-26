@@ -99,6 +99,11 @@ header {
     height: 3.5rem; //56px
     line-height: 1.5;    
     
+    background-color: $primary;
+    &:hover {
+        background-color: $primary-hover;
+    }
+    
     // Button Color
     @include btnColor($btn-primary, $btn-primary-darken, $btn-primary-hover);
     
@@ -106,7 +111,7 @@ header {
     
     // Hamburger Styling
     .burger-container {
-        position: relative;
+        // position: relative;
         width: 100%;
         // border: 2px solid green;
         

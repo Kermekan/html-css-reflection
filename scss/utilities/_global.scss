@@ -26,7 +26,7 @@
     margin: 0 auto;
     padding: 0 0.938rem; //15px
     
-    // border: 1px solid gray;
+    // border: 1px solid purple;
     
     /* ------------------------------- Breakpoints ------------------------------ */
     // width=750px from 768px to 992px viewport
@@ -93,7 +93,7 @@ input {
     color: $primary;
     border-radius: 3px;
     border: 1px solid $gray-400;
-    box-shadow: 0 3px 2.188rem rgba(0,0,0,.1); // horizontal vertical blur color // 35px blur
+    box-shadow: 0 3px 2.188rem rgba(0,0,0,.1); // horizontal vertical spread color // 35px blur
     // overflow: hidden;
     padding: 1.875rem; //30px
 }
