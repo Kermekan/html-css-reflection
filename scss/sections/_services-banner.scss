@@ -2,227 +2,97 @@
 @use '../utilities/mixins' as *;
 @use '../utilities/breakpoints' as *;
 
-#services {
-    @include fullSize;
-    position: relative;
-    // border: 3px solid grey;
-}
-
 .banner {
     position: relative;
-    flex-direction: column;
-    width: 100%;
-    height: 80vh;
-    border-top: 1px solid rgba(51,54,69,.5);
-    // border: 3px solid indianred;
-    
-    @include respond-to-down(sm) {
-        // height: 90vh;
-        @media (orientation: landscape) {
-            height: 110vw;
-        // border: 3px solid purple;
-            
-        }
-    }
-    
-    @include respond-to-down(xs) {
-        height: 80vh;
-        // border: 2px solid red;
-        
-        @media (orientation: landscape) {
-            // border: 2px solid red;
-        }
-    }
-    
-    @include respond-to-down(xxs) {
-        height: 90vh;
-        // border: 2px solid yellow;
-        
-        @media (orientation: landscape) {
-            // border: 2px solid yellow;
-        }
-    }
-    
-    @media (max-height: 321px) {
-        // border: 3px solid purple;
-        
-        @media (orientation: landscape) {
-            height: 110vh;
-            // border: 2px solid indianred;
-        }
-    }
-    
-    // Shadow effect
-    &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 1;
-        background: linear-gradient(270deg,transparent 25%,#000);
-        -webkit-background: linear-gradient(270deg,transparent 25%,#000);
-    }
-    
-    // Overlay for medium screens and below
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 1;
-        background:rgba(0, 0, 0, 0.5);
-    }
-    
-    // Overlay for medium and above
-    @include respond-to-up(md) {
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            z-index: 1;
-            background:rgba(0, 0, 0, 0.1);
-        }
-    }
-    
-    // image styling
-    img { //Image now scales down when screen size is reduced for some reason
-        position: relative;
-        width: 100%;
-        height: 100%; // use vh so it can cover height on large screens
-        object-fit: cover;
-        // border: 3px solid yellowgreen;
-    }
-}
-
-/* ----------------------------- Services Slider ---------------------------- */
-// Content Container
-.banner-content {
-    position: absolute;
-    justify-content: start !important;
-    z-index: 2; //places image above shadow overlay
-    height: 100%;
-    // border: 2px solid darkgoldenrod;
-}
-
-// Contains description & button
-.banner-info {
-    color: $white !important;
-    flex-direction: column; //places button under text
-    justify-content: center;
-    height: 100%;
-    // border: 2px solid white;
-
-    // Align content to left above 992px
-    @include respond-to-up(md) {
-        align-items: start;
-    }
-    /* ------------------------------ Text-styling ------------------------------ */
-    .banner-text {
-        display: block;
-        width: fit-content;
-        text-align: center;
-        // border: 3px solid violet;
-        
-        // Breakpoints
-        // increase width above 768px
-        @include respond-to-up (sm) {
-            width: 100%;
-        }
-        
-        // Align text to left above 992px
-        @include respond-to-up(md) {
-            text-align: start;
-        }
-        
-        // Title Styling
-        h1 {
-            font-size: 3rem; //48px
-            font-weight: 400;
-            margin-bottom: 1.563rem; //25px
-        }
-        
-        // Description Styling
-        p {
-            font-size: 1.25rem;
-            line-height: 2.25rem; //36px
-            margin-bottom: 2.188rem; //35px
-        }
-        
-    }
-}
-
-/* ------------------------------ Owl Controls ------------------------------ */
-.owl-controls {
-    position: relative;
-    bottom: 10%;
-    width: 100%;
+    // overflow: hidden;
     height: fit-content;
-    color: white;
-    // border: 2px solid olive;
+    // height: calc(100vh - 209px);
     
-    @include respond-to-down(sm) {
-        // bottom: 15%;
-    }
-    .owl-nav {
-        position: relative;
-        width: fit-content;
-        height: fit-content;
-        cursor: pointer;
-        // border: 2px solid darkcyan;
-        
-        // Owl Dots
-        .owl-container {
-            position: relative;
-            margin: 0 0.625rem; // 0 10px
-            height: fit-content;
-            // border: 2px solid darkkhaki;
-            
-            span {
-                position: relative;
-                background-color: $owl;
-                opacity: 0.5;
-                width: 0.688rem; //11px
-                height: 0.688rem;
-                border-radius: 50%;
-                
-                &:hover {
-                    background-color: $owl-hover;
-                }
-            }
-        }
-        
-        // Styling when button is activated
-        .active  span {
-            background-color: $white;
-            opacity: 1;
-            
-            &::after {
-                content: "";
-                position: absolute;
-                top: -6px;
-                left: -6px;
-                width: 1.438rem; //11px
-                height: 1.438rem; //11px
-                border-radius: 50%;
-                border: 2px solid $white;
-            }
-        }
-    }
+    flex-direction: column;
     
+    border-top: 1px solid rgba(51,54,69,.5);
+    // border: 2px solid peru;
 }
 
+.slide-container {
+    position: relative;
+    height: fit-content;
+    // border: 2px solid red;
+}
 
+/* ------------------------------ Slide Content ----------------------------- */
+.slide {
+    position: relative;
+    width: 100%;
+    color: $white;
+    
+    // Image Styling
+    img {
+        position: relative;
+        @include fullSize;
+        object-fit: cover;
+    }
+    
+    @include bannerHeight;
+    @include bannerShadow;
+}
 
-
-
-
-
-
+// Content
+.slide .content {
+    position: absolute;
+    z-index: 2;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    // border: 2px solid firebrick;
+    
+    &--info {
+        color: $white;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        // border: 2px solid purple;
+        
+        // text styling
+        .text {
+            display: block;
+            text-align: center;
+            // border: 3px solid violet;
+            
+            // Title
+            h1 {
+                font-size: 3rem; //48px
+                font-weight: 400;
+                text-transform: uppercase;
+                margin-bottom: 1.563rem; //25px
+            }
+            
+            // Description
+            p {
+                font-size: 1.25rem;
+                line-height: 2.25rem; //36px
+                margin-bottom: 2.188rem; //35px
+            }
+        }
+    }
+    
+    // Breakpoints
+    @include respond-to-up(md) {
+        &--info {
+            align-items: start;
+            
+            .text {
+                text-align: start;
+            }
+        }
+    }
+    
+    @include respond-to-up (sm) {
+        &--info {
+            .text {
+                width: 100%;
+            }
+        }
+    }
+}
 

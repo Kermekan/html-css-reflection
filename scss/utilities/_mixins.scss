@@ -48,7 +48,7 @@
 
 // Sets space between sections
 @mixin headerSpacing {
-    margin-bottom: 1.25rem; //20px
+    padding-bottom: 1.25rem; //20px
 }
 
 // line for services cards
@@ -103,7 +103,74 @@
             display: block;
         }
     }
+}
+
+// Banner Styling
+@mixin bannerHeight {
+    height: calc(100vh - 209px);
+    // border: 2px solid green;
     
+    @media (max-width: 992px) {
+        height: calc(100vh - 110px);
+        // border: 2px solid greenyellow;
+        
+        // Landscape view
+        @media (orientation: landscape) {
+            height: 150vh;
+            border: 2px solid saddlebrown;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        height: calc(100vh - 168px);
+        // border: 2px solid red;
+        
+        // Landscape view
+        @media (orientation: landscape) {
+            height: 120vh;
+            border: 2px solid hotpink;
+        }
+    }
+}
+
+@mixin bannerShadow {
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        background: linear-gradient(270deg,transparent 25%,#000);
+        -webkit-background: linear-gradient(270deg,transparent 25%,#000);
+    }
+    
+    // Overlay for medium screens and below
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        // z-index: 1;
+        background:rgba(0, 0, 0, 0.5);
+    }
+    
+    // Overlay for medium and above
+    @media (min-width: 992px) {
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            // z-index: 1;
+            background:rgba(0, 0, 0, 0.1);
+        }
+    }
 }
 
 /* --------------------------------- Buttons -------------------------------- */

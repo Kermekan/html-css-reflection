@@ -30,9 +30,20 @@ overlay.addEventListener("click", () => {
         fullPage.classList.remove("is-active");
         menuOpen = false;
     }
-});
+})
 
-
+/* ----------------------------- Image Carousel ----------------------------- */
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplaySpeed: 350,
+        autoplayTimeout: 4000,
+        dots: false,
+        
+    });
+  });
 
 
 

@@ -1,0 +1,40 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+/* -------------------------- Banner Button Styling ------------------------- */
+.banner-btn {
+    @include btnSpacing(
+        1.25rem,
+        0.313rem, 1.25rem, // 5px 20px
+        3.125rem // 50px
+    );
+    
+    a {
+        color: $white;
+        @include btnIconSpace;
+    }
+}
+
+.web-btn {
+    @include btnColor($web, $web-darken, $web-hover);
+}
+
+.it-support-btn {
+    @include btnColor($it-support, $it-support-darken, $it-support-hover);
+}
+
+.telecoms-btn {
+    @include btnColor($telecoms, $telecoms-darken, $telecoms-hover);
+}
+
+.software-btn {
+    @include btnColor($software, $software-darken, $software-hover);
+}
+
+
+
+
+
+
+

@@ -11194,7 +11194,7 @@ a:not([class]) {
 /* Make images responsive to container size */
 img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
@@ -11338,13 +11338,13 @@ input:focus {
   }
 }
 
-@media (min-width: 576px) and (max-width: 769px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .hidden-sm {
     display: none !important;
   }
 }
 
-@media (min-width: 769px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .hidden-md {
     display: none !important;
   }
@@ -11454,24 +11454,6 @@ h6 {
 }
 .buttons .contact-lg:hover {
   background-color: #8c8d96;
-}
-
-/* -------------------------- Banner Button Styling ------------------------- */
-.banner-btn {
-  background-color: #926fb1;
-  border: 1px solid #79539a;
-  font-size: 1.25rem;
-  padding: 0.313rem 1.25rem;
-  line-height: 3.125rem;
-}
-.banner-btn:hover {
-  background-color: #855ea8;
-}
-.banner-btn a {
-  color: #fff;
-}
-.banner-btn a span {
-  margin-left: 0.75rem;
 }
 
 /* -------------------------- About Button Styling -------------------------- */
@@ -11693,9 +11675,9 @@ header {
   width: 100%;
   padding-top: 1.25rem;
 }
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   header {
-    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 }
 
@@ -11706,9 +11688,10 @@ header {
   flex-wrap: nowrap;
   margin-bottom: 0.625rem;
 }
-@media (min-width: 769px) {
+@media (min-width: 767px) {
   .header-inner {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0;
+    padding-bottom: 1.25rem;
   }
 }
 
@@ -11719,7 +11702,7 @@ header {
   margin-right: 1.5rem;
   flex-shrink: 1;
 }
-@media (min-width: 769px) {
+@media (min-width: 767px) {
   .logo-container {
     max-width: 23.375rem;
   }
@@ -11830,7 +11813,7 @@ header {
 
 .search-sm {
   position: relative;
-  height: 47px;
+  min-height: 48px;
 }
 .search-sm .input-container {
   justify-content: flex-end;
@@ -12310,40 +12293,54 @@ header {
   }
 }
 
-#services {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
 .banner {
   position: relative;
+  height: fit-content;
   flex-direction: column;
-  width: 100%;
-  height: 80vh;
   border-top: 1px solid rgba(51, 54, 69, 0.5);
 }
-@media (max-width: 769px) and (orientation: landscape) {
-  .banner {
-    height: 110vw;
+
+.slide-container {
+  position: relative;
+  height: fit-content;
+}
+
+/* ------------------------------ Slide Content ----------------------------- */
+.slide {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  height: calc(100vh - 209px);
+}
+.slide img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 992px) {
+  .slide {
+    height: calc(100vh - 110px);
   }
 }
-@media (max-width: 576px) {
-  .banner {
-    height: 80vh;
+@media (max-width: 992px) and (orientation: landscape) {
+  .slide {
+    height: 150vh;
+    border: 2px solid saddlebrown;
   }
 }
-@media (max-width: 360px) {
-  .banner {
-    height: 90vh;
+@media (max-width: 768px) {
+  .slide {
+    height: calc(100vh - 168px);
   }
 }
-@media (max-height: 321px) and (orientation: landscape) {
-  .banner {
-    height: 110vh;
+@media (max-width: 768px) and (orientation: landscape) {
+  .slide {
+    height: 120vh;
+    border: 2px solid hotpink;
   }
 }
-.banner::before {
+.slide::before {
   content: "";
   position: absolute;
   left: 0;
@@ -12354,124 +12351,112 @@ header {
   background: linear-gradient(270deg, transparent 25%, #000);
   -webkit-background: linear-gradient(270deg, transparent 25%, #000);
 }
-.banner::after {
+.slide::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 1;
   background: rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 992px) {
-  .banner::after {
+  .slide::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 1;
     background: rgba(0, 0, 0, 0.1);
   }
 }
-.banner img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
-/* ----------------------------- Services Slider ---------------------------- */
-.banner-content {
+.slide .content {
   position: absolute;
-  justify-content: start !important;
   z-index: 2;
-  height: 100%;
-}
-
-.banner-info {
-  color: #fff !important;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  /* ------------------------------ Text-styling ------------------------------ */
+  flex-wrap: nowrap;
+  width: 100%;
 }
-@media (min-width: 992px) {
-  .banner-info {
-    align-items: start;
-  }
+.slide .content--info {
+  color: #fff;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
 }
-.banner-info .banner-text {
+.slide .content--info .text {
   display: block;
-  width: fit-content;
   text-align: center;
 }
-@media (min-width: 769px) {
-  .banner-info .banner-text {
-    width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .banner-info .banner-text {
-    text-align: start;
-  }
-}
-.banner-info .banner-text h1 {
+.slide .content--info .text h1 {
   font-size: 3rem;
   font-weight: 400;
+  text-transform: uppercase;
   margin-bottom: 1.563rem;
 }
-.banner-info .banner-text p {
+.slide .content--info .text p {
   font-size: 1.25rem;
   line-height: 2.25rem;
   margin-bottom: 2.188rem;
 }
+@media (min-width: 992px) {
+  .slide .content--info {
+    align-items: start;
+  }
+  .slide .content--info .text {
+    text-align: start;
+  }
+}
+@media (min-width: 767px) {
+  .slide .content--info .text {
+    width: 100%;
+  }
+}
 
-/* ------------------------------ Owl Controls ------------------------------ */
-.owl-controls {
-  position: relative;
-  bottom: 10%;
-  width: 100%;
-  height: fit-content;
-  color: white;
+/* -------------------------- Banner Button Styling ------------------------- */
+.banner-btn {
+  font-size: 1.25rem;
+  padding: 0.313rem 1.25rem;
+  line-height: 3.125rem;
 }
-.owl-controls .owl-nav {
-  position: relative;
-  width: fit-content;
-  height: fit-content;
-  cursor: pointer;
+.banner-btn a {
+  color: #fff;
 }
-.owl-controls .owl-nav .owl-container {
-  position: relative;
-  margin: 0 0.625rem;
-  height: fit-content;
+.banner-btn a span {
+  margin-left: 0.75rem;
 }
-.owl-controls .owl-nav .owl-container span {
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.5);
-  opacity: 0.5;
-  width: 0.688rem;
-  height: 0.688rem;
-  border-radius: 50%;
+
+.web-btn {
+  background-color: #926fb1;
+  border: 1px solid #79539a;
 }
-.owl-controls .owl-nav .owl-container span:hover {
-  background-color: rgba(204, 204, 204, 0.5);
+.web-btn:hover {
+  background-color: #855ea8;
 }
-.owl-controls .owl-nav .active span {
-  background-color: #fff;
-  opacity: 1;
+
+.it-support-btn {
+  background-color: #4183d7;
+  border: 1px solid #286abd;
 }
-.owl-controls .owl-nav .active span::after {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: -6px;
-  width: 1.438rem;
-  height: 1.438rem;
-  border-radius: 50%;
-  border: 2px solid #fff;
+.it-support-btn:hover {
+  background-color: #2c75d2;
+}
+
+.telecoms-btn {
+  background-color: #d64541;
+  border: 1px solid #bc2c28;
+}
+.telecoms-btn:hover {
+  background-color: #d1312d;
+}
+
+.software-btn {
+  background-color: #67809F;
+  border: 1px solid #526781;
+}
+.software-btn:hover {
+  background-color: #5c7391;
 }
 
 .service-cards {
@@ -12946,7 +12931,7 @@ header {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 767px) {
   .card-sm {
     flex-basis: 47.9%;
     display: flex;
@@ -13043,7 +13028,7 @@ header {
   gap: 1.875rem;
   overflow: hidden;
 }
-@media (min-width: 769px) {
+@media (min-width: 767px) {
   .articles-list {
     align-items: stretch;
     flex-direction: row;
@@ -13110,7 +13095,7 @@ header {
 .article-content--title a:hover {
   text-decoration: underline;
 }
-@media (min-width: 769px) {
+@media (min-width: 767px) {
   .article-content--title {
     min-height: 3rem;
   }
@@ -13154,7 +13139,7 @@ header {
 }
 
 /* ------------------- Card sizing for different viewports ------------------ */
-@media (min-width: 769px) {
+@media (min-width: 767px) {
   .article-sm {
     width: 47.9%;
   }
@@ -13453,7 +13438,7 @@ header {
   border: 3px solid #333645;
   border-radius: 3px;
 }
-@media (min-width: 769px) {
+@media (min-width: 767px) {
   .label label .text {
     margin-right: 1.25rem;
   }
@@ -13515,7 +13500,7 @@ header {
   flex-wrap: wrap;
   width: 100%;
 }
-@media (min-width: 769px) {
+@media (min-width: 767px) {
   .services-list, .offices-list {
     justify-content: space-evenly;
   }

@@ -23,6 +23,7 @@ header {
     margin-bottom: 0.625rem; // 10px
     
     @include respond-to-up(sm) {
+        margin-bottom: 0;
         @include headerSpacing;        // Separates mobile search from header-inner
     }
     
@@ -185,7 +186,7 @@ header {
 
 .search-sm {
     position: relative;
-    height: 47px;
+    min-height: 48px;
     // border: 2px solid yellow;
      
     .input-container {

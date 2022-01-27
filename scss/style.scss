@@ -19,7 +19,10 @@
 //Sections
 @use 'sections/header';
 @use 'sections/navigation';
+
 @use 'sections/services-banner';
+@use 'components/banner-buttons';
+
 @use 'sections/services-cards';
 @use 'sections/about';
 @use 'sections/news';
