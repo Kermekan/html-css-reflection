@@ -16,7 +16,12 @@
     // border: 3px solid lightblue;
     
     &.is-active {
+        right: 275px;
         overflow: hidden ;
+        
+        @include respond-to-up(md) {
+            right: 333px;
+        }
     }
 }
 
@@ -27,12 +32,12 @@
     // border: 2px solid purple;
     
     &.is-active {
-        right: 275px;
+        // right: 275px;
         overflow: hidden ;
         
-        @include respond-to-up(md) {
-            right: 333px;
-        }
+        // @include respond-to-up(md) {
+        //     right: 333px;
+        // }
     }
 }
 
