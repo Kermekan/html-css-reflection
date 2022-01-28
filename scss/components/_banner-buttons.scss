@@ -32,8 +32,19 @@
     @include btnColor($software, $software-darken, $software-hover);
 }
 
+.digital-btn {
+    @include btnColor($digital, $digital-darken, $digital-hover);
+    
+    @include respond-to-down(xxs) {
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+    }
+}
 
-
+.security-btn {
+    @include btnColor($security, $security-darken, $security-hover);
+    margin: 0 20px;
+}
 
 
 

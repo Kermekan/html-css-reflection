@@ -2,6 +2,11 @@
 @use '../utilities/mixins' as *;
 @use '../utilities/breakpoints' as *;
 
+#services {
+    position: relative;
+    // border: 2px solid hotpink;
+}
+
 .banner {
     position: relative;
     // overflow: hidden;
@@ -96,3 +101,50 @@
     }
 }
 
+
+.owl-dots {
+    position: absolute;
+    bottom: 44px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    // border: 2px solid red;
+    
+    button {
+        display: block;
+        
+        margin: 0 0.625rem; // 0 10px
+        
+        span {
+            position: relative;
+            width: 0.688rem; //11px
+            height: 0.688rem;
+            border-radius: 50%;
+            
+            background-color: $owl;
+            // border: 2px solid olive;
+            
+            &:hover {
+                background-color: $owl-hover;
+            }
+        }
+        
+        &.active {
+            span {
+                background-color: $white;
+                
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -6px;
+                    left: -6px;
+                    width: 1.438rem; //11px
+                    height: 1.438rem; //11px
+                    border-radius: 50%;
+                    border: 2px solid $white;
+                }
+            }
+        }
+    }
+}

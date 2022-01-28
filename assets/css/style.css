@@ -11218,7 +11218,13 @@ span {
   align-items: center;
 }
 .full-page.is-active {
+  right: 275px;
   overflow: hidden;
+}
+@media (min-width: 992px) {
+  .full-page.is-active {
+    right: 333px;
+  }
 }
 
 .page-container {
@@ -11227,13 +11233,7 @@ span {
   height: fit-content;
 }
 .page-container.is-active {
-  right: 275px;
   overflow: hidden;
-}
-@media (min-width: 992px) {
-  .page-container.is-active {
-    right: 333px;
-  }
 }
 
 .inner {
@@ -11492,7 +11492,7 @@ h6 {
 /* --------------------------- Service Cards Hover -------------------------- */
 .sidebar-container {
   display: none;
-  animation: fade 500ms;
+  animation: fade 300ms;
 }
 
 .sidebar-container.is-active {
@@ -11671,9 +11671,14 @@ h6 {
 }
 
 header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
   width: 100%;
+  background-color: #fff;
   padding-top: 1.25rem;
+  transition: all 300ms ease-in-out;
 }
 @media (max-width: 767px) {
   header {
@@ -11855,6 +11860,16 @@ header {
   .search-md .input-field {
     width: 15rem;
   }
+}
+
+.scroll-down header {
+  position: fixed;
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+  position: fixed;
+  transform: translate3d(0, 0, 0);
 }
 
 .main-nav {
@@ -12293,6 +12308,10 @@ header {
   }
 }
 
+#services {
+  position: relative;
+}
+
 .banner {
   position: relative;
   height: fit-content;
@@ -12325,8 +12344,7 @@ header {
 }
 @media (max-width: 992px) and (orientation: landscape) {
   .slide {
-    height: 150vh;
-    border: 2px solid saddlebrown;
+    height: 120vh;
   }
 }
 @media (max-width: 768px) {
@@ -12336,8 +12354,7 @@ header {
 }
 @media (max-width: 768px) and (orientation: landscape) {
   .slide {
-    height: 120vh;
-    border: 2px solid hotpink;
+    height: 140vh;
   }
 }
 .slide::before {
@@ -12414,6 +12431,41 @@ header {
   }
 }
 
+.owl-dots {
+  position: absolute;
+  bottom: 44px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.owl-dots button {
+  display: block;
+  margin: 0 0.625rem;
+}
+.owl-dots button span {
+  position: relative;
+  width: 0.688rem;
+  height: 0.688rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.owl-dots button span:hover {
+  background-color: #869791;
+}
+.owl-dots button.active span {
+  background-color: #fff;
+}
+.owl-dots button.active span::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 1.438rem;
+  height: 1.438rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
 /* -------------------------- Banner Button Styling ------------------------- */
 .banner-btn {
   font-size: 1.25rem;
@@ -12457,6 +12509,29 @@ header {
 }
 .software-btn:hover {
   background-color: #5c7391;
+}
+
+.digital-btn {
+  background-color: #2ecc71;
+  border: 1px solid #25a25a;
+}
+.digital-btn:hover {
+  background-color: #29b765;
+}
+@media (max-width: 360px) {
+  .digital-btn {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
+
+.security-btn {
+  background-color: #f62459;
+  border: 1px solid #de093f;
+  margin: 0 20px;
+}
+.security-btn:hover {
+  background-color: #f50c46;
 }
 
 .service-cards {
@@ -13277,7 +13352,7 @@ header {
 .client-items:hover .desciption {
   display: block;
   position: absolute;
-  bottom: 100%;
+  bottom: 139%;
   left: -200px;
   right: -200px;
 }
