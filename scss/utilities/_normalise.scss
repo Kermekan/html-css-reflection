@@ -35,7 +35,8 @@ li {
 html {
   font-size: 16px;
   line-height: 1.6;
-  letter-spacing: 0.4px !important;
+  overflow-x: hidden;
+  letter-spacing: 0.4px;
 }
 
 // Body Styling
@@ -45,11 +46,11 @@ body {
   width: 100vw;
   height: 100vh;
   line-height: 1.4;
+  overflow-x: hidden;
    
    
   //  border: 2px solid blue;
 }
-
 
 /* Remove list styles*/
 ul,
