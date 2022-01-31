@@ -1,4 +1,5 @@
 /* ------------------------------- Menu toggle ------------------------------ */
+const body = document.querySelector("body")
 const fullPage = document.querySelector(".full-page")
 const pageContainer = document.querySelector(".page-container")
 
@@ -45,33 +46,10 @@ $(document).ready(function(){
 });
 
 /* ------------------------------ Sticky Header ----------------------------- */
-(function () {
-    let lastScroll = 0;
-    window.addEventListener("scroll", function () {
-        const currentScroll = window.pageYOffset;
+const header = document.getElementById("header");
+// console.log(header);
 
-        if (currentScroll <= 0) {
-        body.classList.remove("scroll-up");
-        return;
-        }
-
-        if (currentScroll > 300) {
-            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-                body.classList.remove("scroll-up");
-                body.classList.add("scroll-down");
-            } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
-                setTimeout(function () {
-                body.classList.remove("scroll-down");
-                body.classList.add("scroll-up");
-                }, 250);
-            }
-        }
-
-        lastScroll = currentScroll;
-    });
-})();
-
-
+// let lastScroll = window.scrollY;
 
 
 

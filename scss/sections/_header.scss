@@ -3,23 +3,23 @@
 @use '../utilities/breakpoints' as *;
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 2;
+    // padding-right: 17px;
     
     width: 100%;
     background-color: $white;
     
     padding-top: 1.25rem; //20px
-    transition: all 300ms ease-in-out;
+    // transition: all 300ms ease-in-out;
     
     // breakpoints
     @include respond-to-down(sm) {
         @include headerSpacing;         
     }
 }
-
 
 .header-inner {
     position: relative;
@@ -251,8 +251,6 @@ header {
         }
     }
 }
-
-
 
 .scroll-down {
     header {
