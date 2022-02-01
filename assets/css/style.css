@@ -11155,6 +11155,7 @@ html {
   line-height: 1.6;
   overflow-x: hidden;
   letter-spacing: 0.4px;
+  height: 100vh;
 }
 
 body {
@@ -11248,7 +11249,7 @@ span {
 }
 .page-container.is-active {
   right: 275px;
-  overflow: hidden;
+  /* For when header is fixed */
 }
 @media (min-width: 992px) {
   .page-container.is-active {
@@ -11472,7 +11473,95 @@ h6 {
   margin-left: 0.75rem;
 }
 
-/* ---------------------------- Newsletter button --------------------------- */
+/* ----------------------------- Cookie Buttons ----------------------------- */
+.cookie-footer {
+  justify-content: space-between;
+  gap: 1.875rem;
+}
+.cookie-footer .btn {
+  width: 47.2%;
+}
+.cookie-footer .btn span {
+  color: #fff;
+}
+.cookie-footer .cookie-settings {
+  background-color: #999aa2;
+  border: 1px solid #7e808a;
+}
+.cookie-footer .cookie-settings:hover {
+  background-color: #8c8d96;
+}
+.cookie-footer .cookie-accept {
+  background-color: #926fb1;
+  border: 1px solid #79539a;
+}
+.cookie-footer .cookie-accept:hover {
+  background-color: #855ea8;
+}
+@media (max-width: 767px) {
+  .cookie-footer {
+    flex-direction: column;
+  }
+  .cookie-footer .btn {
+    width: 100%;
+  }
+}
+
+.cookie-consent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.cookie-consent .cookie-box {
+  padding: 0;
+  border-radius: 5px;
+  background-clip: padding-box;
+  width: 100%;
+  max-width: 37.5rem;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: start;
+}
+.cookie-consent .cookie-box > div {
+  width: 100%;
+  padding: 20px;
+}
+.cookie-consent .cookie-box .cookie-header {
+  padding: 15px 20px;
+}
+.cookie-consent .cookie-box .cookie-header h3 {
+  font-size: 1.625rem;
+}
+.cookie-consent .cookie-box .cookie-description {
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+}
+.cookie-consent .cookie-box .cookie-description p {
+  color: #666;
+  margin-bottom: 25px;
+  line-height: 1.875rem;
+}
+.cookie-consent .cookie-box .cookie-description p a {
+  color: #333645;
+}
+.cookie-consent .cookie-box .cookie-description p a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 767px) {
+  .cookie-consent {
+    padding: 1.875rem;
+  }
+  .cookie-consent .cookie-box {
+    width: 100%;
+  }
+}
+
 /* ------------------------------- Menu Hover ------------------------------- */
 /* ------------------------------ Service cards ----------------------------- */
 .card-container {
@@ -11672,13 +11761,14 @@ h6 {
 }
 
 header {
-  position: fixed;
+  width: 100%;
+  padding-top: 1.25rem;
+  background-color: #fff;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 2;
-  width: 100%;
-  background-color: #fff;
-  padding-top: 1.25rem;
+  transition: all 300ms ease-in-out;
 }
 @media (max-width: 767px) {
   header {
@@ -11750,7 +11840,7 @@ header {
   position: relative;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding: 5px 13px;
+  padding: 5px 14px;
   margin-left: 1.25rem;
   height: 3.5rem;
   line-height: 1.5;
@@ -12310,6 +12400,7 @@ header {
 
 #services {
   position: relative;
+  width: 100%;
 }
 
 .banner {
@@ -12587,6 +12678,7 @@ header {
   line-height: 1.375rem;
 }
 .software-card .card-inner .services-btn {
+  display: block;
   color: #fff;
   background-color: #67809F;
 }
@@ -12650,6 +12742,7 @@ header {
   line-height: 1.375rem;
 }
 .it-support-card .card-inner .services-btn {
+  display: block;
   color: #fff;
   background-color: #4183d7;
 }
@@ -12713,6 +12806,7 @@ header {
   line-height: 1.375rem;
 }
 .digital-card .card-inner .services-btn {
+  display: block;
   color: #fff;
   background-color: #2ecc71;
 }
@@ -12776,6 +12870,7 @@ header {
   line-height: 1.375rem;
 }
 .telecoms-card .card-inner .services-btn {
+  display: block;
   color: #fff;
   background-color: #d64541;
 }
@@ -12839,6 +12934,7 @@ header {
   line-height: 1.375rem;
 }
 .web-card .card-inner .services-btn {
+  display: block;
   color: #fff;
   background-color: #926fb1;
 }
@@ -12902,6 +12998,7 @@ header {
   line-height: 1.375rem;
 }
 .security-card .card-inner .services-btn {
+  display: block;
   color: #fff;
   background-color: #f62459;
 }
@@ -12968,6 +13065,7 @@ header {
   line-height: 1.375rem;
 }
 .training-card .card-inner .services-btn {
+  display: block;
   color: #fff;
   background-color: #926fb1;
 }
@@ -13424,7 +13522,7 @@ header {
   justify-content: start;
   flex-direction: column;
   align-items: start;
-  margin: 0 30px;
+  margin: 0 1.875rem;
 }
 
 .sign-up {
@@ -13733,5 +13831,9 @@ header {
     width: fit-content;
   }
 }
+/* Variables */
+/* Utilities */
+/* Components */
+/* Sections */
 
 /*# sourceMappingURL=style.css.map */

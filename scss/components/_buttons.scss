@@ -6,7 +6,7 @@
 /* -------------------- Search Button for medium +screens ------------------- */
 .search-md .search-btn {
     position: relative;
-    background-color: $btn-gray;
+    background-color: $btn-default;
     height: 100%;
     width: 3.938rem; //63px
     margin: 0 auto;
@@ -23,7 +23,7 @@
     }
     
     &:hover {
-        @include btnHover($btn-gray-hover);
+        @include btnHover($btn-default-hover);
     }
 }
 
@@ -63,14 +63,12 @@
     
     // Contact button
     .contact-lg {
-        background-color: $btn-gray;
+        background-color: $btn-default;
         &:hover {
-            @include btnHover($btn-gray-hover)
+            @include btnHover($btn-default-hover)
         }
     }
 }
-
-
 
 /* -------------------------- About Button Styling -------------------------- */
 
@@ -85,5 +83,34 @@
     }
 }
 
-/* ---------------------------- Newsletter button --------------------------- */
+/* ----------------------------- Cookie Buttons ----------------------------- */
+.cookie-footer {
+    justify-content: space-between;
+    gap: 1.875rem;
+    
+    .btn {
+        width: 47.2%;
+        
+         span {
+            color: $white;
+         }
+    }
+    
+    .cookie-settings {
+        @include btnColor($btn-default, $btn-default-darken, $btn-default-hover);
+    }
+    
+    .cookie-accept {
+        @include btnColor($btn-purple, $btn-purple-darken, $btn-purple-hover);
+    }
+    
+    // Breakpoints
+    @include respond-to-down(sm) {
+        flex-direction: column;
+        
+        .btn {
+            width: 100%;
+        }
+    }
+}
 

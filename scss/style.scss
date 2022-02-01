@@ -1,30 +1,34 @@
-// Variables
+/* Variables */
 @use 'custom';
 
-// Utilities
+/* Utilities */
 @use 'utilities/normalise';
 @use 'utilities/breakpoints';
 @use 'utilities/mixins';
 @use 'utilities/section-containers';
 @use 'utilities/global';
 
-//Components
+/* Components */
 @use 'components/animation';
 @use 'components/typography';
 @use 'components/buttons';
+@use 'components/cookie-consent';
 @use 'components/sub-menu-hover';
 @use 'components/service-cards-hover';
 @use 'components/articles-colors';
 @use 'components/side-menu';
 
-//Sections
+/* Sections */
+
+// Header
 @use 'sections/header';
 @use 'sections/navigation';
 
+// Services
 @use 'sections/services-banner';
 @use 'components/banner-buttons';
-
 @use 'sections/services-cards';
+
 @use 'sections/about';
 @use 'sections/news';
 @use 'sections/clients';

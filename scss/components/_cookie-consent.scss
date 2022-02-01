@@ -1,0 +1,90 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+
+.cookie-consent {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    
+    min-width: 100vw;
+    min-height: 100vh;
+    
+    background-color: rgba(0, 0, 0, 0.7);
+    // border: 2px solid peru;
+    // display: none;
+    
+    .cookie-box {
+        padding: 0;
+        border-radius: 5px;
+        background-clip: padding-box;
+        
+        width: 100%;
+        max-width: 37.5rem; // 600px
+        height: fit-content;
+        
+        flex-direction: column;
+        justify-content: start;
+        
+        // All children
+        & > div {
+            width: 100%;
+            padding: 20px;
+        }
+        
+        // Header
+        .cookie-header {
+            padding: 15px 20px;
+            
+            h3 {
+                font-size: 1.625rem;
+            }
+        }
+        
+        // Text
+        .cookie-description {
+            border-top: 1px solid $gray-300;
+            border-bottom: 1px solid $gray-300;
+            
+            p {
+                color: #666;
+                margin-bottom: 25px;
+                line-height: 1.875rem;
+                
+                a {
+                    color: $primary;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        
+        // Footer in scss/components/_buttons.scss
+        
+    }
+    
+    @include respond-to-down(sm) {
+        padding: 1.875rem;
+        
+        .cookie-box {
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
