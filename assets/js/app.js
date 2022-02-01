@@ -41,6 +41,7 @@ const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
 // Save cookie
 const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
+// show cookie on load
 window.onload = () => {
     const consentPopup = document.getElementById('cookie-consent');
     const acceptBtn = document.getElementById('accept');
@@ -51,6 +52,7 @@ window.onload = () => {
     }
     acceptBtn.addEventListener('click', acceptFn);
 
+    // if no cookie then show
     if (shouldShowPopup(storageType)) {
         consentPopup.classList.remove('hidden');
         
