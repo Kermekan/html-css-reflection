@@ -45,8 +45,9 @@ const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 window.onload = () => {
     const consentPopup = document.getElementById('cookie-consent');
     const acceptBtn = document.getElementById('accept');
-
-    const acceptFn = event => {
+    
+    // add cookies on button click
+    const acceptFn = () => {
         saveToStorage(storageType);
         consentPopup.classList.add('hidden');
     }
