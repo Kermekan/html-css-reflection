@@ -41,7 +41,7 @@ const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
 // Save cookie
 const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
-// show cookie on load
+// show cookie popup on load
 window.onload = () => {
     const consentPopup = document.getElementById('cookie-consent');
     const acceptBtn = document.getElementById('accept');
