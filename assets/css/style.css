@@ -12448,6 +12448,11 @@ header {
     height: 140vh;
   }
 }
+@media (max-height: 700px) {
+  .slide {
+    height: 102vh;
+  }
+}
 .slide::before {
   content: "";
   position: absolute;

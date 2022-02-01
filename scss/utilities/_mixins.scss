@@ -131,6 +131,11 @@
             // border: 2px solid hotpink;
         }
     }
+    
+    @media (max-height: 700px) {
+        height: 102vh;
+        // border: 2px solid gold;
+     }
 }
 
 @mixin bannerShadow {
