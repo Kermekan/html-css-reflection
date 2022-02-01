@@ -21,22 +21,24 @@ $(document).ready(function(){
 // let lastScroll = window.scrollY;
 
 /* ----------------------------- Cookie Consent ----------------------------- */
+// Get and set cookie
 const cookieStorage = {
-    getItem: (item) => {
+    getItem: (key) => {
         const cookies = document.cookie
             .split(';')
             .map(cookie => cookie.split('='))
             .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
-        return cookies[item];
+        return cookies[key];
     },
-    setItem: (item, value) => {
-        document.cookie = `${item}=${value};`
+    setItem: (key, value) => {
+        document.cookie = `${key}=${value};`
     }
 }
 
 const storageType = cookieStorage;
 const consentPropertyName = 'netmatters_cookie-consent';
 const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+// Save cookie
 const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
 window.onload = () => {
@@ -49,10 +51,9 @@ window.onload = () => {
     }
     acceptBtn.addEventListener('click', acceptFn);
 
-    if (shouldShowPopup(storageType.value == false)) {
-        setTimeout(() => {
-            consentPopup.classList.remove('hidden');
-        }, 2000);
+    if (shouldShowPopup(storageType)) {
+        consentPopup.classList.remove('hidden');
+        
     }
 
 };
