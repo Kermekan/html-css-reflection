@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    // border: 3px solid lightblue;
+    // border: 2px solid green;
     
     &.is-active {
         // right: 275px;
@@ -49,19 +49,20 @@
 // Page content
 .page-container {
     position: relative;
+    // width: 100%;
     z-index: 0;
     height: fit-content;
-    // margin-right: 17px;
     // border: 2px solid gold;
     
     &.is-active {
         right: 275px;
-        overflow: hidden ;
+        // overflow: hidden;
         
         @include respond-to-up(md) {
             right: 333px;
         }
         
+        /* For when header is fixed */
         // header {
         //     left: -275px;
             
@@ -73,7 +74,7 @@
 }
 
 .main-content {
-    // margin-top: 209px;
+    
 }
 
 // Remove padding from rows and wrappers

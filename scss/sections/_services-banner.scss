@@ -4,6 +4,7 @@
 
 #services {
     position: relative;
+    width: 100%;
     // border: 2px solid hotpink;
     
     
@@ -32,11 +33,13 @@
     position: relative;
     width: 100%;
     color: $white;
+    // border: 2px solid plum;
     
     // Image Styling
     img {
         position: relative;
         @include fullSize;
+        // width: 100vw;
         object-fit: cover;
     }
     

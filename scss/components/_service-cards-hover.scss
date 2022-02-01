@@ -15,14 +15,13 @@
         flex-direction: column;
         justify-content: start;
         align-items: center;
-        padding: 1.875rem; //30px
+        padding: 1.875rem; //1.875rem
         text-align: center;
         @include fullSize;
     }
 }
 
 /* --------------------------- Service Cards Hover -------------------------- */
-
 @mixin serviceHover($color) {
     
     .card-inner {
@@ -56,6 +55,7 @@
         }
         
         .services-btn {
+            display: block;
             color: $white;
             background-color: $color;
             // border: 2px solid fuchsia;
