@@ -11258,6 +11258,11 @@ span {
   overflow-y: scroll;
   /* For when header is fixed */
 }
+@media (min-width: 1360px) {
+  .page-container.is-active .header-container2 {
+    padding-right: 33px;
+  }
+}
 .row, .container, .card-wrapper, .wrapper {
   padding: 0 !important;
   margin: 0;
@@ -11779,7 +11784,6 @@ h6 {
 
 .header-container1 {
   position: relative;
-  z-index: 2;
   padding: 0;
 }
 
