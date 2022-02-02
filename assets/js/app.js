@@ -23,15 +23,19 @@ $(fullPage).scroll(function() {
     const scrollTop = $(this).scrollTop();
     
     if (scrollTop > lastScrollTop) {
-        $('.header-container2').show();
+        // Scroll Down
+        $('.header-container2').removeClass("slide-down");
+        $('.header-container2').addClass("slide-up");
         $('.header-container1').css("visibility", "hidden");
         
     } else {
-        $('.header-container2').hide();
+        // Scroll up
+        $('.header-container2').removeClass("slide-up");
+        $('.header-container2').addClass("slide-down");
         $('.header-container1').css("visibility", "visible");
     }
-    
     lastScrollTop = scrollTop;
+    
 });
 
 /* ----------------------------- Cookie Consent ----------------------------- */
