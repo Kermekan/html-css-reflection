@@ -5,7 +5,7 @@
 // Containers
 .header-container1 {
     position: relative;
-    // z-index: 2;
+    z-index: 2;
     padding: 0;
     // border: 2px solid red;
 }
@@ -23,7 +23,7 @@
     // border: 2px solid purple;
     
     @media (min-width: 1360px) {
-        padding-right: 16px;
+        padding-right: 17px;
     }
     
     &.slide-down {
