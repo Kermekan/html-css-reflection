@@ -11393,6 +11393,22 @@ input:focus {
     opacity: 1;
   }
 }
+@keyframes slide-down {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes slide-up {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
 h1,
 h2,
 h3,
@@ -11763,9 +11779,8 @@ h6 {
 
 .header-container1 {
   position: relative;
+  z-index: 2;
   padding: 0;
-  border: 2px solid red;
-  transition: all 300ms ease-in-out;
 }
 
 .header-container2 {
@@ -11774,12 +11789,19 @@ h6 {
   z-index: 1;
   width: inherit;
   height: fit-content;
-  transition: all 300ms ease-in-out;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  transition: all 500ms ease-in-out;
 }
 @media (min-width: 1360px) {
   .header-container2 {
     padding-right: 16px;
   }
+}
+.header-container2.slide-down {
+  top: 0;
+}
+.header-container2.slide-up {
+  top: -100%;
 }
 
 header {
