@@ -111,7 +111,7 @@ input {
 
 // Hide elements between 991px & 1259px
 .hidden-1260 {
-    @media (min-width: 993px) and (max-width: 1259px) {
+    @media (min-width: 992px) and (max-width: 1259px) {
         display: none !important;
     }
 }
