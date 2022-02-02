@@ -11,6 +11,7 @@
     &.is-active {
         right: 275px;
         overflow-y: scroll;
+        
         @include respond-to-up(md) {
             right: 333px;
         }
@@ -53,17 +54,17 @@
         width: 100%;
         overflow-y: scroll;
         
-        @include respond-to-up(md) {
-            // right: 333px;
+        /* For when header is fixed */
+        .header-container2 {
+            // border: 2px solid greenyellow;
+            
+            @media (min-width: 1360px) {
+                padding-right: 33px;
+            }
         }
         
-        /* For when header is fixed */
-        header {
-            // left: -275px;
+        @include respond-to-up(md) {
             
-            @include respond-to-up(md) {
-                // left: -17px;
-            }
         }
     }
 }
