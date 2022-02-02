@@ -26,13 +26,13 @@ $(fullPage).scroll(function() {
         // Scroll Down
         $('.header-container2').removeClass("slide-down");
         $('.header-container2').addClass("slide-up");
-        $('.header-container1').css("z-index", "2");
+        $('.header-container1').css("z-index", "1");
         
     } else {
         // Scroll up
         $('.header-container2').removeClass("slide-up");
         $('.header-container2').addClass("slide-down");
-        $('.header-container1').css("z-index", "1");
+        $('.header-container1').css("z-index", "2");
     }
     lastScrollTop = scrollTop;
     
