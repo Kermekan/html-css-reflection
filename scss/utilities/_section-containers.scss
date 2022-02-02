@@ -8,17 +8,11 @@
     height: 100vh;
     overflow-x: hidden;
     
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    // border: 2px solid green;
-    
     &.is-active {
-        // right: 275px;
-        overflow: hidden ;
-        
+        right: 275px;
+        overflow-y: scroll;
         @include respond-to-up(md) {
-            // right: 333px;
+            right: 333px;
         }
     }
 }
@@ -49,27 +43,28 @@
 // Page content
 .page-container {
     position: relative;
-    // width: 100%;
+    width: 100%;
     z-index: 0;
     height: fit-content;
     // border: 2px solid gold;
     
     &.is-active {
-        right: 275px;
-        // overflow: hidden;
+        // right: 275px;
+        width: 100%;
+        overflow-y: scroll;
         
         @include respond-to-up(md) {
-            right: 333px;
+            // right: 333px;
         }
         
         /* For when header is fixed */
-        // header {
-        //     left: -275px;
+        header {
+            // left: -275px;
             
-        //     @include respond-to-up(md) {
-        //         left: -333px;
-        //     }
-        // }
+            @include respond-to-up(md) {
+                // left: -17px;
+            }
+        }
     }
 }
 
@@ -89,7 +84,6 @@
     
     // border: 2px solid limegreen;
 }
-
 
 
 
