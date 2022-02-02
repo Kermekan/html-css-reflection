@@ -11217,13 +11217,17 @@ span {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
 }
 .full-page.is-active {
-  overflow: hidden;
+  right: 275px;
+  overflow-y: scroll;
 }
+@media (min-width: 992px) {
+  .full-page.is-active {
+    right: 333px;
+  }
+}
+
 .inner {
   position: relative;
   width: 100%;
@@ -11245,19 +11249,15 @@ span {
 
 .page-container {
   position: relative;
+  width: 100%;
   z-index: 0;
   height: fit-content;
 }
 .page-container.is-active {
-  right: 275px;
+  width: 100%;
+  overflow-y: scroll;
   /* For when header is fixed */
 }
-@media (min-width: 992px) {
-  .page-container.is-active {
-    right: 333px;
-  }
-}
-
 .row, .container, .card-wrapper, .wrapper {
   padding: 0 !important;
   margin: 0;
@@ -11359,7 +11359,7 @@ input:focus {
   }
 }
 
-@media (min-width: 993px) and (max-width: 1259px) {
+@media (min-width: 992px) and (max-width: 1259px) {
   .hidden-1260 {
     display: none !important;
   }
@@ -11761,6 +11761,27 @@ h6 {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
+.header-container1 {
+  position: relative;
+  padding: 0;
+  border: 2px solid red;
+  transition: all 300ms ease-in-out;
+}
+
+.header-container2 {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: inherit;
+  height: fit-content;
+  transition: all 300ms ease-in-out;
+}
+@media (min-width: 1360px) {
+  .header-container2 {
+    padding-right: 16px;
+  }
+}
+
 header {
   width: 100%;
   padding-top: 1.25rem;
@@ -11768,8 +11789,6 @@ header {
   position: relative;
   top: 0;
   left: 0;
-  z-index: 2;
-  transition: all 300ms ease-in-out;
 }
 @media (max-width: 767px) {
   header {
@@ -11984,6 +12003,7 @@ header {
 }
 .nav-container .nav-item {
   flex: 1;
+  width: 100%;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 1px solid rgba(0, 0, 0, 0.25);
 }
@@ -12036,6 +12056,11 @@ header {
   position: absolute;
   top: 0;
   bottom: 0;
+}
+@media (min-width: 1360px) {
+  .web:hover .sub-menu::before, .web:hover .sub-menu::after {
+    width: 1536px;
+  }
 }
 .web:hover .sub-menu::after {
   right: 100%;
@@ -12102,6 +12127,11 @@ header {
   top: 0;
   bottom: 0;
 }
+@media (min-width: 1360px) {
+  .it-support:hover .sub-menu::before, .it-support:hover .sub-menu::after {
+    width: 1536px;
+  }
+}
 .it-support:hover .sub-menu::after {
   right: 100%;
 }
@@ -12166,6 +12196,11 @@ header {
   position: absolute;
   top: 0;
   bottom: 0;
+}
+@media (min-width: 1360px) {
+  .telecoms:hover .sub-menu::before, .telecoms:hover .sub-menu::after {
+    width: 1536px;
+  }
 }
 .telecoms:hover .sub-menu::after {
   right: 100%;
@@ -12232,6 +12267,11 @@ header {
   top: 0;
   bottom: 0;
 }
+@media (min-width: 1360px) {
+  .software:hover .sub-menu::before, .software:hover .sub-menu::after {
+    width: 1536px;
+  }
+}
 .software:hover .sub-menu::after {
   right: 100%;
 }
@@ -12296,6 +12336,11 @@ header {
   position: absolute;
   top: 0;
   bottom: 0;
+}
+@media (min-width: 1360px) {
+  .digital:hover .sub-menu::before, .digital:hover .sub-menu::after {
+    width: 1536px;
+  }
 }
 .digital:hover .sub-menu::after {
   right: 100%;
@@ -12362,6 +12407,11 @@ header {
   top: 0;
   bottom: 0;
 }
+@media (min-width: 1360px) {
+  .security:hover .sub-menu::before, .security:hover .sub-menu::after {
+    width: 1536px;
+  }
+}
 .security:hover .sub-menu::after {
   right: 100%;
 }
@@ -12401,6 +12451,7 @@ header {
 
 #services {
   position: relative;
+  z-index: 0;
   width: 100%;
 }
 
@@ -13168,6 +13219,7 @@ header {
 .news {
   position: relative;
   width: 100%;
+  z-index: 0;
 }
 
 /* ------------------------------- Bar Styling ------------------------------ */

@@ -9,16 +9,30 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 300,
         autoplayTimeout: 4000,
-        smartSpeed: 400,
+        smartSpeed: 2000,
         dots: true,
     });
 });
 
 /* ------------------------------ Sticky Header ----------------------------- */
-// const header = document.getElementById("header");
-// console.log(header);
 
-// let lastScroll = window.scrollY;
+let lastScrollTop = 0;
+
+$(fullPage).scroll(function() {
+
+    const scrollTop = $(this).scrollTop();
+    
+    if (scrollTop > lastScrollTop) {
+        $('.header-container2').show();
+        $('.header-container1').css("visibility", "hidden");
+        
+    } else {
+        $('.header-container2').hide();
+        $('.header-container1').css("visibility", "visible");
+    }
+    
+    lastScrollTop = scrollTop;
+});
 
 /* ----------------------------- Cookie Consent ----------------------------- */
 // Get and set cookie
