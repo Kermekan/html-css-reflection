@@ -9,7 +9,7 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 300,
         autoplayTimeout: 4000,
-        smartSpeed: 2000,
+        smartSpeed: 200,
         dots: true,
     });
 });
