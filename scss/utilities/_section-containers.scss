@@ -7,6 +7,7 @@
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    // border: 2px solid hotpink;
     
     &.is-active {
         right: 275px;
@@ -15,6 +16,8 @@
         @include respond-to-up(md) {
             right: 333px;
         }
+        
+        
     }
 }
 
