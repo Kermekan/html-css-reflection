@@ -11263,6 +11263,11 @@ span {
     padding-right: 33px;
   }
 }
+.main-content section {
+  position: relative;
+  z-index: 0;
+}
+
 .row, .container, .card-wrapper, .wrapper {
   padding: 0 !important;
   margin: 0;
@@ -13587,6 +13592,8 @@ header {
 }
 
 .newsletter {
+  position: relative;
+  z-index: 0;
   padding: 3.125rem 0;
   background-color: #dddddd;
 }

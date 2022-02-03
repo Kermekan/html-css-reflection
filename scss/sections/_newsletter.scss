@@ -3,6 +3,8 @@
 @use '../utilities/breakpoints' as *;
 
 .newsletter {
+    position: relative;
+    z-index: 0;
     @include sectionSpacing;
     background-color: $gray-ddd;
 }

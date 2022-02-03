@@ -74,6 +74,11 @@
 
 .main-content {
     
+    section {
+        position: relative;
+        z-index: 0;
+        // border: 2px solid red;
+    }
 }
 
 // Remove padding from rows and wrappers
