@@ -11170,7 +11170,8 @@ body {
 
 /* Remove list styles*/
 ul,
-ol {
+ol,
+li {
   list-style-type: none;
 }
 
@@ -11259,7 +11260,7 @@ span {
   /* For when header is fixed */
 }
 @media (min-width: 1360px) {
-  .page-container.is-active .header-container2 {
+  .page-container.is-active .sticky-header {
     padding-right: 33px;
   }
 }
@@ -11787,13 +11788,13 @@ h6 {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-.header-container1 {
+.fixed-header {
   position: relative;
   z-index: 2;
   padding: 0;
 }
 
-.header-container2 {
+.sticky-header {
   position: fixed;
   top: 0;
   z-index: 1;
@@ -11803,14 +11804,14 @@ h6 {
   transition: all 500ms ease-in-out;
 }
 @media (min-width: 1360px) {
-  .header-container2 {
+  .sticky-header {
     padding-right: 17px;
   }
 }
-.header-container2.slide-down {
+.sticky-header.slide-down {
   top: 0;
 }
-.header-container2.slide-up {
+.sticky-header.slide-up {
   top: -100%;
 }
 
