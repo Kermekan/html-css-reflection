@@ -3,7 +3,7 @@
 @use '../utilities/breakpoints' as *;
 
 // Containers
-.header-container1 {
+.fixed-header {
     position: relative;
     z-index: 2;
     padding: 0;
@@ -11,7 +11,7 @@
 }
 
 // Sticky header
-.header-container2 {
+.sticky-header {
     position: fixed;
     top: 0;
     z-index: 1;

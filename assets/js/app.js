@@ -1,5 +1,4 @@
 
-
 /* ----------------------------- Image Carousel ----------------------------- */
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
@@ -24,15 +23,15 @@ $(fullPage).scroll(function() {
     
     if (scrollTop > lastScrollTop) {
         // Scroll Down
-        $('.header-container2').removeClass("slide-down");
-        $('.header-container2').addClass("slide-up");
-        $('.header-container1').css("z-index", "1");
+        $('.sticky-header').removeClass("slide-down");
+        $('.sticky-header').addClass("slide-up");
+        $('.fixed-header').css("z-index", "1");
         
     } else {
         // Scroll up
-        $('.header-container2').removeClass("slide-up");
-        $('.header-container2').addClass("slide-down");
-        $('.header-container1').css("z-index", "2");
+        $('.sticky-header').removeClass("slide-up");
+        $('.sticky-header').addClass("slide-down");
+        $('.fixed-header').css("z-index", "2");
     }
     lastScrollTop = scrollTop;
     
@@ -76,7 +75,6 @@ window.onload = () => {
         consentPopup.classList.remove('hidden');
         
     }
-
 };
 
 

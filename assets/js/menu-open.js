@@ -5,8 +5,8 @@ const pageContainer = document.querySelector(".page-container")
 
 const sidebarContainer = document.querySelector(".sidebar-container")
 const overlay = document.querySelector(".overlay")
-const menuBtn = document.querySelector(".header-container1 #menu-btn");
-const menuBtn2 = document.querySelector(".header-container2 #menu-btn");
+const menuBtn = document.querySelector(".fixed-header #menu-btn");
+const menuBtn2 = document.querySelector(".sticky-header #menu-btn");
 
 menuOpen = false;
 

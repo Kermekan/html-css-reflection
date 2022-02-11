@@ -58,7 +58,7 @@
         overflow-y: scroll;
         
         /* For when header is fixed */
-        .header-container2 {
+        .sticky-header{
             // border: 2px solid greenyellow;
             
             @media (min-width: 1360px) {
