@@ -2,16 +2,29 @@
 @use '../utilities/mixins' as *;
 @use '../utilities/breakpoints' as *;
 
-.full-page {
+.full-page{
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    
     overflow-x: hidden;
-    // border: 2px solid hotpink;
+    border: 2px solid hotpink;
     
     &.is-active {
         right: 275px;
+        width: 100%;
         overflow-y: scroll;
+        
+        & > * {
+            overflow-x: hidden;
+        }
+        
+        .header-container {
+            padding-right: 0;
+            
+            @include respond-to-up(lg) {
+                padding-right: 17px;
+            }
+        }
         
         @include respond-to-up(md) {
             right: 333px;
@@ -50,7 +63,7 @@
     width: 100%;
     z-index: 0;
     height: fit-content;
-    // border: 2px solid gold;
+    border: 2px solid gold;
     
     &.is-active {
         // right: 275px;
@@ -62,7 +75,7 @@
             // border: 2px solid greenyellow;
             
             @media (min-width: 1360px) {
-                padding-right: 33px;
+                // padding-right: 33px;
             }
         }
         
@@ -73,11 +86,17 @@
 }
 
 .main-content {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    height: fit-content;
+    // margin-top: 209px;
+    
     
     section {
-        position: relative;
-        z-index: 0;
-        // border: 2px solid red;
+        // position: relative;
+        // z-index: 0;
+        border: 2px solid red;
     }
 }
 

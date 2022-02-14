@@ -22,6 +22,7 @@
     flex-direction: row;
     
     .overlay {
+        // display: none;
         position: relative;
         @include fullSize;
         z-index: 998;
@@ -45,6 +46,7 @@
        
     background-color: $primary;
     animation: fade1 50ms;
+    display: none;
     // border: 2px solid red;
     
     @include respond-to-up(md) {

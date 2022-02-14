@@ -2,24 +2,39 @@
 @use '../utilities/mixins' as *;
 @use '../utilities/breakpoints' as *;
 
-.header-container {
+// Containers
+.fixed-header {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    // border: 2px solid red;
+}
+
+// Sticky header
+.sticky-header {
     position: fixed;
-    z-index: 99;
-    width: 100%;
-    border: 2px solid green;
+    top: 0;
+    z-index: 1;
     
-    transition: none;
+    width: inherit;
+    height: fit-content;
+    box-shadow: 0 5px 35px rgba(0,0,0,.1);
+    transition: all 500ms ease-in-out;
+    // border: 2px solid purple;
+    
+    @media (min-width: 1360px) {
+        padding-right: 17px;
+    }
+    
     &.slide-down {
-        transition: 300ms;
         top: 0;
     }
     
     &.slide-up {
-        transition: 300ms;
         top: -100%;
     }
-    
 }
+
 
 header {
     width: 100%;
@@ -27,6 +42,9 @@ header {
     background-color: $white;
     
     position: relative;
+    top: 0;
+    left: 0;
+    
     
     // transition: all 300ms ease-in-out;
     // border: 2px solid lightgreen;
@@ -265,6 +283,19 @@ header {
         @media only screen and (min-width: 1260px) {
             width: 15rem; //240px
         }
+    }
+}
+
+.scroll-down {
+    header {
+        position: fixed;
+        transform: translate3d(0, -100%, 0);
+    }
+}
+.scroll-up {
+    header {
+        position: fixed;
+        transform: translate3d(0, 0, 0);
     }
 }
 

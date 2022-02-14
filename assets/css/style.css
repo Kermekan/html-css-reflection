@@ -11156,16 +11156,18 @@ html {
   line-height: 1.6;
   overflow-x: hidden;
   letter-spacing: 0.4px;
-  height: 100vh;
+}
+html.is-active {
+  overflow-y: hidden;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  line-height: 1.4;
   overflow-x: hidden;
+  line-height: 1.4;
+  max-width: 100vw;
+  min-height: 100vh;
 }
 
 /* Remove list styles*/
@@ -11215,13 +11217,25 @@ span {
 
 .full-page {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   overflow-x: hidden;
+  border: 2px solid hotpink;
 }
 .full-page.is-active {
   right: 275px;
+  width: 100%;
   overflow-y: scroll;
+}
+.full-page.is-active > * {
+  overflow-x: hidden;
+}
+.full-page.is-active .header-container {
+  padding-right: 0;
+}
+@media (min-width: 1200px) {
+  .full-page.is-active .header-container {
+    padding-right: 17px;
+  }
 }
 @media (min-width: 992px) {
   .full-page.is-active {
@@ -11253,20 +11267,21 @@ span {
   width: 100%;
   z-index: 0;
   height: fit-content;
+  border: 2px solid gold;
 }
 .page-container.is-active {
   width: 100%;
   overflow-y: scroll;
   /* For when header is fixed */
 }
-@media (min-width: 1360px) {
-  .page-container.is-active .sticky-header {
-    padding-right: 33px;
-  }
+.main-content {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  height: fit-content;
 }
 .main-content section {
-  position: relative;
-  z-index: 0;
+  border: 2px solid red;
 }
 
 .row, .container, .card-wrapper, .wrapper {
@@ -11644,6 +11659,7 @@ h6 {
   overflow-y: scroll;
   background-color: #333645;
   animation: fade1 50ms;
+  display: none;
 }
 @media (min-width: 992px) {
   .sidebar {
@@ -11788,30 +11804,19 @@ h6 {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-.fixed-header {
-  position: relative;
-  z-index: 2;
-  padding: 0;
-}
-
-.sticky-header {
+.header-container {
   position: fixed;
-  top: 0;
-  z-index: 1;
-  width: inherit;
-  height: fit-content;
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
-  transition: all 500ms ease-in-out;
+  z-index: 99;
+  width: 100%;
+  border: 2px solid green;
+  transition: none;
 }
-@media (min-width: 1360px) {
-  .sticky-header {
-    padding-right: 17px;
-  }
-}
-.sticky-header.slide-down {
+.header-container.slide-down {
+  transition: 300ms;
   top: 0;
 }
-.sticky-header.slide-up {
+.header-container.slide-up {
+  transition: 300ms;
   top: -100%;
 }
 
@@ -11820,8 +11825,6 @@ header {
   padding-top: 1.25rem;
   background-color: #fff;
   position: relative;
-  top: 0;
-  left: 0;
 }
 @media (max-width: 767px) {
   header {
@@ -12003,16 +12006,6 @@ header {
   .search-md .input-field {
     width: 15rem;
   }
-}
-
-.scroll-down header {
-  position: fixed;
-  transform: translate3d(0, -100%, 0);
-}
-
-.scroll-up header {
-  position: fixed;
-  transform: translate3d(0, 0, 0);
 }
 
 .main-nav {

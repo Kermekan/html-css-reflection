@@ -1,18 +1,21 @@
 /* ------------------------------- Menu toggle ------------------------------ */
-const body = document.querySelector("body")
-const fullPage = document.querySelector(".full-page")
-const pageContainer = document.querySelector(".page-container")
+const body = document.body
+const html = document.querySelector("html");
+const fullPage = document.querySelector(".full-page");
+const pageContainer = document.querySelector(".page-container");
 
-const sidebarContainer = document.querySelector(".sidebar-container")
-const overlay = document.querySelector(".overlay")
-const menuBtn = document.querySelector(".fixed-header #menu-btn");
+const sidebarContainer = document.querySelector(".sidebar-container");
+const overlay = document.querySelector(".overlay");
+const menuBtn = document.querySelector("#menu-btn");
 const menuBtn2 = document.querySelector(".sticky-header #menu-btn");
 
 menuOpen = false;
+// console.log(body);
 
 // menuBtn1 open
 menuBtn.addEventListener("click", () => {
     if(!menuOpen) {
+        html.classList.add("is-active");
         // add is-active class
         menuBtn.classList.add("is-active");
         sidebarContainer.classList.add("is-active");
@@ -23,20 +26,21 @@ menuBtn.addEventListener("click", () => {
 });
 
 // menuBtn2 open
-menuBtn2.addEventListener("click", () => {
-    if(!menuOpen) {
-        // add is-active class
-        menuBtn2.classList.add("is-active");
-        sidebarContainer.classList.add("is-active");
-        pageContainer.classList.add("is-active");
-        fullPage.classList.add("is-active");
-        menuOpen = true;
-    }
-});
+// menuBtn2.addEventListener("click", () => {
+//     if(!menuOpen) {
+//         // add is-active class
+//         menuBtn2.classList.add("is-active");
+//         sidebarContainer.classList.add("is-active");
+//         pageContainer.classList.add("is-active");
+//         fullPage.classList.add("is-active");
+//         menuOpen = true;
+//     }
+// });
 
 // Close menu
 overlay.addEventListener("click", () => {
     if(menuOpen == true){
+        html.classList.remove("is-active");
         menuBtn.classList.remove("is-active");
         menuBtn2.classList.remove("is-active");
         sidebarContainer.classList.remove("is-active");
