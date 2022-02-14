@@ -25,7 +25,7 @@ $(fullPage).scroll(function() {
         // Scroll Down
         $('.sticky-header').removeClass("slide-down");
         $('.sticky-header').addClass("slide-up");
-        $('.fixed-header').css("z-index", "1");
+        $('.fixed-header').css("z-index", "0");
         
     } else {
         // Scroll up
