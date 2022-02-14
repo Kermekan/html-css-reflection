@@ -11790,14 +11790,15 @@ h6 {
 
 .fixed-header {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   padding: 0;
+  visibility: visible;
 }
 
 .sticky-header {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   width: inherit;
   height: fit-content;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);

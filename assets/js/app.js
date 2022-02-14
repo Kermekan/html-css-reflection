@@ -22,16 +22,18 @@ $(fullPage).scroll(function() {
     const scrollTop = $(this).scrollTop();
     
     if (scrollTop > lastScrollTop) {
-        // Scroll Down
+        // hide header when scroll down
         $('.sticky-header').removeClass("slide-down");
         $('.sticky-header').addClass("slide-up");
-        $('.fixed-header').css("z-index", "0");
+        $('.fixed-header').css("z-index", "3");
+        $('.fixed-header').css("visibility", "visible");
         
     } else {
-        // Scroll up
+        // // show header when scroll up
+        $('.fixed-header').css("z-index", "1");
+        $('.fixed-header').css("visibility", "hidden");
         $('.sticky-header').removeClass("slide-up");
         $('.sticky-header').addClass("slide-down");
-        $('.fixed-header').css("z-index", "2");
     }
     lastScrollTop = scrollTop;
     
