@@ -11126,6 +11126,12 @@ textarea.form-control-lg {
 /* -------------------------------------------------------------------------- */
 /* -------------------------- Landscape Breakpoints ------------------------- */
 /* --------------------------- height breakpoints --------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Remove default margin and padding */
 body,
 section,
