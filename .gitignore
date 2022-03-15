@@ -1,6 +1,9 @@
 # Node folder
 node_modules/
 
+# gulp
+gulpfile.js
+
 # File Extensions
 *.zip
 *.log
