@@ -1,3 +1,9 @@
+# Node folder
 node_modules/
+
+# File Extensions
 *.zip
 *.log
+
+# CSS Files
+assets/css/style.css.map
