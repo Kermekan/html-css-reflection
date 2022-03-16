@@ -11224,6 +11224,7 @@ span {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  border: 2px solid hotpink;
 }
 .full-page.is-active {
   right: 275px;
@@ -11241,6 +11242,7 @@ span {
   max-width: 75rem;
   margin: 0 auto;
   padding: 0 0.938rem;
+  border: 1px solid purple;
   /* ------------------------------- Breakpoints ------------------------------ */
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -11829,23 +11831,10 @@ header {
   position: relative;
   top: 0;
   left: 0;
+  border: 2px solid lightgreen;
 }
 @media (max-width: 767px) {
   header {
-    padding-bottom: 1.25rem;
-  }
-}
-
-.header-inner {
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  margin-bottom: 0.625rem;
-}
-@media (min-width: 767px) {
-  .header-inner {
-    margin-bottom: 0;
     padding-bottom: 1.25rem;
   }
 }

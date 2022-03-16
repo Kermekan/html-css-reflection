@@ -7,7 +7,7 @@
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    // border: 2px solid hotpink;
+    border: 2px solid hotpink;
     
     &.is-active {
         right: 275px;
@@ -30,7 +30,7 @@
     margin: 0 auto;
     padding: 0 0.938rem; //15px
     
-    // border: 1px solid purple;
+    border: 1px solid purple;
     
     /* ------------------------------- Breakpoints ------------------------------ */
     // width=750px from 768px to 992px viewport
