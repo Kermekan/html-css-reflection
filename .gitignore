@@ -8,5 +8,3 @@ gulpfile.js
 *.zip
 *.log
 
-# CSS Files
-assets/css/style.css.map
