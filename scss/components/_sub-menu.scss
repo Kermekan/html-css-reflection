@@ -1,0 +1,28 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+// Mixin for submenu colors
+@mixin submenuColor($color, $color-darken) {
+    .icon {
+        color: $color;
+    }
+    
+    // Styling for Hover
+    &:hover {
+        background-color: $color;
+        
+        .icon {
+            color: #fff;
+        }
+        
+        .submenu {
+            background-color: $color-darken;
+            
+            &::before {
+                background-color: $color-darken;
+            }
+        }
+        
+    }
+}

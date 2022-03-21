@@ -11223,8 +11223,6 @@ span {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
-  border: 2px solid hotpink;
 }
 .full-page.is-active {
   right: 275px;
@@ -11242,7 +11240,6 @@ span {
   max-width: 75rem;
   margin: 0 auto;
   padding: 0 0.938rem;
-  border: 1px solid purple;
   /* ------------------------------- Breakpoints ------------------------------ */
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -11598,7 +11595,6 @@ h6 {
   }
 }
 
-/* ------------------------------- Menu Hover ------------------------------- */
 /* ------------------------------ Service cards ----------------------------- */
 .card-container {
   width: 100%;
@@ -11632,6 +11628,7 @@ h6 {
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: end;
   flex-direction: row;
+  border: 2px solid purple;
 }
 .sidebar-container.is-active .overlay {
   position: relative;
@@ -11796,18 +11793,11 @@ h6 {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-.fixed-header {
-  position: relative;
-  z-index: 1;
-  padding: 0;
-  visibility: visible;
-}
-
 .sticky-header {
   position: fixed;
   top: 0;
   z-index: 2;
-  width: inherit;
+  width: 100vw;
   height: fit-content;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   transition: all 500ms ease-in-out;
@@ -11828,13 +11818,28 @@ header {
   width: 100%;
   padding-top: 1.25rem;
   background-color: #fff;
-  position: relative;
+  position: sticky;
+  z-index: 9;
   top: 0;
   left: 0;
-  border: 2px solid lightgreen;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 767px) {
   header {
+    padding-bottom: 1.25rem;
+  }
+}
+
+.header-inner {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 0.625rem;
+}
+@media (min-width: 767px) {
+  .header-inner {
+    margin-bottom: 0;
     padding-bottom: 1.25rem;
   }
 }
@@ -12011,471 +12016,218 @@ header {
   transform: translate3d(0, 0, 0);
 }
 
-.main-nav {
-  position: relative;
-  display: block;
-  height: fit-content;
+.navbar {
+  width: 100%;
   background-color: #333645;
-}
-
-.main-nav-inner {
-  position: relative;
-}
-
-/* -------------------------------- Nav items ------------------------------- */
-.nav-container {
-  position: relative;
-  justify-content: start;
+  color: #fff;
   padding: 0;
+}
+.navbar .flex {
+  height: auto;
+}
+.navbar .item-list {
+  position: relative;
+  width: 100%;
+  justify-content: start;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.25);
 }
-.nav-container .nav-item {
+.navbar .item {
   flex: 1;
-  width: 100%;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 1px solid rgba(0, 0, 0, 0.25);
 }
-.nav-container .nav-item .nav-container {
-  padding: 0;
-}
-.nav-container .nav-item a {
+.navbar .item a {
   position: relative;
   color: #fff;
-  flex-direction: column;
-  padding: 1.125rem;
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1;
+  padding: 18px 0;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
-.nav-container .nav-item a .icon {
-  padding-bottom: 0.625rem;
+.navbar .item a .icon {
+  padding-bottom: 10px;
 }
-.nav-container .nav-item a .small-text {
-  padding-bottom: 2px;
+.navbar .item a .small-text {
+  padding-bottom: 3px;
 }
-.nav-container .nav-item .sub-menu {
+
+/* -------------------------------- Sub Menu -------------------------------- */
+.submenu {
   display: none;
 }
 
-/* ----------------------------- Nav Item Colors ---------------------------- */
-.web {
-  /* --------------------------- All Elements Hover --------------------------- */
-}
-.web .icon {
-  color: #926fb1;
-}
-.web:hover {
-  background-color: #926fb1;
-  /* ---------------------------- Sub menu styling ---------------------------- */
-}
-.web:hover .icon {
-  color: #fff;
-}
-.web:hover .sub-menu {
-  color: white;
+.navbar .item-list .item:hover .submenu {
   display: block;
-  position: absolute;
   z-index: 3;
-  left: 0;
 }
-.web:hover .sub-menu::before, .web:hover .sub-menu::after {
-  content: "";
-  background-color: #79539a;
-  width: 200%;
+
+.submenu {
   position: absolute;
+  top: 100%;
+  left: 0;
+  justify-content: start;
+  width: 100vw;
+}
+.submenu::before {
+  content: "";
+  position: absolute;
+  right: 0;
   top: 0;
   bottom: 0;
+  z-index: -1;
+  width: 1000%;
 }
-@media (min-width: 1360px) {
-  .web:hover .sub-menu::before, .web:hover .sub-menu::after {
-    width: 1535px;
-  }
-}
-.web:hover .sub-menu::after {
+.submenu::after {
+  content: "";
   right: 100%;
 }
-.web:hover .sub-menu .sub-menu-inner {
-  width: fit-content;
-  font-size: 1rem;
-  position: relative;
-  z-index: 3;
-  padding: 0;
+.submenu .submenu-item-list {
   justify-content: start;
 }
-.web:hover .sub-menu .sub-menu-inner--text {
+.submenu .submenu-item {
   position: relative;
+  width: fit-content;
+  height: fit-content;
 }
-.web:hover .sub-menu .sub-menu-inner--text a {
-  font-size: 0.813rem;
-  line-height: 2.813rem;
-  padding-left: 0.313rem;
+.submenu .submenu-item:not(:last-child) a::after {
+  content: "-";
+  padding-left: 1.25rem;
 }
 @media (min-width: 1260px) {
-  .web:hover .sub-menu .sub-menu-inner--text a {
-    font-size: 1rem;
+  .submenu .submenu-item:not(:last-child) a::after {
+    padding-left: 1.875rem;
   }
 }
-.web:hover .sub-menu .sub-menu-inner--text:first-child a {
-  padding-left: 0;
-}
-.web:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-  content: "-";
-  padding-left: 1.5rem;
+.submenu .submenu-item a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  color: white;
+  line-height: 45px;
+  padding: 0;
+  padding-right: 1.25rem;
+  font-size: 13px;
 }
 @media (min-width: 1260px) {
-  .web:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-    padding-left: 2.125rem;
+  .submenu .submenu-item a {
+    font-size: 1rem;
+    padding-right: 1.875rem;
   }
 }
 
-.it-support {
-  /* --------------------------- All Elements Hover --------------------------- */
-}
-.it-support .icon {
-  color: #4183d7;
-}
-.it-support:hover {
-  background-color: #4183d7;
-  /* ---------------------------- Sub menu styling ---------------------------- */
-}
-.it-support:hover .icon {
-  color: #fff;
-}
-.it-support:hover .sub-menu {
-  color: white;
-  display: block;
-  position: absolute;
-  z-index: 3;
-  left: 0;
-}
-.it-support:hover .sub-menu::before, .it-support:hover .sub-menu::after {
-  content: "";
-  background-color: #286abd;
-  width: 200%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-@media (min-width: 1360px) {
-  .it-support:hover .sub-menu::before, .it-support:hover .sub-menu::after {
-    width: 1535px;
-  }
-}
-.it-support:hover .sub-menu::after {
-  right: 100%;
-}
-.it-support:hover .sub-menu .sub-menu-inner {
-  width: fit-content;
-  font-size: 1rem;
-  position: relative;
-  z-index: 3;
-  padding: 0;
-  justify-content: start;
-}
-.it-support:hover .sub-menu .sub-menu-inner--text {
-  position: relative;
-}
-.it-support:hover .sub-menu .sub-menu-inner--text a {
-  font-size: 0.813rem;
-  line-height: 2.813rem;
-  padding-left: 0.313rem;
-}
-@media (min-width: 1260px) {
-  .it-support:hover .sub-menu .sub-menu-inner--text a {
-    font-size: 1rem;
-  }
-}
-.it-support:hover .sub-menu .sub-menu-inner--text:first-child a {
-  padding-left: 0;
-}
-.it-support:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-  content: "-";
-  padding-left: 1.5rem;
-}
-@media (min-width: 1260px) {
-  .it-support:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-    padding-left: 2.125rem;
-  }
-}
-
-.telecoms {
-  /* --------------------------- All Elements Hover --------------------------- */
-}
-.telecoms .icon {
-  color: #d64541;
-}
-.telecoms:hover {
-  background-color: #d64541;
-  /* ---------------------------- Sub menu styling ---------------------------- */
-}
-.telecoms:hover .icon {
-  color: #fff;
-}
-.telecoms:hover .sub-menu {
-  color: white;
-  display: block;
-  position: absolute;
-  z-index: 3;
-  left: 0;
-}
-.telecoms:hover .sub-menu::before, .telecoms:hover .sub-menu::after {
-  content: "";
-  background-color: #bc2c28;
-  width: 200%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-@media (min-width: 1360px) {
-  .telecoms:hover .sub-menu::before, .telecoms:hover .sub-menu::after {
-    width: 1535px;
-  }
-}
-.telecoms:hover .sub-menu::after {
-  right: 100%;
-}
-.telecoms:hover .sub-menu .sub-menu-inner {
-  width: fit-content;
-  font-size: 1rem;
-  position: relative;
-  z-index: 3;
-  padding: 0;
-  justify-content: start;
-}
-.telecoms:hover .sub-menu .sub-menu-inner--text {
-  position: relative;
-}
-.telecoms:hover .sub-menu .sub-menu-inner--text a {
-  font-size: 0.813rem;
-  line-height: 2.813rem;
-  padding-left: 0.313rem;
-}
-@media (min-width: 1260px) {
-  .telecoms:hover .sub-menu .sub-menu-inner--text a {
-    font-size: 1rem;
-  }
-}
-.telecoms:hover .sub-menu .sub-menu-inner--text:first-child a {
-  padding-left: 0;
-}
-.telecoms:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-  content: "-";
-  padding-left: 1.5rem;
-}
-@media (min-width: 1260px) {
-  .telecoms:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-    padding-left: 2.125rem;
-  }
-}
-
-.software {
-  /* --------------------------- All Elements Hover --------------------------- */
-}
-.software .icon {
+.nav-inner .software .icon {
   color: #67809F;
 }
-.software:hover {
+.nav-inner .software:hover {
   background-color: #67809F;
-  /* ---------------------------- Sub menu styling ---------------------------- */
 }
-.software:hover .icon {
+.nav-inner .software:hover .icon {
   color: #fff;
 }
-.software:hover .sub-menu {
-  color: white;
-  display: block;
-  position: absolute;
-  z-index: 3;
-  left: 0;
-}
-.software:hover .sub-menu::before, .software:hover .sub-menu::after {
-  content: "";
+.nav-inner .software:hover .submenu {
   background-color: #526781;
-  width: 200%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
 }
-@media (min-width: 1360px) {
-  .software:hover .sub-menu::before, .software:hover .sub-menu::after {
-    width: 1535px;
-  }
-}
-.software:hover .sub-menu::after {
-  right: 100%;
-}
-.software:hover .sub-menu .sub-menu-inner {
-  width: fit-content;
-  font-size: 1rem;
-  position: relative;
-  z-index: 3;
-  padding: 0;
-  justify-content: start;
-}
-.software:hover .sub-menu .sub-menu-inner--text {
-  position: relative;
-}
-.software:hover .sub-menu .sub-menu-inner--text a {
-  font-size: 0.813rem;
-  line-height: 2.813rem;
-  padding-left: 0.313rem;
-}
-@media (min-width: 1260px) {
-  .software:hover .sub-menu .sub-menu-inner--text a {
-    font-size: 1rem;
-  }
-}
-.software:hover .sub-menu .sub-menu-inner--text:first-child a {
-  padding-left: 0;
-}
-.software:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-  content: "-";
-  padding-left: 1.5rem;
-}
-@media (min-width: 1260px) {
-  .software:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-    padding-left: 2.125rem;
-  }
+.nav-inner .software:hover .submenu::before {
+  background-color: #526781;
 }
 
-.digital {
-  /* --------------------------- All Elements Hover --------------------------- */
+.nav-inner .it-support .icon {
+  color: #4183d7;
 }
-.digital .icon {
+.nav-inner .it-support:hover {
+  background-color: #4183d7;
+}
+.nav-inner .it-support:hover .icon {
+  color: #fff;
+}
+.nav-inner .it-support:hover .submenu {
+  background-color: #286abd;
+}
+.nav-inner .it-support:hover .submenu::before {
+  background-color: #286abd;
+}
+
+.nav-inner .digital .icon {
   color: #2ecc71;
 }
-.digital:hover {
+.nav-inner .digital:hover {
   background-color: #2ecc71;
-  /* ---------------------------- Sub menu styling ---------------------------- */
 }
-.digital:hover .icon {
+.nav-inner .digital:hover .icon {
   color: #fff;
 }
-.digital:hover .sub-menu {
-  color: white;
-  display: block;
-  position: absolute;
-  z-index: 3;
-  left: 0;
-}
-.digital:hover .sub-menu::before, .digital:hover .sub-menu::after {
-  content: "";
+.nav-inner .digital:hover .submenu {
   background-color: #25a25a;
-  width: 200%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
 }
-@media (min-width: 1360px) {
-  .digital:hover .sub-menu::before, .digital:hover .sub-menu::after {
-    width: 1535px;
-  }
-}
-.digital:hover .sub-menu::after {
-  right: 100%;
-}
-.digital:hover .sub-menu .sub-menu-inner {
-  width: fit-content;
-  font-size: 1rem;
-  position: relative;
-  z-index: 3;
-  padding: 0;
-  justify-content: start;
-}
-.digital:hover .sub-menu .sub-menu-inner--text {
-  position: relative;
-}
-.digital:hover .sub-menu .sub-menu-inner--text a {
-  font-size: 0.813rem;
-  line-height: 2.813rem;
-  padding-left: 0.313rem;
-}
-@media (min-width: 1260px) {
-  .digital:hover .sub-menu .sub-menu-inner--text a {
-    font-size: 1rem;
-  }
-}
-.digital:hover .sub-menu .sub-menu-inner--text:first-child a {
-  padding-left: 0;
-}
-.digital:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-  content: "-";
-  padding-left: 1.5rem;
-}
-@media (min-width: 1260px) {
-  .digital:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-    padding-left: 2.125rem;
-  }
+.nav-inner .digital:hover .submenu::before {
+  background-color: #25a25a;
 }
 
-.security {
-  /* --------------------------- All Elements Hover --------------------------- */
+.nav-inner .telecoms .icon {
+  color: #d64541;
 }
-.security .icon {
-  color: #f62459;
+.nav-inner .telecoms:hover {
+  background-color: #d64541;
 }
-.security:hover {
-  background-color: #f62459;
-  /* ---------------------------- Sub menu styling ---------------------------- */
-}
-.security:hover .icon {
+.nav-inner .telecoms:hover .icon {
   color: #fff;
 }
-.security:hover .sub-menu {
-  color: white;
-  display: block;
-  position: absolute;
-  z-index: 3;
-  left: 0;
+.nav-inner .telecoms:hover .submenu {
+  background-color: #bc2c28;
 }
-.security:hover .sub-menu::before, .security:hover .sub-menu::after {
-  content: "";
+.nav-inner .telecoms:hover .submenu::before {
+  background-color: #bc2c28;
+}
+
+.nav-inner .web .icon {
+  color: #926fb1;
+}
+.nav-inner .web:hover {
+  background-color: #926fb1;
+}
+.nav-inner .web:hover .icon {
+  color: #fff;
+}
+.nav-inner .web:hover .submenu {
+  background-color: #79539a;
+}
+.nav-inner .web:hover .submenu::before {
+  background-color: #79539a;
+}
+
+.nav-inner .security .icon {
+  color: #f62459;
+}
+.nav-inner .security:hover {
+  background-color: #f62459;
+}
+.nav-inner .security:hover .icon {
+  color: #fff;
+}
+.nav-inner .security:hover .submenu {
   background-color: #de093f;
-  width: 200%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
 }
-@media (min-width: 1360px) {
-  .security:hover .sub-menu::before, .security:hover .sub-menu::after {
-    width: 1535px;
-  }
+.nav-inner .security:hover .submenu::before {
+  background-color: #de093f;
 }
-.security:hover .sub-menu::after {
-  right: 100%;
+
+.nav-inner .training .icon {
+  color: #926fb1;
 }
-.security:hover .sub-menu .sub-menu-inner {
-  width: fit-content;
-  font-size: 1rem;
-  position: relative;
-  z-index: 3;
-  padding: 0;
-  justify-content: start;
+.nav-inner .training:hover {
+  background-color: #926fb1;
 }
-.security:hover .sub-menu .sub-menu-inner--text {
-  position: relative;
+.nav-inner .training:hover .icon {
+  color: #fff;
 }
-.security:hover .sub-menu .sub-menu-inner--text a {
-  font-size: 0.813rem;
-  line-height: 2.813rem;
-  padding-left: 0.313rem;
+.nav-inner .training:hover .submenu {
+  background-color: #79539a;
 }
-@media (min-width: 1260px) {
-  .security:hover .sub-menu .sub-menu-inner--text a {
-    font-size: 1rem;
-  }
-}
-.security:hover .sub-menu .sub-menu-inner--text:first-child a {
-  padding-left: 0;
-}
-.security:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-  content: "-";
-  padding-left: 1.5rem;
-}
-@media (min-width: 1260px) {
-  .security:hover .sub-menu .sub-menu-inner--text:not(:last-child) a::after {
-    padding-left: 2.125rem;
-  }
+.nav-inner .training:hover .submenu::before {
+  background-color: #79539a;
 }
 
 #services {
