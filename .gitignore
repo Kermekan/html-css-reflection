@@ -9,3 +9,4 @@ gulpfile.js
 *.log
 
 wawa.html
+header.scss
