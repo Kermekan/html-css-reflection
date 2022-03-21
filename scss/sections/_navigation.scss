@@ -1,98 +1,175 @@
 @use '../custom' as *;
 @use '../utilities/mixins' as *;
 @use '../utilities/breakpoints' as *;
-@use '../components/sub-menu-hover' as *;
+@use '../components/sub-menu' as *;
 
-// Nav Container
-.main-nav {
-    position: relative;
-    display: block;
-    height: fit-content;
+// All Navigation Styling
+
+.navbar {
+    width: 100%;
     background-color: $primary;
-    // overflow-x: hidden;
-    // border: 2px solid red;
-}
-
-// Nav inner 
-.main-nav-inner {
-    position: relative;
-    // border: 1px solid white;
-}
-
-/* -------------------------------- Nav items ------------------------------- */
-.nav-container {
-    position: relative;
-    justify-content: start;
+    color: #fff;
     padding: 0;
     
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(0, 0, 0, 0.25);
-    // border: 1px solid yellow;
+    // Resets flex class height
+    .flex {
+        height: auto;
+    }
     
-    // Nav Item styling
-    .nav-item {
-        // position: relative;
-        flex: 1;
+    .item-list {
+        position: relative;
         width: 100%;
-        // Nav Border Styling
+        justify-content: start;
+        
+        border-left: 1px solid hsla(0,0%,100%,.1);
+        border-right: 1px solid rgba(0,0,0,.25);
+    }
+    
+    .item {
+        flex: 1; 
+        
         border-right: 1px solid rgba(255, 255, 255, 0.1);
         border-left: 1px solid rgba(0, 0, 0, 0.25);
         
-        
-        .nav-container {
-            padding: 0;
-        }
-        // Styling of all the links
+        // Links styling
         a {
             position: relative;
-            color: $white;
-            flex-direction: column;
-            padding: 1.125rem; // 18px
-            font-size: 1.125rem;
+            color: #fff;
+            font-size: 18px;
+            
             line-height: 1;
-            // border: 1px solid purple;
             
-            // Icon Padding
+            padding: 18px 0;
+            flex-direction: column;
+            
+            @include fullSize;
+            
+            // Icon
             .icon {
-                padding-bottom: 0.625rem; //10px
+                padding-bottom: 10px;
             }
             
-            // Top text styling
             .small-text {
-                padding-bottom: 2px;
+                padding-bottom: 3px;
             }
-        }
-        
-        //Hide Sub-menu for hover
-        .sub-menu {
-            display: none;
         }
     }
 }
 
-/* ----------------------------- Nav Item Colors ---------------------------- */
-.web {
-    @include submenuHover($web, $web-darken);
+/* -------------------------------- Sub Menu -------------------------------- */
+
+// Hide submenu for hover
+.submenu {
+    display: none;
 }
 
-.it-support {
-    @include submenuHover($it-support, $it-support-darken);
+// Show submenu for hover
+.navbar .item-list .item  {
+    &:hover {
+        .submenu {
+            display: block;
+            z-index: 3;
+        }
+    }
 }
 
-.telecoms {
-    @include submenuHover($telecoms, $telecoms-darken);
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    justify-content: start;
+    
+    width: 100vw;
+    
+    &::before {
+        content: "";
+        // background-color: $bespoke-software;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 1000%;
+    }
+    &::after {
+        content: "";
+        right: 100%;
+    }
+    
+    // Items in sub-menu
+    .submenu-item-list {
+        justify-content: start; 
+    }
+    
+    .submenu-item {
+        position: relative;
+        @include fitContent;    
+        
+        // Hyphen
+        &:not(:last-child) a::after {
+            content: "-";
+            padding-left: 1.25rem;
+            
+            // Breakpoint @ 1260px
+            @media (min-width: 1260px) {
+                padding-left: 1.875rem;
+            }
+        }
+        
+        a {
+            @include fullSize;
+            display: inline-block;
+            color: white;
+            
+            line-height: 45px;
+            padding: 0;
+            
+            // Spacing between hyphen & text
+            padding-right: 1.25rem;
+            
+            // increase font-size @ 1260px breakpoint
+            font-size: 13px;
+            
+            @media (min-width: 1260px) {
+                font-size: 1rem;
+                padding-right: 1.875rem;
+                
+            }
+        }
+    }
 }
 
-.software {
-    @include submenuHover($software, $software-darken);
+// Submenu Colors =======
+.nav-inner .software {
+    @include submenuColor($software, $software-darken);
 }
 
-.digital {
-    @include submenuHover($digital, $digital-darken);
+.nav-inner .it-support {
+    @include submenuColor($it-support, $it-support-darken);
 }
 
-.security {
-    @include submenuHover($security, $security-darken);
+.nav-inner .digital {
+    @include submenuColor($digital, $digital-darken);
 }
+
+.nav-inner .telecoms {
+    @include submenuColor($telecoms, $telecoms-darken);
+}
+
+.nav-inner .web {
+    @include submenuColor($web, $web-darken);
+}
+
+.nav-inner .security {
+    @include submenuColor($security, $security-darken);
+}
+
+.nav-inner .training {
+    @include submenuColor($training, $training-darken);
+}
+
+
+
+
 
 

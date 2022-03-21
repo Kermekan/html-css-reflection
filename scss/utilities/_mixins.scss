@@ -6,6 +6,12 @@
     height: 100%;
 }
 
+// Fit Content
+@mixin fitContent {
+    width: fit-content;
+    height: fit-content;
+}
+
 // Hover, active, focus states
 @mixin hoverFocusActive {
     &:hover, &:focus, &:active {
@@ -177,6 +183,9 @@
         }
     }
 }
+
+
+
 
 /* --------------------------------- Buttons -------------------------------- */
 // Button Hover
