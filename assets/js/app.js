@@ -1,4 +1,3 @@
-
 /* ----------------------------- Image Carousel ----------------------------- */
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
@@ -11,32 +10,6 @@ $(document).ready(function(){
         smartSpeed: 200,
         dots: true,
     });
-});
-
-/* ------------------------------ Sticky Header ----------------------------- */
-
-let lastScrollTop = 0;
-
-$(fullPage).scroll(function() {
-
-    const scrollTop = $(this).scrollTop();
-    
-    if (scrollTop > lastScrollTop) {
-        // hide header when scroll down
-        $('.sticky-header').removeClass("slide-down");
-        $('.sticky-header').addClass("slide-up");
-        $('.fixed-header').css("z-index", "3");
-        $('.fixed-header').css("visibility", "visible");
-        
-    } else {
-        // // show header when scroll up
-        $('.fixed-header').css("z-index", "1");
-        $('.fixed-header').css("visibility", "hidden");
-        $('.sticky-header').removeClass("slide-up");
-        $('.sticky-header').addClass("slide-down");
-    }
-    lastScrollTop = scrollTop;
-    
 });
 
 /* ----------------------------- Cookie Consent ----------------------------- */
@@ -78,13 +51,4 @@ window.onload = () => {
         
     }
 };
-
-
-
-
-
-
-
-
-
 
