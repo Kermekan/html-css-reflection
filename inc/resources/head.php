@@ -1,6 +1,4 @@
-<?php 
 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +26,6 @@
     <link rel="stylesheet" href="./assets/css/hamburgers.css">
     <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
