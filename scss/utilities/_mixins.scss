@@ -111,6 +111,16 @@
     }
 }
 
+@mixin isActive {
+    right: 275px;
+    overflow-y: scroll;
+    
+    @media (min-height: 992px) {
+        right: 333px;
+    }
+}
+
+
 /* Banner Styling */
 @mixin bannerHeight {
     height: calc(100vh - 209px);

@@ -2,53 +2,22 @@
 @use '../utilities/mixins' as *;
 @use '../utilities/breakpoints' as *;
 
-// Containers
-.fixed-header {
-    position: relative;
-    z-index: 1;
-    padding: 0;
-    visibility: visible;
-    // display: none;
-    // border: 2px solid red;
-}
-
-// Sticky header
-.sticky-header {
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    
-    width: inherit;
-    height: fit-content;
-    box-shadow: 0 5px 35px rgba(0,0,0,.1);
-    transition: all 500ms ease-in-out;
-    // border: 2px solid purple;
-    
-    @media (min-width: 1360px) {
-        padding-right: 17px;
-    }
-    
-    &.slide-down {
-        top: 0;
-    }
-    
-    &.slide-up {
-        top: -100%;
-    }
-}
-
+// Header
 header {
     width: 100%;
     padding-top: 1.25rem; //20px
     background-color: $white;
     
-    position: relative;
+    position: sticky;
+    z-index: 9;
+    
     top: 0;
     left: 0;
     
+    box-shadow: 0 5px 35px rgba(0,0,0,.1);
     
-    // transition: all 300ms ease-in-out;
-    border: 2px solid lightgreen;
+    // border: 2px solid lightgreen;
+    transition: all 300ms ease-in-out;
     
     // breakpoints
     @include respond-to-down(sm) {
@@ -56,21 +25,21 @@ header {
     }
 }
 
-// .header-inner {
-//     position: relative;
-//     justify-content: space-between;
-//     align-items: center;
-//     flex-wrap: nowrap;
-//     margin-bottom: 0.625rem; // 10px
+.header-inner {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 0.625rem; // 10px
     
-//     // breakpoints
-//     @include respond-to-up(sm) {
-//         margin-bottom: 0;
-//         @include headerSpacing;        
-//     }
+    // breakpoints
+    @include respond-to-up(sm) {
+        margin-bottom: 0;
+        @include headerSpacing;        
+    }
     
-//     // border: 2px solid wheat;
-// }
+    // border: 2px solid wheat;
+}
 
 /* ------------------------------ Logo Styling ------------------------------ */
 .logo-container {
@@ -289,16 +258,17 @@ header {
 
 .scroll-down {
     header {
-        position: fixed;
+        // position: sticky;
         transform: translate3d(0, -100%, 0);
     }
 }
 .scroll-up {
     header {
-        position: fixed;
+        // position: sticky;
         transform: translate3d(0, 0, 0);
     }
 }
+
 
 
 

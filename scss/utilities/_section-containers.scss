@@ -16,8 +16,25 @@
         @include respond-to-up(md) {
             right: 333px;
         }
+    }
+}
+
+// Page content
+.page-container {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    height: fit-content;
+    // border: 2px solid gold;
+    
+    &.is-active {
+        @include isActive;
         
-        
+        .header {
+            position: fixed;
+            margin-right: 17px;
+            // right: 275px;
+        }
     }
 }
 
@@ -44,43 +61,7 @@
     }
 }
 
-// Page content
-.page-container {
-    // margin-top: 209px;
-    position: relative;
-    width: 100%;
-    z-index: 0;
-    height: fit-content;
-    // border: 2px solid gold;
-    
-    &.is-active {
-        // right: 275px;
-        width: 100%;
-        overflow-y: scroll;
-        
-        /* For when header is fixed */
-        .sticky-header{
-            // border: 2px solid greenyellow;
-            
-            @media (min-width: 1360px) {
-                padding-right: 34px;
-            }
-        }
-        
-        @include respond-to-up(md) {
-            
-        }
-    }
-}
 
-.main-content {
-    
-    section {
-        position: relative;
-        z-index: 0;
-        // border: 2px solid red;
-    }
-}
 
 // Remove padding from rows and wrappers
 .row, .container, .card-wrapper, .wrapper {
