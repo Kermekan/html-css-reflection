@@ -2,6 +2,30 @@
 @use '../utilities/mixins' as *;
 @use '../utilities/breakpoints' as *;
 
+body.is-active {
+    // @include isActive;
+    overflow-y: scroll;
+    .header {
+        position: sticky;
+        
+        margin-right: 275px;
+        
+        @media (min-width: 992px) {
+            // margin-right: 678px;
+        }
+        
+        transition: all 1ms ease-in-out;
+    }
+    
+    // .services {
+    //     margin-top: 207px;
+        
+    //     @include respond-to-down(md) {
+    //         margin-top: 110px;
+    //     }
+    // }
+}
+
 .full-page {
     position: relative;
     width: 100vw;
@@ -15,25 +39,6 @@
         
         @include respond-to-up(md) {
             right: 333px;
-        }
-    }
-}
-
-// Page content
-.page-container {
-    position: relative;
-    width: 100%;
-    z-index: 0;
-    height: fit-content;
-    // border: 2px solid gold;
-    
-    &.is-active {
-        @include isActive;
-        
-        .header {
-            position: fixed;
-            margin-right: 17px;
-            // right: 275px;
         }
     }
 }
@@ -61,7 +66,19 @@
     }
 }
 
-
+.page-container {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    
+    height: fit-content;
+    // border: 2px solid gold;
+    
+    &.is-active {
+        @include isActive;
+        overflow-y: scroll;
+    }
+}
 
 // Remove padding from rows and wrappers
 .row, .container, .card-wrapper, .wrapper {

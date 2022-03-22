@@ -115,7 +115,7 @@
     right: 275px;
     overflow-y: scroll;
     
-    @media (min-height: 992px) {
+    @media (min-width: 992px) {
         right: 333px;
     }
 }
