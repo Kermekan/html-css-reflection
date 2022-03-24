@@ -8,7 +8,7 @@ include __DIR__ . './inc/layout/sidebar.php';
 <!-- Opening Body Tag -->
 
 
-<div class="page-container">
+<main class="page-container">
     <!-- Header -->
     <?php include __DIR__ . './inc/layout/header.php';?>
     <!-- Services -->
@@ -23,7 +23,7 @@ include __DIR__ . './inc/layout/sidebar.php';
     <?php include __DIR__ . './inc/layout/newsletter.php';?>
     <!-- Footer -->
     <?php include __DIR__ . './inc/layout/footer.php';?>
-</div>
+</main>
 
 <!-- Ending body tag & JS links -->
 <?php include __DIR__ . './inc/resources/end-body.php';?>
