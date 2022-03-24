@@ -120,8 +120,29 @@
     }
 }
 
+// Card Image
+@mixin cardImage {
+    .img-container {
+        position: relative;
+        overflow: hidden;
+        height: fit-content;
+        border-radius: 3px 3px 0 0; // tl tr br bl
+        
+        .image-inner {
+            display: block;            
+            transition: all 400ms ease-in-out;
+            
+            img {
+                position: relative;
+                object-fit: cover;
+                width: 100%;
+                height: fit-content;
+            }
+        }
+    }
+}
 
-/* Banner Styling */
+/* ----------------------------- Banner Styling ----------------------------- */
 @mixin bannerHeight {
     height: calc(100vh - 209px);
     // border: 2px solid green;
