@@ -1,0 +1,147 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+.offices {
+    z-index: 0;
+    .breadcrumbs {
+        padding: 0.875rem 0px;
+        box-shadow: 0 5px 35px rgba(0,0,0,.1);
+        // border: 2px solid green;
+        .breadcrumb {
+            margin: 0;
+            li {
+                padding: 0 !important;
+                margin: 0 !important;
+                font-size: 0.8125rem;
+                
+                &:last-child::before {
+                    content: "/\A0";
+                }
+            }
+            
+            .home-link{
+                padding-right: 5px;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+                
+            }
+        }
+    }
+    
+    .top {
+        @include respond-to-up(md) {
+            margin-top: 3.125rem;
+        }
+    }
+    
+    // title
+    .title-container {
+        width: 100%;
+        padding: 1.5rem 0;
+        
+        color: $white;
+        background-color: $primary;
+        margin-bottom: 3.125rem;
+        // border: 2px solid red;
+        
+        @include respond-to-up(md) {
+            background-color: white;
+            color: $primary;
+            margin-bottom: 1.75rem;
+        }
+        
+        .title h1 {
+            font-size: 2.25rem;
+        }
+    }
+}
+
+/* ---------------------------------- Cards --------------------------------- */
+
+.offices-cards-list {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 2.5rem;
+    
+    flex-direction: column;
+    flex-wrap: nowrap; // forces cards to fit container
+    gap: 1.875rem;
+    
+    overflow: hidden;
+    // border: 2px solid grey;
+    
+    @include respond-to-up(md) {
+        flex-direction: row;
+        // align-items: stretch;
+    }
+}
+
+.offices-cards {
+    // border: 2px solid purple;
+    
+    // Img Styling
+    @include cardImage;
+    .img-container {
+        border-radius: 0;
+    }
+    
+    .card-content {
+        align-items: start;
+        
+        & > * {
+            margin-bottom: 0.938rem;
+            font-weight: 400;
+        }
+        
+        & a {
+            cursor: pointer;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        
+        // Title
+        
+        
+        // Text
+        .p {
+            font-size: 0.8125rem;
+            line-height: 1.375rem;
+        }
+        
+        // phone
+        .tel {
+            a {
+                font-weight: 700;
+                color: $web;
+            }
+        }
+        
+        // button
+        .btn {
+            padding: 0.313rem 1.875rem; // 5px 30px
+            
+            a {
+                font-size: 0.9em;
+                color: white;
+                
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            
+        } 
+    }
+    
+    // Map
+    .map {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+
