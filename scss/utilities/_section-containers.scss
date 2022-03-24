@@ -16,31 +16,12 @@ body.is-active {
         
         transition: all 1ms ease-in-out;
     }
-    
-    // .services {
-    //     margin-top: 207px;
-        
-    //     @include respond-to-down(md) {
-    //         margin-top: 110px;
-    //     }
-    // }
 }
 
-.full-page {
+// Section styling
+section {
+    width: 100%;
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    // overflow-x: hidden;
-    // border: 2px solid hotpink;
-    
-    &.is-active {
-        right: 275px;
-        overflow-y: scroll;
-        
-        @include respond-to-up(md) {
-            right: 333px;
-        }
-    }
 }
 
 // Inner Styling

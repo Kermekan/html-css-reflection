@@ -11119,7 +11119,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* Banner Styling */
+/* ----------------------------- Banner Styling ----------------------------- */
 /* --------------------------------- Buttons -------------------------------- */
 /* -------------------------------------------------------------------------- */
 /*                                 Breakpoints                                */
@@ -11219,39 +11219,17 @@ span {
   display: inline-block;
 }
 
-.full-page {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-.full-page.is-active {
-  right: 275px;
+body.is-active {
   overflow-y: scroll;
 }
-@media (min-width: 992px) {
-  .full-page.is-active {
-    right: 333px;
-  }
+body.is-active .header {
+  position: sticky;
+  margin-right: 275px;
+  transition: all 1ms ease-in-out;
 }
-
-.page-container {
-  position: relative;
+section {
   width: 100%;
-  z-index: 0;
-  height: fit-content;
-}
-.page-container.is-active {
-  right: 275px;
-  overflow-y: scroll;
-}
-@media (min-height: 992px) {
-  .page-container.is-active {
-    right: 333px;
-  }
-}
-.page-container.is-active .header {
-  position: fixed;
-  margin-right: 17px;
+  position: relative;
 }
 
 .inner {
@@ -11270,6 +11248,23 @@ span {
 @media only screen and (min-width: 992px) and (max-width: 1259px) {
   .inner {
     max-width: 60.625rem;
+  }
+}
+
+.page-container {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  height: fit-content;
+}
+.page-container.is-active {
+  right: 275px;
+  overflow-y: scroll;
+  overflow-y: scroll;
+}
+@media (min-width: 992px) {
+  .page-container.is-active {
+    right: 333px;
   }
 }
 
@@ -11434,6 +11429,15 @@ h6 {
   font-weight: 400;
   line-height: 1.1;
   color: inherit;
+}
+
+.h2 {
+  font-size: 1.125rem;
+}
+
+.h3 {
+  font-size: 1.625rem;
+  margin: 0;
 }
 
 /* -------------------- Search Button for medium +screens ------------------- */
@@ -11796,11 +11800,9 @@ header {
   padding-top: 1.25rem;
   background-color: #fff;
   position: sticky;
-  z-index: 9;
+  z-index: 99;
   top: 0;
   left: 0;
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
-  transition: all 300ms ease-in-out;
 }
 @media (max-width: 767px) {
   header {
@@ -11986,10 +11988,13 @@ header {
 
 .scroll-down header {
   transform: translate3d(0, -100%, 0);
+  transition: all 300ms ease-in-out;
 }
 
 .scroll-up header {
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   transform: translate3d(0, 0, 0);
+  transition: all 300ms ease-in-out;
 }
 
 .navbar {
@@ -13038,7 +13043,6 @@ header {
   position: relative;
   object-fit: cover;
   width: 100%;
-  height: 100%;
   height: fit-content;
 }
 .article-container .img-container .image-inner:hover {
@@ -13645,9 +13649,128 @@ header {
     width: fit-content;
   }
 }
+.offices {
+  z-index: 0;
+}
+.offices .breadcrumbs {
+  padding: 0.875rem 0px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+}
+.offices .breadcrumbs .breadcrumb {
+  margin: 0;
+}
+.offices .breadcrumbs .breadcrumb li {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 0.8125rem;
+}
+.offices .breadcrumbs .breadcrumb li:last-child::before {
+  content: "/ ";
+}
+.offices .breadcrumbs .breadcrumb .home-link {
+  padding-right: 5px;
+}
+.offices .breadcrumbs .breadcrumb .home-link:hover {
+  text-decoration: underline;
+}
+@media (min-width: 992px) {
+  .offices .top {
+    margin-top: 3.125rem;
+  }
+}
+.offices .title-container {
+  width: 100%;
+  padding: 1.5rem 0;
+  color: #fff;
+  background-color: #333645;
+  margin-bottom: 3.125rem;
+}
+@media (min-width: 992px) {
+  .offices .title-container {
+    background-color: white;
+    color: #333645;
+    margin-bottom: 1.75rem;
+  }
+}
+.offices .title-container .title h1 {
+  font-size: 2.25rem;
+}
+
+/* ---------------------------------- Cards --------------------------------- */
+.offices-cards-list {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 2.5rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1.875rem;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .offices-cards-list {
+    flex-direction: row;
+  }
+}
+
+.offices-cards .img-container {
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+  border-radius: 3px 3px 0 0;
+}
+.offices-cards .img-container .image-inner {
+  display: block;
+  transition: all 400ms ease-in-out;
+}
+.offices-cards .img-container .image-inner img {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: fit-content;
+}
+.offices-cards .img-container {
+  border-radius: 0;
+}
+.offices-cards .card-content {
+  align-items: start;
+}
+.offices-cards .card-content > * {
+  margin-bottom: 0.938rem;
+  font-weight: 400;
+}
+.offices-cards .card-content a {
+  cursor: pointer;
+}
+.offices-cards .card-content a:hover {
+  text-decoration: underline;
+}
+.offices-cards .card-content .p {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+}
+.offices-cards .card-content .tel a {
+  font-weight: 700;
+  color: #926fb1;
+}
+.offices-cards .card-content .btn {
+  padding: 0.313rem 1.875rem;
+}
+.offices-cards .card-content .btn a {
+  font-size: 0.9em;
+  color: white;
+}
+.offices-cards .card-content .btn a:hover {
+  text-decoration: none;
+}
+.offices-cards .map {
+  width: 100%;
+  height: 300px;
+}
+
 /* Variables */
 /* Utilities */
 /* Components */
 /* Sections */
+/* Contacts Page */
 
 /*# sourceMappingURL=style.css.map */
