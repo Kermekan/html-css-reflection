@@ -19,12 +19,9 @@
 @use 'components/side-menu';
 
 /* Sections */
-
-// Header
 @use 'sections/header';
 @use 'sections/navigation';
 
-// Services
 @use 'sections/services-banner';
 @use 'components/banner-buttons';
 @use 'sections/services-cards';
@@ -33,5 +30,9 @@
 @use 'sections/news';
 @use 'sections/clients';
 @use 'sections/newsletter';
+
 @use 'sections/footer';
 @use 'sections/accreditation';
+
+/* Contacts Page */
+@use 'sections/offices';

@@ -8,7 +8,7 @@
                 <ul class="item-container">
                     <!-- individual items -->
                     <li id="contact-us" class="item">
-                        <a href="" class="">Contact Us</a>
+                        <a href="./contacts.php" class="">Contact Us</a>
                     </li><!-- .item -->
                     <li id="web" class="item flex">
                         <a href="">
@@ -272,7 +272,7 @@
                         <a href="">Covid Risk Assessment</a>
                     </li><!-- .item -->
                     <li class="item">
-                        <a href="">Contact Us</a>
+                        <a href="./contacts.php">Contact Us</a>
                         <!-- item-links -->
                         <ul class="item-links">
                             <li>
@@ -285,6 +285,15 @@
                                 <a href="">Great Yarmout Office</a>
                             </li>
                         </ul>
+                    </li><!-- .item -->
+                    <li class="item">
+                        <a href=""></a>
+                    </li><!-- .item -->
+                    <li class="item">
+                        <a href=""></a>
+                    </li><!-- .item -->
+                    <li class="item">
+                        <a href="">Support</a>
                     </li><!-- .item -->
                 </ul><!-- .item-container -->
             </div>
