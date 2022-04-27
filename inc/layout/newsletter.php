@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <!-- checkbox & info -->
-                <div class="label flex">
+                <div class="label sign flex">
                     <label for="marketing" class="flex">
                         <span class="check-holder flex">
                             <!-- checkbox -->
@@ -38,7 +38,7 @@
                             information on how we use your data.
                         </div>
                     </label>
-                </div>
+                </div><!-- .label -->
                 <!-- button -->
                 <div class="btn signup-btn">
                     <a href="#" class="text-center flex text-uppercase">

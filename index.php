@@ -1,29 +1,26 @@
 <?php 
 $pageTitle = "Netmatters | Full Service Digital Agency | Norwich, Norfolk | Netmatters";
 
-include __DIR__ . './inc/resources/head.php'; 
-include __DIR__ . './inc/layout/cookies.php';
-include __DIR__ . './inc/layout/sidebar.php';
+include('inc/resources/head.php'); 
+include ('inc/layout/cookies.php');
+include ('inc/layout/sidebar.php');
 ?>
-<!-- Opening Body Tag -->
+<!-- Header -->
+<?php include ('inc/layout/header.php');?>
+<!-- Services -->
+<?php include ('inc/layout/service-banner.php');?>
+<?php include ('inc/layout/service-cards.php');?>
+<!-- About -->
+<?php include ('inc/layout/about.php');?>
+<!-- News -->
+<?php include ('inc/layout/news.php');?>
+<!-- Clients -->
+<?php include ('inc/layout/clients.php');?>
+<!-- Newsletter -->
+<?php include ('inc/layout/newsletter.php');?>
+<!-- Footer -->
+<?php include ('inc/layout/footer.php');?>
 
-
-<main class="page-container">
-    <!-- Header -->
-    <?php include __DIR__ . './inc/layout/header.php';?>
-    <!-- Services -->
-    <section id="services" class="services">
-        <?php include __DIR__ . './inc/layout/service-banner.php';?>
-        <?php include __DIR__ . './inc/layout/service-cards.php';?>
-    </section>
-    
-    <?php include __DIR__ . './inc/layout/about.php';?>
-    <?php include __DIR__ . './inc/layout/news.php';?>
-    <?php include __DIR__ . './inc/layout/clients.php';?>
-    <?php include __DIR__ . './inc/layout/newsletter.php';?>
-    <!-- Footer -->
-    <?php include __DIR__ . './inc/layout/footer.php';?>
-</main>
 
 <!-- Ending body tag & JS links -->
-<?php include __DIR__ . './inc/resources/end-body.php';?>
+<?php include ('inc/resources/end-body.php');?>

@@ -1,0 +1,161 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+// Generic Input Styling
+.input-group {
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    width: 100%;
+    
+
+    // individual input fields
+    .input-wrapper {
+        width: 100%;
+        margin-bottom: 0.938rem;
+        
+        // Controls width of input fields at large screens
+        @include respond-to-up(md) {
+            width: 48.3%;
+        }
+        
+        @media (min-width: 1260px) {
+            width: 48.65%;
+        }
+    }
+}
+
+/* ------------------------------ Form styling ----------------------------- */
+// Input Higlighting
+input, textarea {
+    width: 100%;
+    border: 1px solid $gray-300;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.125);
+    
+    &:focus {
+        border-color: $focus-outline;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.08),
+        0 0 8px rgba(91,192,222,.6) ;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+}
+
+// Input Styling for forms
+.input-wrapper {
+    // label styling
+    label {
+        // color: $primary;
+        font-weight: 600;
+        margin-bottom: 0.313rem;
+    }
+    // Input styling
+    input {
+        height: 2.938rem; // 47px
+        
+        @include inputStyling;
+        @include inputFocus;
+    }
+    
+    textarea {
+        height: 100px;
+        min-height: 100px;
+        
+        @include inputStyling;
+        @include inputFocus;
+        // border: 2px solid red;
+    }
+}
+
+// Form required asterisk
+.required::after {
+    content: "*";
+    color: $required;
+}
+
+/* ---------------------------- Checkbox Styling ---------------------------- */
+.newsletter form .sign,
+.contact form .contacts {
+    justify-content: start;
+    margin-bottom: 1.875rem;
+    // border: 2px solid blue;
+    
+    label {
+        cursor: pointer;
+        font-weight: 600;
+        line-height: 2;
+        
+        justify-content: start;
+        align-items: start;
+        flex-wrap: nowrap;
+        // border: 2px solid yellow;
+        
+        .check-holder {
+            position: relative;
+            width: fit-content;
+            // Seperate checkbox from text
+            margin-right: 1.25rem;
+            // border: 2px solid red;
+            
+            .checkbox {
+                position: relative;
+                width: fit-content;
+                height: fit-content;
+                padding: 0;
+                margin: 0;
+                
+                // checkbox
+                input {
+                    position: relative;
+                    display: none;
+                    width: 2em;
+                    height: 2em;
+                    margin: 0;
+                    padding: 0;
+                    cursor: pointer;
+                }
+            }
+            
+            // Netmatters Checkbox
+            .check {
+                display: block;
+                position: relative;
+                // top: -41px;
+                z-index: 4;
+                
+                min-width: 2em;
+                height: 2em;
+                
+                border: 3px solid $primary;
+                border-radius: 3px;
+            }
+            
+        }
+        
+        // Text
+        .text {
+            // margin-bottom: -10px;
+            @include respond-to-up(sm) {
+                margin-right: 1.25rem;
+            }
+            
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Checkbox Checked state
+.check-holder .cb:checked + .check {
+    background: $primary;
+}
+
+.check-holder .cb:checked + .check::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    color: $white;
+    position: absolute;
+    top: -2px;
+    left: 5px;
+}

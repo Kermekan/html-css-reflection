@@ -73,7 +73,6 @@ $breakpoints: (
      }
 }
 
-
  @mixin height-640 {
     @media (max-height: 640px) {
         @media (orientation: landscape) {
@@ -81,3 +80,17 @@ $breakpoints: (
         }
     }
 }
+/* ----------------------------- Custom Viewport ---------------------------- */
+@mixin bp-up($bp: 0) {
+    @media (min-width: $bp) {
+      @content;
+    }
+  }
+  
+  @mixin bp-down($bp: 0) {
+      @media (max-width: $bp) {
+        @content;
+      }
+  }
+  
+ 

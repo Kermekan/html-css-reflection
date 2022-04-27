@@ -6,6 +6,7 @@
     z-index: 0;
     .breadcrumbs {
         padding: 0.875rem 0px;
+        border-top: 1px solid #333645;
         box-shadow: 0 5px 35px rgba(0,0,0,.1);
         // border: 2px solid green;
         .breadcrumb {
@@ -58,6 +59,7 @@
         }
     }
 }
+
 
 /* ---------------------------------- Cards --------------------------------- */
 

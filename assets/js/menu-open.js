@@ -15,6 +15,7 @@ menuBtn.addEventListener("click", () => {
         body.classList.add("is-active");
         sidebarContainer.classList.add("is-active");
         pageContainer.classList.add("is-active");
+        menuBtn.classList.add("is-active");
         menuOpen = true;
     }
 });
@@ -25,7 +26,7 @@ overlay.addEventListener("click", () => {
         body.classList.remove("is-active");
         sidebarContainer.classList.remove("is-active");
         pageContainer.classList.remove("is-active");
-        // fullPage.classList.remove("is-active");
+        menuBtn.classList.remove("is-active");
         menuOpen = false;
     }
     // console.log(menuBtn);

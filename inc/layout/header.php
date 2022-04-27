@@ -1,5 +1,5 @@
 <!-- ------------------------------- Header -------------------------------- -->
-<!-- shows when scrolling up  -->
+<main class="page-container">
 <header class="header">
     <div class="header-inner inner flex">
         <!-- Logo -->

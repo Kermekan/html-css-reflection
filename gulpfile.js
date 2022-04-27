@@ -68,7 +68,7 @@ gulp.task('browserSync', function(){
         proxy: 'http://localhost/my-projects/html-css-reflection',
         browser: ['firefox', 'chrome'],
         files: [
-            "assets/css/*.css", "*.php", "inc/*.php", "assets/js/*.js", "scss/*.scss"
+            "assets/css/*.css", "*.php", "inc/**/*.php", "assets/js/*.js", "scss/*.scss"
         ]
     });
 });

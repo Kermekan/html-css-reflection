@@ -19,6 +19,13 @@
     }
 }
 
+@mixin hoverClick {
+    &:hover, &:focus, &:active {
+        cursor: pointer;
+    }
+}
+
+
 // Center an Element
 @mixin absoluteCenter {
     position: absolute;
@@ -79,6 +86,14 @@
 }
 
 // input highlight
+
+@mixin inputStyling {
+    font-size: 0.875rem;
+    padding: 0.313rem 0.938rem;
+    border-radius: 2px;
+    border-color: #ccc;
+}
+
 @mixin inputFocus {
     &:focus {
         border-color: $focus-outline;
@@ -111,6 +126,7 @@
     }
 }
 
+// Menu Button Active Class
 @mixin isActive {
     right: 275px;
     overflow-y: scroll;
@@ -214,9 +230,6 @@
         }
     }
 }
-
-
-
 
 /* --------------------------------- Buttons -------------------------------- */
 // Button Hover

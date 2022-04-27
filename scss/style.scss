@@ -13,6 +13,7 @@
 @use 'components/typography';
 @use 'components/buttons';
 @use 'components/cookie-consent';
+@use 'components/form-inputs';
 @use 'components/sub-menu';
 @use 'components/service-cards-hover';
 @use 'components/articles-colors';
@@ -36,3 +37,4 @@
 
 /* Contacts Page */
 @use 'sections/offices';
+@use 'sections/contact-form';

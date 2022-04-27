@@ -1,0 +1,204 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+.contact {
+    padding-bottom: 3.125rem;
+    // border: 2px solid green;
+    
+    strong {
+        font-weight: 600;
+        color: $primary;
+    }
+    
+    .contact-inner {
+        flex-direction: column;
+        align-items: flex-start;    
+        // border: 2px solid blue;
+    }
+    
+    /* ---------------------------------- Info ---------------------------------- */
+    &--info {
+        width: 100%;
+        
+        p {
+            width: 100%;
+            
+            @include bp-up(1260px) { 
+                width: fit-content;
+            }
+        }
+        
+        // Margin between paragraph elements
+        & > * > p,
+        .accordion .item * > p  {
+            line-height: 1.875rem;
+            margin-bottom: 1.563rem;
+        }
+        
+        // Underline links
+        & > * a {
+            cursor: pointer;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        
+        .info-block { 
+            width: fit-content;           
+            // Company Email
+            .text-web {
+                font-size: 1.625rem; // 26px
+                font-weight: 600;
+                color: $web;
+                
+                &:hover {
+                    color: $web;
+                }
+            }
+        }
+        
+        // Accordion
+        .accordion {
+            // max-width: 400px;
+            
+            .item {
+                
+                // @include fullSize;
+                &--head {
+                    @include hoverClick;
+                }
+                
+                // set body height to zero on click
+                &--body {
+                    max-height: 0px;
+                    overflow: hidden;
+                    transition: 400ms linear;
+                    
+                    // border: 2px solid red;
+                }
+                
+                // set body height to auto on click
+                &.active {
+                    .item--body {
+                        max-height: 475px;
+                    }
+                }
+            } 
+        } 
+    } 
+    
+    /* ---------------------------------- Form ---------------------------------- */
+    &--form {
+        padding: 1.875rem; // 30px
+        border-radius: 10px;
+        background-color: $gray-300;
+        
+        justify-content: space-between;
+        
+        .input-wrapper {
+            // Error Highlight
+            &.input-error input, &.input-error textarea {
+                border:1px solid $error-border;
+                transition: 250ms;
+            }
+            
+            // Change width of first 4 inputs
+            @include bp-up(1260px) { 
+                width: 47.75%;
+                
+                &.subject, &.message {
+                    width: 100%;
+                }
+            }
+        }
+        
+        .input-container, .subject {
+            margin-bottom: 0.938rem;
+        }
+        
+        .label {
+            margin-bottom: 0.938rem;
+        }
+        
+        .form-submit {
+            align-items: center;
+            justify-content: center;
+            
+            width: 9.375em; //150px
+            height: 2.875em; //47px
+            
+            text-decoration: none;
+            
+            color: white;
+            background-color: $web;
+            
+            border-radius: 3px;
+            
+            &:hover {
+                background-color: $web-hover;
+            }
+        }
+        
+        // border: 2px solid red;
+        
+        // Form Error Boxes
+        .alert {
+            display: flex;
+            justify-content: space-between;
+            
+            color: white;
+            width: 100%;
+            // text-align: center;
+            padding: 0.938rem;
+            
+            &.error {
+                color: $error-text;
+            }
+            
+            // x Icon
+            .bi-x {
+                font-size: 25px;
+                
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            
+        }
+        
+        .error {
+            background-color: $error;
+        }
+        
+        .success {
+            background-color: $success-dark;
+        }
+    }
+}
+
+
+
+@include bp-up(1260px) {
+    .contact {
+        .contact-inner {
+            flex-direction: row-reverse;
+            justify-content: start;
+            gap: 1.875rem;
+            // border: 2px solid green;
+        }
+        
+        &--info {
+            flex-basis: 30%;
+            
+            .info-block {
+                width: fit-content;
+            }
+        }
+        
+        &--form {
+            flex-basis: 66%;
+        }
+    } 
+}
