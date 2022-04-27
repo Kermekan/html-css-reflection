@@ -14,7 +14,7 @@
             <div class="buttons flex hidden-md hidden-sm hidden-xs">
                 <!-- Support Button -->
                 <a href="#" class="btn support-lg flex">
-                    <span class="icon icon-mouse"></span>
+                    <span class="icon bi bi-mouse2-fill"></span>
                     <span class="btn-text text-uppercase text-center">Support</span>
                 </a>
                 <!-- Contacts Button Large Screens -->
@@ -25,8 +25,8 @@
             </div>
             <!-- Contact Button (Mobile) -->
             <div class="contact-sm hidden-md hidden-lg hidden-xl hidden-xxl">
-                <a href="#" class="mobile-sms">
-                    <span class="icon icon-phone_in_talk"></span>
+                <a href="#" class="mobile-sm">
+                    <i class="icon bx bxs-phone-call"></i>
                 </a>
             </div>
             <!-- Search for medium screens -->
@@ -36,7 +36,7 @@
                         <input type="text" placeholder="Search..." class="input-field hidden-lg">
                         <!-- Search Button -->
                         <div class=" btn search-btn flex">
-                            <span class="icon-search text-center"></span>
+                            <span class="bi bi-search text-center"></span>
                         </div>
                     </div>
                 </form>
@@ -54,7 +54,7 @@
         <form action="#" class="search-form">
             <div class="input-container flex">
                 <input type="text" placeholder="Search..." class="input-field">
-                <span class="icon-search"></span>
+                <span class="bi bi-search"></span>
             </div>
         </form>
     </div>
@@ -66,7 +66,7 @@
                 <li class="item software">
                     <a href="" class="flex text-center">
                         <!-- Icon -->
-                        <i class="icon icon-apps"></i>
+                        <i class="icon ri-grid-fill"></i>
                         <!-- Text -->
                         <span class="small-text text-uppercase">bespoke</span>
                         software
@@ -88,7 +88,7 @@
                 <li class="item it-support">
                     <a href="" class="flex text-center">
                         <!-- Icon -->
-                        <i class="icon icon-display"></i>
+                        <i class="icon bi bi-display"></i>
                         <!-- Text -->
                         <span class="small-text text-uppercase">it</span>
                         support
@@ -109,7 +109,7 @@
                 <li class="item digital">
                     <a href="" class="flex text-center">
                         <!-- Icon -->
-                        <i class="icon icon-bars"></i>
+                        <i class="icon bi bi-reception-3"></i>
                         <!-- Text -->
                         <span class="small-text text-uppercase">digital</span>
                         marketing
@@ -130,7 +130,7 @@
                 <li class="item telecoms">
                     <a href="" class="flex text-center">
                         <!-- Icon -->
-                        <i class="icon icon-phone_in_talk"></i>
+                        <i class="icon bx bxs-phone-call"></i>
                         <!-- Text -->
                         <span class="small-text text-uppercase">telecoms</span>
                         services
@@ -151,7 +151,7 @@
                 <li class="item web">
                     <a href="" class="flex text-center">
                         <!-- Icon -->
-                        <i class="icon icon-code"></i>
+                        <i class="icon bi bi-code-slash"></i>
                         <!-- Text -->
                         <span class="small-text text-uppercase">web</span>
                         design
@@ -172,7 +172,7 @@
                 <li class="item security">
                     <a href="" class="flex text-center">
                         <!-- Icon -->
-                        <i class="icon icon-security"></i>
+                        <span class="icon bx bx-shield-quarter"></span>
                         <!-- Text -->
                         <span class="small-text text-uppercase">cyber</span>
                         security
@@ -193,7 +193,7 @@
                 <li class="item training">
                     <a href="" class="flex text-center">
                         <!-- Icon -->
-                        <i class="icon icon-graduation-cap"></i>
+                        <i class="icon bx bxs-graduation"></i>
                         <!-- Text -->
                         <span class="small-text text-uppercase">developer</span>
                         training

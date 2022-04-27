@@ -13,7 +13,7 @@
                     <li id="web" class="item flex">
                         <a href="">
                             <!-- Icon -->
-                            <span class="icon icon-code"></span>
+                            <span class="icon bi bi-code-slash"></span>
                             <!-- Text -->
                             <span class="small-text text-uppercase">web</span>
                             design
@@ -43,7 +43,7 @@
                     <li id="it-support" class="item flex">
                         <a href="">
                             <!-- Icon -->
-                            <span class="icon icon-display"></span>
+                            <span class="icon bi bi-display"></span>
                             <!-- Text -->
                             <span class="small-text text-uppercase">It</span>
                             support
@@ -73,7 +73,7 @@
                     <li id="telecoms" class="item flex">
                         <a href="">
                             <!-- Icon -->
-                            <span class="icon icon-phone_in_talk"></span>
+                            <span class="icon bx bxs-phone-call"></span>
                             <!-- Text -->
                             <span class="small-text text-uppercase">Telecoms</span>
                             Services
@@ -103,7 +103,7 @@
                     <li id="software" class="item flex">
                         <a href="">
                             <!-- Icon -->
-                            <span class="icon icon-apps"></span>
+                            <span class="icon ri-grid-fill"></span>
                             <!-- Text -->
                             <span class="small-text text-uppercase">Bespoke</span>
                             Software
@@ -136,7 +136,7 @@
                     <li id="digital" class="item flex">
                         <a href="">
                             <!-- Icon -->
-                            <span class="icon icon-bars"></span>
+                            <span class="icon bi bi-reception-3"></span>
                             <!-- Text -->
                             <span class="small-text text-uppercase">digital</span>
                             marketing
@@ -166,7 +166,7 @@
                     <li id="security" class="item flex">
                         <a href="">
                             <!-- Icon -->
-                            <span class="icon icon-security"></span>
+                            <span class="icon bx bx-shield-quarter"></span>
                             <!-- Text -->
                             <span class="small-text text-uppercase">cyber</span>
                             security

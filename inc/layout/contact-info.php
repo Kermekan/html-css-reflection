@@ -22,7 +22,7 @@
                 <p>
                     <a href="" onclick="return false;" class="">
                         <strong>Out of Hours IT Support</strong>
-                        <span class="icon-chevron-down1"></span>
+                        <span class="bi bi-chevron-down"></span>
                     </a>
                 </p>
             </div>

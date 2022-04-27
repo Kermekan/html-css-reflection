@@ -11282,8 +11282,8 @@ section {
 
 .icon {
   font-size: 1.438rem;
+  color: white;
 }
-
 .btn {
   border-radius: 3px;
   white-space: nowrap;

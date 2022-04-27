@@ -25,7 +25,7 @@
                 <div class="btn about-btn">
                     <a href="#" class="text-center flex text-uppercase">
                         Our Culture
-                        <span class="icon icon-arrow-thin-right"></span>
+                        <span class="icon bi bi-arrow-right"></span>
                     </a>
                 </div>
             </div><!-- .about-content -->

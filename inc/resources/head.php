@@ -19,11 +19,17 @@
 
     <!-- --------------------------- Icons --------------------------- -->
     <!-- BoxIcons -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <!-- Icomoon -->
     <link rel="stylesheet" href="https://i.icomoon.io/public/21140f81e3/OthelloDeemi/style.css">
+    
+    <!-- RemixIcon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/d1cb6fec79.js" crossorigin="anonymous"></script>
 

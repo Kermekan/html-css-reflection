@@ -20,7 +20,7 @@
                     <div class="btn banner-btn web-btn">
                         <a href="#" class="text-center flex text-uppercase">
                             Find Out More
-                            <span class="icon-arrow-thin-right"></span>
+                            <span class="bi bi-arrow-right"></span>
                         </a>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                     <div class="btn banner-btn it-support-btn">
                         <a href="#" class="text-center flex text-uppercase">
                             Find Out More
-                            <span class="icon-arrow-thin-right"></span>
+                            <span class="bi bi-arrow-right"></span>
                         </a>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                     <div class="btn banner-btn telecoms-btn">
                         <a href="#" class="text-center flex text-uppercase">
                             Find Out More
-                            <span class="icon-arrow-thin-right"></span>
+                            <span class="bi bi-arrow-right"></span>
                         </a>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                     <div class="btn banner-btn software-btn">
                         <a href="#" class="text-center flex text-uppercase">
                             Find Out More
-                            <span class="icon-arrow-thin-right"></span>
+                            <span class="bi bi-arrow-right"></span>
                         </a>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                     <div class="btn banner-btn digital-btn">
                         <a href="#" class="text-center flex text-uppercase">
                             See How We Can Help You
-                            <span class="icon-arrow-thin-right"></span>
+                            <span class="bi bi-arrow-right"></span>
                         </a>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                     <div class="btn banner-btn security-btn">
                         <a href="#" class="text-center flex text-uppercase">
                             Find Out More
-                            <span class="icon-arrow-thin-right"></span>
+                            <span class="bi bi-arrow-right"></span>
                         </a>
                     </div>
                 </div>

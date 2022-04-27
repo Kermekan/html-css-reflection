@@ -6,7 +6,7 @@
             <div class="card-container card card-xs software-card">
                 <a href="#" class="card-inner flex">
                     <span class="icon-container">
-                        <span class="icon icon-apps"></span>
+                        <span class="icon ri-grid-fill"></span>
                     </span>
                     <!-- heading -->
                     <h4 class="heading ">Bespoke Software</h4>
@@ -22,7 +22,7 @@
             <div class="card-container card card-xs it-support-card">
                 <a href="#" class="card-inner flex">
                     <span class="icon-container ">
-                        <span class="icon icon-display"></span>
+                        <span class="icon bi bi-display"></span>
                     </span>
                     <!-- heading -->
                     <h4 class="heading ">IT Support</h4>
@@ -37,7 +37,7 @@
             <div class="card-container card card-xs digital-card">
                 <a href="#" class="card-inner flex">
                     <span class="icon-container ">
-                        <span class="icon icon-bars"></span>
+                        <span class="icon bi bi-reception-3"></span>
                     </span>
                     <!-- heading -->
                     <h4 class="heading ">Digital Marketing</h4>
@@ -52,7 +52,7 @@
             <div class="card-container card card-sm telecoms-card">
                 <a href="#" class="card-inner flex">
                     <span class="icon-container ">
-                        <span class="icon icon-phone_in_talk"></span>
+                        <span class="icon bx bxs-phone-call"></span>
                     </span>
                     <!-- heading -->
                     <h4 class="heading ">Telecoms Services</h4>
@@ -67,7 +67,7 @@
             <div class="card-container card card-sm web-card">
                 <a href="#" class="card-inner flex">
                     <span class="icon-container ">
-                        <span class="icon icon-code"></span>
+                        <span class="icon bi bi-code-slash"></span>
                     </span>
                     <!-- heading -->
                     <h4 class="heading ">Web Design</h4>
@@ -82,7 +82,7 @@
             <div class="card-container card card-sm security-card">
                 <a href="#" class="card-inner flex">
                     <span class="icon-container ">
-                        <span class="icon icon-security"></span>
+                        <span class="icon bx bx-shield-quarter"></span>
                     </span>
                     <!-- heading -->
                     <h4 class="heading ">Cyber Security</h4>
@@ -97,7 +97,7 @@
             <div class="card-container card card-sm training-card">
                 <a href="#" class="card-inner flex">
                     <span class="icon-container ">
-                        <span class="icon icon-graduation-cap"></span>
+                        <span class="icon bx bxs-graduation"></span>
                     </span>
                     <!-- heading -->
                     <h4 class="heading ">Developer Training</h4>
