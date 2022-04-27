@@ -8,5 +8,4 @@ gulpfile.js
 *.zip
 *.log
 
-wawa.html
-header.scss
+inc/resources/connection.php
