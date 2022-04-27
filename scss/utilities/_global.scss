@@ -7,6 +7,11 @@
 // Icon font
 .icon {
     font-size: 1.438rem; //23px
+    color: white;
+    
+    &.bx-signal-3 {
+        // font-size: 30px;
+    }
 }
 
 // generic buttons styling
