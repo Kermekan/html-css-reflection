@@ -12,7 +12,6 @@
             <div class="articles-list flex">
                 <?php include ('inc/resources/news-cards.php');?>
                 
-                
                 <!-- Article 1 -->
                 <!-- <div class="article-container article-lg article-sm web-article">
                     <!~~ Image ~~>
