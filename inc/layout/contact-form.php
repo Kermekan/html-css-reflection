@@ -46,7 +46,7 @@
             <label for="message" class="required">
                 Message
             </label>
-            <textarea name="message" id="message" value="<?= $message?>" ></textarea>
+            <textarea name="message" id="message" value="" ><?= $message?></textarea>
         </div>
     </div><!-- .input-container -->
     <!-- checkbox & info -->
