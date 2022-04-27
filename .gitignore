@@ -9,3 +9,4 @@ gulpfile.js
 *.log
 
 inc/resources/connection.php
+assets/css/style.css.map
