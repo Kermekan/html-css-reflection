@@ -11283,7 +11283,11 @@ section {
 .icon {
   font-size: 1.438rem;
   color: white;
+  /* &.bx-signal-3 {
+      // font-size: 30px;
+  } */
 }
+
 .btn {
   border-radius: 3px;
   white-space: nowrap;
