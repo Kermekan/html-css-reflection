@@ -9,13 +9,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!empty($_POST['fullName'])) {
         // Check if name has only letters and whitespace
         $fullName = test_input($_POST['fullName']);
+        
         if (!preg_match("/^[a-zA-Z ]*$/",$fullName)) {
             $fullNameErr = "Only letters and white space allowed.";
             echo "<div id='form-alert' class='alert error' role='alert'>"
                 . "<p>$fullNameErr</p>"
                 // . "<i class='icon bi bi-x'></i>"
                 . "</div>"; 
+        } else {
+            $fullNameErr = "";
         }
+    } else if(empty($_POST['fullName'])) {
+        $fullNameErr = "Name is required.";
+        echo "<div id='form-alert' class='alert error' role='alert'>"
+            . "<p>$fullNameErr</p>"
+            // . "<i class='icon bi bi-x'></i>"
+            . "</div>"; 
     }
     // Subject
     if (!empty($_POST["subject"])) {
@@ -26,7 +35,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 . "<p>$subjectErr</p>"
                 // . "<i class='icon bi bi-x'></i>"
                 . "</div>"; 
+        } else {
+            $subjectErr = "";
         }
+    } else if(empty($_POST['subject'])) {
+        $subjectErr = "Subject is required.";
+        echo "<div id='form-alert' class='alert error' role='alert'>"
+            . "<p>$subjectErr</p>"
+            // . "<i class='icon bi bi-x'></i>"
+            . "</div>"; 
     }
     // Email
     if (!empty($_POST["email"])) {
@@ -38,7 +55,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 . "<p>$emailErr</p>"
                 // . "<i class='icon bi bi-x'></i>"
                 . "</div>"; 
+        } else {
+            $emailErrErr = "";
         }
+    } else if(empty($_POST['email'])) {
+        $emailErr = "Email is required.";
+        echo "<div id='form-alert' class='alert error' role='alert'>"
+            . "<p>$emailErr</p>"
+            // . "<i class='icon bi bi-x'></i>"
+            . "</div>"; 
     }
     // Phone
     if (!empty($_POST["telephone"])) {
@@ -50,7 +75,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 . "<p>$telephoneErr</p>"
                 // . "<i class='icon bi bi-x'></i>"
                 . "</div>"; 
+        } else {
+            $telephoneErr = "";
         }
+    } else if(empty($_POST['telephone'])) {
+        $telephoneErr = "Phone is required.";
+        echo "<div id='form-alert' class='alert error' role='alert'>"
+            . "<p>$telephoneErr</p>"
+            // . "<i class='icon bi bi-x'></i>"
+            . "</div>"; 
     }
     // Message
     if (!empty($_POST["message"])) {
@@ -61,7 +94,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 . "<p>$messageErr</p>"
                 // . "<i class='icon bi bi-x'></i>"
                 . "</div>"; 
+        } else {
+            $messageErr = "";
         }
+    } else if(empty($_POST['message'])) {
+        $messageErr = "Message is required.";
+        echo "<div id='form-alert' class='alert error' role='alert'>"
+            . "<p>$messageErr</p>"
+            // . "<i class='icon bi bi-x'></i>"
+            . "</div>"; 
     }
     // If Validation is successful
     if ($fullNameErr == "" 
@@ -85,6 +126,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             . "<p>Form submitted successfully</p>"
             // . "<i class='icon bi bi-x'></i>" 
             . "</div>";
+            $fullName = $companyName = $email = $telephone = $subject = $message = "";
         } else {
             echo "<div id='form-alert' class='alert error' role='alert'>"
             . "<p>Form submission failed</p>"
