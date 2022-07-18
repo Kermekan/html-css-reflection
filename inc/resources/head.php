@@ -25,7 +25,7 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <!-- Icomoon -->
-    <link rel="stylesheet" href="https://i.icomoon.io/public/21140f81e3/OthelloDeemi/style.css">
+    <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/21140f81e3/OthelloDeemi/style.css"> -->
     
     <!-- RemixIcon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
