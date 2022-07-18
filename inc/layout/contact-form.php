@@ -56,8 +56,7 @@
                 <!-- checkbox -->
                 <span class="checkbox">
                     <input type="checkbox" id="marketing" class="cb">
-                    <span class="check">
-                    </span>
+                    <label for="marketing" class="check"></label>
                 </span>
             </span>
             <!-- Text -->

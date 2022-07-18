@@ -1,4 +1,4 @@
-const form = document.getElementById('contact-form');
+ const form = document.getElementById('contact-form');
     fullName = document.getElementById('full-name'),
     email = document.getElementById('email'),
     phone = document.getElementById('telephone'),
@@ -94,14 +94,14 @@ function setError(input) {
     inputWrapper.classList.add('input-error')
 }
 
-function removeError(input) {
-    const inputWrapper = input.parentElement;
-    inputWrapper.classList.remove('input-error')
-}
+// function removeError(input) {
+//     const inputWrapper = input.parentElement;
+//     inputWrapper.classList.remove('input-error')
+// }
 
-function isEmail(email) {
-	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
+// function isEmail(email) {
+// 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+// }
 
 // X button - Not Working
 // const exitBtn = document.querySelector("icon.bi-x");
@@ -111,4 +111,4 @@ function isEmail(email) {
 //     e.currentTarget.parentElement.classList.add("hidden");
 // })
 
-// console.log(exitBtn);
+// console.log(exitBtn); 
